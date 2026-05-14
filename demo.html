@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração - Conteúdo Expansível | Lunara Terapias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 100%);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .demo-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-header h1 {
+            color: #2c5530;
+            margin-bottom: 10px;
+        }
+
+        .demo-header p {
+            color: #5a6c5d;
+            font-size: 1.1rem;
+        }
+
+        .terapia-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #2c5530;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-title i {
+            color: #4a7c59;
+            font-size: 1.5rem;
+        }
+
+        .terapia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .terapia-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(74, 124, 89, 0.1);
+            overflow: hidden;
+        }
+
+        .terapia-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(74, 124, 89, 0.2);
+        }
+
+        .terapia-header {
+            padding: 2rem;
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+        }
+
+        .terapia-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4a7c59, #6ba777);
+        }
+
+        .terapia-header i.terapia-icon {
+            font-size: 2.5rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .terapia-header h4 {
+            font-size: 1.3rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .expand-icon {
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            color: #4a7c59;
+        }
+
+        .terapia-header.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .terapia-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            background: #f8fdf9;
+        }
+
+        .terapia-content.expanded {
+            max-height: 2000px; /* Valor grande o suficiente para conter todo o conteúdo */
+        }
+
+        .terapia-content-inner {
+            padding: 2rem;
+        }
+
+        .terapia-content h5 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .terapia-content p {
+            color: #5a6c5d;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .terapia-content ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .terapia-content li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #5a6c5d;
+        }
+
+        .terapia-content li i {
+            color: #4a7c59;
+            margin-top: 0.2rem;
+            font-size: 0.8rem;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .beneficio-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #4a7c59;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .beneficio-item h6 {
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .beneficio-item p {
+            color: #5a6c5d;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .reiki-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .reiki-type {
+            background: linear-gradient(135deg, #4a7c59, #6ba777);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .reiki-type h6 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .reiki-type p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .demo-note {
+            background: linear-gradient(135deg, #4a7c59, #6ba777);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .demo-note h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-note p {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .terapia-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reiki-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-header">
+            <h1><i class="fas fa-flask"></i> Demonstração - Conteúdo Expansível</h1>
+            <p>Clique nos títulos das terapias abaixo para ver o conteúdo detalhado expandir e recolher</p>
+        </div>
+
+        <!-- Terapias Energéticas -->
+        <div class="terapia-category">
+            <h3 class="category-title">
+                <i class="fas fa-hands"></i>
+                Terapias Energéticas
+            </h3>
+            <div class="terapia-grid">
+                <!-- Reiki Usui -->
+                <div class="terapia-card">
+                    <div class="terapia-header" onclick="toggleContent(this)">
+                        <i class="fas fa-leaf terapia-icon"></i>
+                        <h4>
+                            Reiki Usui
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </h4>
+                        <p>Técnica japonesa tradicional de canalização de energia universal para promover relaxamento e cura natural.</p>
+                    </div>
+                    <div class="terapia-content">
+                        <div class="terapia-content-inner">
+                            <h5>O que é o Reiki Usui?</h5>
+                            <p>O Reiki Usui é a forma tradicional de Reiki desenvolvida por Mikao Usui no Japão no início do século XX. É uma técnica de cura energética que utiliza a imposição das mãos para canalizar energia universal (Ki) para promover o equilíbrio e a cura.</p>
+                            
+                            <h5>Como funciona?</h5>
+                            <p>Durante uma sessão, o praticante coloca as mãos em posições específicas sobre ou próximo ao corpo do receptor, permitindo que a energia flua naturalmente para onde é mais necessária. Não há manipulação física, apenas o toque suave ou a proximidade das mãos.</p>
+                            
+                            <h5>Benefícios do Reiki Usui:</h5>
+                            <div class="beneficios-grid">
+                                <div class="beneficio-item">
+                                    <h6>Relaxamento Profundo</h6>
+                                    <p>Reduz significativamente os níveis de estresse e ansiedade</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Equilíbrio Energético</h6>
+                                    <p>Harmoniza os chakras e o fluxo de energia vital</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Melhora do Sono</h6>
+                                    <p>Promove um sono mais reparador e tranquilo</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Alívio de Dores</h6>
+                                    <p>Pode ajudar a reduzir dores físicas e tensões musculares</p>
+                                </div>
+                            </div>
+                            
+                            <h5>Para quem é indicado?</h5>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Pessoas com estresse e ansiedade</li>
+                                <li><i class="fas fa-check-circle"></i> Quem busca relaxamento profundo</li>
+                                <li><i class="fas fa-check-circle"></i> Indivíduos em processo de cura física ou emocional</li>
+                                <li><i class="fas fa-check-circle"></i> Pessoas interessadas em autoconhecimento</li>
+                                <li><i class="fas fa-check-circle"></i> Complemento a tratamentos médicos convencionais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reiki Elemental -->
+                <div class="terapia-card">
+                    <div class="terapia-header" onclick="toggleContent(this)">
+                        <i class="fas fa-seedling terapia-icon"></i>
+                        <h4>
+                            Reiki Elemental
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </h4>
+                        <p>Modalidade de Reiki que trabalha com as energias dos quatro elementos da natureza: terra, água, fogo e ar.</p>
+                    </div>
+                    <div class="terapia-content">
+                        <div class="terapia-content-inner">
+                            <h5>O que é o Reiki Elemental?</h5>
+                            <p>O Reiki Elemental é uma modalidade especial que combina a energia universal do Reiki tradicional com as forças primordiais dos quatro elementos da natureza. Esta prática reconhece que cada elemento possui qualidades únicas de cura e transformação.</p>
+                            
+                            <h5>Os Quatro Elementos:</h5>
+                            <div class="reiki-types">
+                                <div class="reiki-type">
+                                    <h6><i class="fas fa-mountain"></i> Terra</h6>
+                                    <p>Estabilidade, enraizamento, força física e material</p>
+                                </div>
+                                <div class="reiki-type">
+                                    <h6><i class="fas fa-tint"></i> Água</h6>
+                                    <p>Fluidez, emoções, intuição e purificação</p>
+                                </div>
+                                <div class="reiki-type">
+                                    <h6><i class="fas fa-fire"></i> Fogo</h6>
+                                    <p>Transformação, paixão, energia vital e coragem</p>
+                                </div>
+                                <div class="reiki-type">
+                                    <h6><i class="fas fa-wind"></i> Ar</h6>
+                                    <p>Comunicação, pensamento, criatividade e liberdade</p>
+                                </div>
+                            </div>
+                            
+                            <h5>Como funciona?</h5>
+                            <p>O terapeuta identifica quais elementos estão desequilibrados na pessoa e canaliza especificamente as energias desses elementos para restaurar a harmonia. Cada elemento trabalha aspectos específicos do ser humano.</p>
+                            
+                            <h5>Benefícios específicos:</h5>
+                            <ul>
+                                <li><i class="fas fa-leaf"></i> Conexão mais profunda com a natureza</li>
+                                <li><i class="fas fa-leaf"></i> Equilíbrio entre aspectos físicos, emocionais, mentais e espirituais</li>
+                                <li><i class="fas fa-leaf"></i> Harmonização de temperamentos e personalidade</li>
+                                <li><i class="fas fa-leaf"></i> Fortalecimento da intuição e percepção</li>
+                                <li><i class="fas fa-leaf"></i> Maior estabilidade emocional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reiki Pet -->
+                <div class="terapia-card">
+                    <div class="terapia-header" onclick="toggleContent(this)">
+                        <i class="fas fa-paw terapia-icon"></i>
+                        <h4>
+                            Reiki Pet (Animais)
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </h4>
+                        <p>Aplicação especializada do Reiki para cães, gatos e outros animais de estimação, promovendo bem-estar animal.</p>
+                    </div>
+                    <div class="terapia-content">
+                        <div class="terapia-content-inner">
+                            <h5>O que é o Reiki Pet?</h5>
+                            <p>O Reiki Pet é a aplicação da energia Reiki especificamente adaptada para animais. Os animais são naturalmente receptivos à energia e frequentemente respondem de forma muito positiva ao tratamento energético.</p>
+                            
+                            <h5>Como é aplicado?</h5>
+                            <p>O Reiki para animais é aplicado de forma mais suave e intuitiva, respeitando o temperamento e as necessidades específicas de cada animal. Pode ser feito com toque direto (se o animal permitir) ou à distância, sempre seguindo o ritmo e conforto do pet.</p>
+                            
+                            <h5>Indicações para o Reiki Pet:</h5>
+                            <div class="beneficios-grid">
+                                <div class="beneficio-item">
+                                    <h6>Ansiedade e Estresse</h6>
+                                    <p>Animais ansiosos, com medo ou estressados</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Recuperação Pós-Cirúrgica</h6>
+                                    <p>Acelera o processo de cura após procedimentos</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Animais Idosos</h6>
+                                    <p>Melhora qualidade de vida e conforto</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Problemas Comportamentais</h6>
+                                    <p>Agressividade, hiperatividade ou apatia</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Mudanças de Ambiente</h6>
+                                    <p>Adaptação a novos lares ou situações</p>
+                                </div>
+                                <div class="beneficio-item">
+                                    <h6>Fim de Vida</h6>
+                                    <p>Conforto e paz em momentos difíceis</p>
+                                </div>
+                            </div>
+                            
+                            <h5>Benefícios observados:</h5>
+                            <ul>
+                                <li><i class="fas fa-heart"></i> Maior calma e tranquilidade</li>
+                                <li><i class="fas fa-heart"></i> Melhora no apetite e sono</li>
+                                <li><i class="fas fa-heart"></i> Redução de comportamentos destrutivos</li>
+                                <li><i class="fas fa-heart"></i> Fortalecimento do vínculo com o tutor</li>
+                                <li><i class="fas fa-heart"></i> Aceleração de processos de cura</li>
+                                <li><i class="fas fa-heart"></i> Maior sociabilidade e confiança</li>
+                            </ul>
+                            
+                            <p><strong>Nota importante:</strong> O Reiki Pet é um complemento ao cuidado veterinário, nunca um substituto. Sempre consulte um veterinário para questões de saúde do seu animal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-note">
+            <h3><i class="fas fa-lightbulb"></i> Como funciona esta demonstração</h3>
+            <p>Clique nos títulos das terapias acima para ver como o conteúdo se expande e recolhe suavemente. Esta funcionalidade será aplicada a todas as terapias na página principal, fornecendo informações detalhadas de forma organizada e interativa.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(header) {
+            const content = header.nextElementSibling;
+            const isExpanded = header.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Recolher
+                header.classList.remove('expanded');
+                content.classList.remove('expanded');
+                content.style.maxHeight = '0';
+            } else {
+                // Expandir
+                header.classList.add('expanded');
+                content.classList.add('expanded');
+                content.style.maxHeight = content.scrollHeight + 'px'; // Ajusta a altura para o conteúdo
+            }
+        }
+
+        // Adiciona efeito de hover nos cards de terapia
+        document.querySelectorAll('.terapia-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (!this.querySelector('.terapia-header').classList.contains('expanded')) {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (!this.querySelector('.terapia-header').classList.contains('expanded')) {
+                    this.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        });
+
+        console.log('Demonstração de conteúdo expansível carregada com sucesso! 🌟');
+    </script>
+</body>
+</html>
+
