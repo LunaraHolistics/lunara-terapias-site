@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    /* Destaques do novo atendimento — escopo restrito, não altera o style.css */
+    .novo-badge{display:inline-block;margin-left:.4rem;padding:.12rem .5rem;border-radius:999px;
+        font-size:.66rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+        background:rgba(140,140,140,.18);border:1px solid rgba(140,140,140,.4);vertical-align:middle}
+    .yoga-highlight .highlight-content h4{display:flex;align-items:center;justify-content:center;
+        gap:.5rem;flex-wrap:wrap}
+    .yoga-pills{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:.9rem 0 1.2rem}
+    .yoga-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.32rem .8rem;
+        border:1px solid rgba(140,140,140,.35);border-radius:999px;font-size:.8rem;font-weight:500}
+    .yoga-actions{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+    .terapia-content-inner .btn{margin-top:1rem}
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,6 +32,9 @@
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="yoga-kundalini.html" class="nav-link">Yoga &amp; Meditação</a>
                     </li>
                     <li class="nav-item">
                         <a href="#terapias" class="nav-link">Terapias</a>
@@ -50,6 +66,9 @@
             <p class="hero-description">Bem-vindo à Lunara Terapias, onde tradição e inovação se encontram para promover seu bem-estar integral. Ofereço uma ampla gama de terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais.</p>
             <div class="hero-buttons">
                 <a href="#terapias" class="btn btn-primary">Conheça as Terapias</a>
+                <a href="yoga-kundalini.html" class="btn btn-secondary">
+                    <i class="fas fa-om"></i> Yoga &amp; Meditação
+                </a>
                 <a href="https://bit.ly/lunarataro" target="_blank" class="btn btn-secondary">
                     <i class="fas fa-magic"></i> Lunara Tarô
                 </a>
@@ -64,7 +83,92 @@
     <section id="terapias" class="terapias">
         <div class="container">
             <h2 class="section-title">Nossas Terapias</h2>
-            
+
+            <!-- Destaque: novo atendimento em grupo -->
+            <div class="lunara-taro-highlight yoga-highlight">
+                <div class="highlight-content">
+                    <h4>
+                        <i class="fas fa-om"></i> Yoga Kundalini, Meditação &amp; Bioenergética
+                        <span class="novo-badge">Novo</span>
+                    </h4>
+                    <p>Aulas presenciais em grupo, à noite, para iniciantes absolutos. Três práticas integradas — movimento e respiração, mantra e silêncio, consciência corporal — em um ciclo de 8 semanas, com guia digital completo para praticar em casa.</p>
+                    <div class="yoga-pills">
+                        <span class="yoga-pill"><i class="fas fa-clock"></i> 50 minutos</span>
+                        <span class="yoga-pill"><i class="fas fa-moon"></i> Noturno</span>
+                        <span class="yoga-pill"><i class="fas fa-users"></i> Em grupo</span>
+                        <span class="yoga-pill"><i class="fas fa-seedling"></i> Sem experiência prévia</span>
+                        <span class="yoga-pill"><i class="fas fa-mobile-screen"></i> Guia digital incluído</span>
+                    </div>
+                    <div class="yoga-actions">
+                        <a href="yoga-kundalini.html" class="btn btn-highlight">
+                            <i class="fas fa-arrow-right"></i> Conhecer as aulas
+                        </a>
+                        <a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-whatsapp"></i> Aula demonstração 30 min
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Práticas em Grupo -->
+            <div class="terapia-category">
+                <h3 class="category-title">
+                    <i class="fas fa-people-group"></i>
+                    Práticas em Grupo · Aulas Regulares
+                </h3>
+                <div class="terapia-grid">
+                    <!-- Yoga Kundalini -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <i class="fas fa-om terapia-icon"></i>
+                            <h4>
+                                Yoga Kundalini, Meditação &amp; Bioenergética
+                                <span class="novo-badge">Novo</span>
+                                <i class="fas fa-chevron-down expand-icon"></i>
+                            </h4>
+                            <p>Aulas de 50 minutos, à noite, em grupo. Ciclo de 8 semanas para iniciantes, com guia digital de prática em casa.</p>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é</h5>
+                                <p>Um percurso de autoconhecimento com técnica concreta. Você não precisa ser flexível, experiente ou "espiritual" — precisa só chegar e respirar. Cada aula trabalha uma área da consciência, e cada técnica é ensinada passo a passo: posição, respiração, tempo, como terminar e cuidados.</p>
+
+                                <h5>As três práticas, e por que juntas</h5>
+                                <ul>
+                                    <li><i class="fas fa-om"></i> <strong>Yoga Kundalini:</strong> kriyas (sequências com efeito específico), pranayama, mudras e mantras. Exercícios curtos, muitos sentados, sempre com versão suave.</li>
+                                    <li><i class="fas fa-spa"></i> <strong>Meditação:</strong> mantras com pronúncia ensinada sílaba por sílaba, respiração guiada, Kirtan Kriya e silêncio atento.</li>
+                                    <li><i class="fas fa-person-rays"></i> <strong>Bioenergética / consciência corporal:</strong> enraizamento, liberação de tensão, percepção do corpo em movimento e relaxamento profundo.</li>
+                                </ul>
+
+                                <h5>Como é uma aula</h5>
+                                <p>Six etapas em ordem fixa: sintonização com mantra · aquecimento dos olhos e pescoço · enraizamento · kriya da semana · abertura e descarga · relaxamento · meditação · encerramento. Cinquenta minutos, terminando no horário.</p>
+
+                                <h5>A metáfora que organiza o ciclo</h5>
+                                <p>Você é uma casa com 11 janelas. A luz do sol já existe do lado de fora — é a sua alma. O trabalho não é fabricar luz: é limpar as janelas. Cada semana do ciclo cuida de uma delas: autenticidade, comunhão, confiança, equanimidade, expressão, escuta, presença, vitalidade, calma, coragem e integração.</p>
+
+                                <h5>O que você recebe</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Guia digital completo no celular, com todas as técnicas ilustradas</li>
+                                    <li><i class="fas fa-check-circle"></i> Mapa das Minhas Janelas — ficha de auto-observação para reavaliar a cada 4 semanas</li>
+                                    <li><i class="fas fa-check-circle"></i> Prática mínima de 4 minutos e prática completa de 20 minutos para casa</li>
+                                    <li><i class="fas fa-check-circle"></i> Grade dos 40 dias e registro de prática</li>
+                                    <li><i class="fas fa-check-circle"></i> Ficha opcional de Numerologia Tântrica, entregue por escrito, no mesmo formato para todos</li>
+                                </ul>
+
+                                <h5>Para quem é</h5>
+                                <p>Para quem nunca praticou e acha que "não é flexível o bastante"; para quem quer algo com técnica explicada, não só relaxamento; para quem prefere praticar em grupo, perto de casa, à noite; e para quem quer aprender a praticar sozinho depois. Cadeira sempre disponível, adaptações conversadas em particular.</p>
+
+                                <p><strong>Nota importante:</strong> a aula é uma prática educativa em grupo, de auto-observação. Não é psicoterapia nem atendimento individual, e não substitui acompanhamento médico ou psicológico.</p>
+
+                                <a href="yoga-kundalini.html" class="btn btn-primary">
+                                    <i class="fas fa-arrow-right"></i> Ver a página completa das aulas
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Terapias Energéticas -->
             <div class="terapia-category">
                 <h3 class="category-title">
@@ -530,12 +634,11 @@
                 </div>
             </div>
 
-<!--
-            <!-- Astrologia e Psicologia -->
+            <!-- Astrologia e Numerologia -->
             <div class="terapia-category">
                 <h3 class="category-title">
                     <i class="fas fa-sun"></i>
-                    Astrologia e Psicologia
+                    Astrologia e Numerologia
                 </h3>
                 <div class="terapia-grid">
                     <!-- Mapa Astral -->
@@ -568,32 +671,37 @@
                         </div>
                     </div>
 
-                    <!-- Psicologia Integrativa -->
+                    <!-- Numerologia Cabalística -->
                     <div class="terapia-card">
                         <div class="terapia-header" onclick="toggleContent(this)">
-                            <i class="fas fa-brain terapia-icon"></i>
+                            <i class="fas fa-hashtag terapia-icon"></i>
                             <h4>
-                                Psicologia Integrativa
+                                Numerologia Cabalística
                                 <i class="fas fa-chevron-down expand-icon"></i>
                             </h4>
-                            <p>Abordagem que combina diferentes correntes psicológicas com práticas holísticas.</p>
+                            <p>Leitura simbólica do nome de nascimento e da data, para autoconhecimento e clareza de propósito.</p>
                         </div>
                         <div class="terapia-content">
                             <div class="terapia-content-inner">
-                                <h5>O que é a Psicologia Integrativa?</h5>
-                                <p>A Psicologia Integrativa é uma abordagem terapêutica que combina técnicas da psicologia tradicional com práticas holísticas e espirituais. Considera o ser humano em sua totalidade: corpo, mente, emoções e espírito.</p>
+                                <h5>O que é a Numerologia Cabalística?</h5>
+                                <p>É um sistema de autoconhecimento que traduz as letras do nome de nascimento em valores numéricos, segundo a tradição cabalística, e cruza esses valores com a data de nascimento. O nome revela como a pessoa se expressa e é percebida; a data revela o ritmo e as lições do seu caminho.</p>
                                 
                                 <h5>Como funciona?</h5>
-                                <p>Integra diferentes modalidades terapêuticas como psicoterapia cognitivo-comportamental, gestalt, psicodrama, técnicas corporais, meditação e outras práticas complementares, adaptando o tratamento às necessidades específicas de cada pessoa.</p>
+                                <p>A partir do nome completo de nascimento e da data, são calculados os números que compõem o mapa pessoal. A leitura organiza esses números em uma narrativa sobre recursos naturais, padrões repetitivos, desafios de crescimento e direção de propósito — sempre como convite à reflexão, nunca como sentença.</p>
                                 
-                                <h5>Benefícios:</h5>
+                                <h5>O que a leitura oferece:</h5>
                                 <ul>
-                                    <li><i class="fas fa-brain"></i> Tratamento personalizado e integral</li>
-                                    <li><i class="fas fa-brain"></i> Resolução de traumas e bloqueios</li>
-                                    <li><i class="fas fa-brain"></i> Desenvolvimento da inteligência emocional</li>
-                                    <li><i class="fas fa-brain"></i> Melhoria da autoestima e autoconfiança</li>
-                                    <li><i class="fas fa-brain"></i> Crescimento pessoal e espiritual</li>
+                                    <li><i class="fas fa-hashtag"></i> Clareza sobre talentos e recursos naturais</li>
+                                    <li><i class="fas fa-hashtag"></i> Reconhecimento de padrões que se repetem</li>
+                                    <li><i class="fas fa-hashtag"></i> Apoio simbólico para decisões e escolhas</li>
+                                    <li><i class="fas fa-hashtag"></i> Compreensão do próprio modo de se expressar</li>
+                                    <li><i class="fas fa-hashtag"></i> Direção de propósito e crescimento pessoal</li>
                                 </ul>
+
+                                <h5>Diferença em relação à Numerologia Tântrica</h5>
+                                <p>A Tântrica, usada nas aulas de Yoga Kundalini, parte apenas da data de nascimento e reduz os valores a um intervalo de 1 a 11, ligando-os às 11 áreas da consciência. A Cabalística parte também do nome, ampliando a leitura sobre expressão e identidade. São mapas complementares, não concorrentes.</p>
+
+                                <p><strong>Nota importante:</strong> trata-se de uma ferramenta simbólica de autoconhecimento. Não é diagnóstico, não é previsão determinista e não substitui acompanhamento médico ou psicológico. A autoridade final sobre a própria experiência é sempre da pessoa.</p>
                             </div>
                         </div>
                     </div>
@@ -629,7 +737,6 @@
                     </div>
                 </div>
             </div>
--->
         </div>
     </section>
 
@@ -648,9 +755,8 @@
                     <div class="profissional-info">
                         <h3>Sobre o Profissional</h3>
                         <p><strong>Celso Luiz</strong></p>
-                        <p>Psicólogo desde 2008 - CRP 06/95.331</p>
                         <p>Psicoterapeuta holístico desde 2020 - CRTP 2.446</p>
-                        <p>Especialista em terapias integrativas e práticas holísticas, com mais de 15 anos de experiência no cuidado integral do ser humano.</p>
+                        <p>Especialista em terapias integrativas e práticas holísticas, dedicado ao cuidado integral do ser humano.</p>
                     </div>
                     
                     <div class="beneficios">
@@ -727,6 +833,23 @@
                         <span>Cliente - Radiestesia, Reiki, Alinhamento Energético de Chakras e Cartomancia</span>
                     </div>
                 </div>
+                
+                <div class="depoimento-card">
+                    <div class="depoimento-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Procurei o Celso para sessões de Reiki como parte do meu tratamento para depressão e ansiedade, e desde o início me senti acolhida e em paz. O ambiente é tranquilo e a abordagem dele é muito sensível e respeitosa. As sessões me ajudaram a reduzir a ansiedade, melhorar o sono e me sentir mais equilibrada emocionalmente. Recomendo de coração o trabalho dele."</p>
+                    </div>
+                    <div class="depoimento-author">
+                        <h4>Elizabete</h4>
+                        <span>Cliente - Reiki Usui e Reiki Elemental</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -768,7 +891,7 @@
                         <i class="fas fa-user"></i>
                         <div>
                             <h4>Profissional</h4>
-                            <p>Celso Luiz - Psicólogo desde 2008 - CRP 06/95.331</p>
+                            <p>Celso Luiz</p>
                             <p>Psicoterapeuta holístico desde 2020 - CRTP 2.446</p>
                         </div>
                     </div>
@@ -806,6 +929,7 @@
                             <label for="terapia">Terapia de Interesse</label>
                             <select id="terapia" name="terapia">
                                 <option value="">Selecione uma terapia</option>
+                                <option value="yoga-kundalini">Yoga Kundalini, Meditação &amp; Bioenergética (aulas)</option>
                                 <option value="reiki-usui">Reiki Usui</option>
                                 <option value="reiki-elemental">Reiki Elemental</option>
                                 <option value="reiki-pet">Reiki Pet</option>
@@ -821,7 +945,7 @@
                                 <option value="runas">Runas</option>
                                 <option value="oraculos">Oráculos Diversos</option>
                                 <option value="mapa">Mapa Astral</option>
-                                <option value="psicologia">Psicologia Integrativa</option>
+                                <option value="numerologia-cabalistica">Numerologia Cabalística</option>
                                 <option value="orientacao">Orientação Astrológica</option>
                                 <option value="outro">Outro</option>
                             </select>
@@ -851,6 +975,7 @@
                     <h4>Links Rápidos</h4>
                     <ul>
                         <li><a href="#home">Início</a></li>
+                        <li><a href="yoga-kundalini.html">Yoga &amp; Meditação</a></li>
                         <li><a href="#terapias">Terapias</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#contato">Contato</a></li>
@@ -873,26 +998,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-                <div class="depoimento-card">
-                    <div class="depoimento-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Procurei o Celso para sessões de Reiki como parte do meu tratamento para depressão e ansiedade, e desde o início me senti acolhida e em paz. O ambiente é tranquilo e a abordagem dele é muito sensível e respeitosa. As sessões me ajudaram a reduzir a ansiedade, melhorar o sono e me sentir mais equilibrada emocionalmente. Recomendo de coração o trabalho dele."</p>
-                    </div>
-                    <div class="depoimento-author">
-                        <h4>Elizabete</h4>
-                        <span>Cliente - Reiki Usui e Reiki Elemental</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
