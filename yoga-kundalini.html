@@ -8,825 +8,1293 @@
 <meta name="keywords" content="yoga kundalini, meditação, bioenergética, consciência corporal, aulas de yoga araraquara, iniciantes, pranayama, mantra, kriya">
 <meta name="author" content="Celso Luiz - Lunara Terapias">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1b3a20">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Yoga Kundalini, Meditação &amp; Bioenergética | Lunara Terapias">
-<meta property="og:description" content="Três práticas, um mesmo caminho: voltar para si. Aulas de 50 min, à noite, para iniciantes absolutos, com guia digital incluído.">
-<meta property="og:image" content="assets/yoga_kundalini.png">
+<meta property="og:description" content="Três práticas, um só caminho: corpo enraizado, energia que sobe, silêncio que assenta. Aulas de 50 min para iniciantes absolutos.">
+<meta property="og:image" content="assets/tres-praticas.png">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="assets/yoga_kundalini.png">
+<meta property="twitter:image" content="assets/tres-praticas.png">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLZBB3EN7X"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-PLZBB3EN7X');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-PLZBB3EN7X');
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="icon" type="image/png" href="assets/logo.png">
 
 <script>
 function imgFallback(img){
-  var exts = ['.png','.webp','.jpg','.jpeg'];
-  var base = img.getAttribute('data-base');
-  var i = parseInt(img.getAttribute('data-try') || '0', 10) + 1;
-  if (base && i < exts.length){ img.setAttribute('data-try', i); img.src = base + exts[i]; }
-  else {
-    img.style.display = 'none';
-    var fb = img.nextElementSibling;
-    if (fb && fb.classList.contains('img-fb')) fb.style.display = 'block';
-  }
+  var exts=['.png','.webp','.jpg','.jpeg'];
+  var base=img.getAttribute('data-base');
+  var i=parseInt(img.getAttribute('data-try')||'0',10)+1;
+  if(base&&i<exts.length){img.setAttribute('data-try',i);img.src=base+exts[i];return;}
+  img.style.display='none';
+  var fb=img.nextElementSibling;
+  if(fb&&fb.classList.contains('img-fb'))fb.style.display='block';
+  var host=img.closest('[data-fallback-host]');
+  if(host)host.classList.add('sem-imagem');
 }
 </script>
 
 <style>
+:root{
+  --verde-abismo:#12281a;
+  --verde-profundo:#1b3a20;
+  --verde:#2c5530;
+  --verde-medio:#4a7c59;
+  --verde-salvia:#7fa98c;
+  --verde-claro:#a8d5ba;
+  --ouro:#c9b37c;
+  --ouro-vivo:#e0ce96;
+  --creme:#f5f1e8;
+  --menta:#e8f5f0;
+  --indigo:#2f2a63;
+  --indigo-luz:#6b5fd0;
+  --ambar:#d98f3a;
+  --terra:#8a5a2b;
+  --tinta:#22301f;
+  --tinta-suave:#4c5c4a;
+  --branco:#ffffff;
+  --ok:#3f9d63;
+  --alerta:#e0a63c;
+  --erro:#c9503f;
+  --sombra-s:0 4px 14px rgba(18,40,26,.10);
+  --sombra-m:0 12px 34px rgba(18,40,26,.14);
+  --sombra-l:0 26px 64px rgba(18,40,26,.22);
+  --raio:18px;
+  --nav-h:72px;
+}
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;background:linear-gradient(135deg,#f5f1e8 0%,#e8f5f0 50%,#a8d5ba 100%);background-attachment:fixed;min-height:100vh;overflow-x:hidden}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 18px)}
+body{
+  font-family:'Poppins',system-ui,sans-serif;
+  color:var(--tinta);line-height:1.65;
+  background:
+    radial-gradient(1100px 700px at 8% -8%, rgba(201,179,124,.20), transparent 62%),
+    radial-gradient(900px 620px at 96% 4%, rgba(107,95,208,.14), transparent 60%),
+    radial-gradient(1000px 800px at 50% 108%, rgba(168,213,186,.34), transparent 66%),
+    linear-gradient(168deg,#f7f3ea 0%,#eef6f1 44%,#dfeee6 76%,#cfe6d8 100%);
+  background-attachment:fixed;min-height:100vh;overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.22;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
 
-/* Header */
-.header{background:linear-gradient(135deg,#2c5530 0%,#4a7c59 100%);box-shadow:0 2px 15px rgba(0,0,0,.1);position:fixed;width:100%;top:0;z-index:1000;backdrop-filter:blur(10px);transition:all .3s ease}
-.nav-container{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;max-width:1200px;margin:0 auto}
-.logo{display:flex;align-items:center}
-.logo-img{height:50px;width:auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));transition:transform .3s ease}
-.logo-img:hover{transform:scale(1.05)}
-.img-fb{display:none;color:#fff;font-weight:600;font-size:1.1rem}
-.nav-menu{display:flex;list-style:none;gap:1.5rem;margin:0;padding:0}
-.nav-link{color:#fff;text-decoration:none;font-weight:500;transition:color .3s;padding:.5rem .9rem;border-radius:5px;display:block}
-.nav-link:hover{color:#c9b37c;background:rgba(255,255,255,.1)}
-.hamburger{display:none;flex-direction:column;cursor:pointer;padding:5px}
-.bar{width:25px;height:3px;background:#fff;margin:3px 0;transition:.3s;border-radius:2px}
+/* ---------- scrollbar ---------- */
+*{scrollbar-width:thin;scrollbar-color:var(--verde-medio) rgba(44,85,48,.10)}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:linear-gradient(180deg,rgba(44,85,48,.07),rgba(201,179,124,.12));border-radius:20px}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,var(--verde-medio),var(--verde));
+  border-radius:20px;border:3px solid transparent;background-clip:padding-box;
+}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--ouro),var(--verde-medio));background-clip:padding-box;border:3px solid transparent}
+::-webkit-scrollbar-corner{background:transparent}
+
+/* ---------- progresso ---------- */
+#progresso{
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:1200;
+  background:linear-gradient(90deg,var(--ambar),var(--ouro),var(--verde-claro),var(--indigo-luz));
+  box-shadow:0 0 14px rgba(201,179,124,.75);transition:width .12s linear;
+}
+
+/* ---------- header ---------- */
+.header{
+  position:fixed;top:0;left:0;width:100%;z-index:1100;height:var(--nav-h);
+  background:linear-gradient(120deg,rgba(18,40,26,.97),rgba(44,85,48,.96) 52%,rgba(74,124,89,.96));
+  border-bottom:1px solid rgba(201,179,124,.24);
+  transition:box-shadow .3s ease,background .3s ease;
+}
+.header.rolou{box-shadow:0 10px 34px rgba(18,40,26,.30);background:linear-gradient(120deg,rgba(18,40,26,.99),rgba(27,58,32,.99))}
+.nav-container{max-width:1180px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-img{height:42px;width:auto;filter:drop-shadow(0 3px 8px rgba(0,0,0,.4));transition:transform .35s cubic-bezier(.2,.8,.3,1)}
+.logo:hover .logo-img{transform:rotate(-8deg) scale(1.07)}
+.img-fb{display:none;color:var(--ouro-vivo);font-weight:600;font-size:1.02rem;letter-spacing:.02em}
+.nav-menu{display:flex;list-style:none;gap:.35rem;align-items:center}
+.nav-link{
+  color:#e8f2ea;text-decoration:none;font-size:.88rem;font-weight:500;
+  padding:.5rem .78rem;border-radius:9px;display:block;position:relative;transition:color .25s,background .25s;
+}
+.nav-link::after{
+  content:'';position:absolute;left:.78rem;right:.78rem;bottom:.28rem;height:2px;
+  background:linear-gradient(90deg,var(--ouro),var(--verde-claro));
+  transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.8,.3,1);border-radius:2px;
+}
+.nav-link:hover{color:var(--ouro-vivo);background:rgba(255,255,255,.07)}
+.nav-link:hover::after,.nav-link.ativo::after{transform:scaleX(1)}
+.nav-link.ativo{color:var(--ouro-vivo)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo)!important;
+  font-weight:600;padding:.55rem 1.1rem!important;border-radius:999px;box-shadow:0 4px 16px rgba(201,179,124,.42);
+}
+.nav-cta::after{display:none}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,179,124,.6)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:0}
+.bar{width:24px;height:2.5px;background:var(--ouro-vivo);border-radius:2px;transition:.3s;display:block}
+.hamburger.active .bar:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 .hamburger.active .bar:nth-child(2){opacity:0}
-.hamburger.active .bar:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.hamburger.active .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.hamburger.active .bar:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
 
-/* Hero */
-.hero{background:linear-gradient(135deg,#f5f1e8 0%,#e8f5f0 25%,#d4e4d8 50%,#a8d5ba 75%,#8bb8a6 100%);color:#2c5530;padding:150px 0 100px;text-align:center;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:100vh}
-.hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');opacity:.3;animation:twinkle 4s infinite}
-@keyframes twinkle{0%,100%{opacity:.3}50%{opacity:.6}}
-.hero-content{max-width:800px;margin:0 auto;padding:0 20px;flex:1;z-index:2;position:relative}
-.hero-image{flex:1;display:flex;justify-content:center;align-items:center;max-width:400px;z-index:2;position:relative}
-.hero-logo{max-width:300px;height:auto;border-radius:20px;opacity:.95;animation:float 6s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(0,0,0,.3))}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0)}33%{transform:translateY(-10px) rotate(1deg)}66%{transform:translateY(-5px) rotate(-1deg)}}
-.hero-title{font-size:3rem;font-weight:700;margin-bottom:1rem;color:#2c5530;text-shadow:2px 2px 4px rgba(44,85,48,.1)}
-.hero-subtitle{font-size:1.4rem;margin-bottom:1.5rem;font-weight:300;color:#4a7c59}
-.hero-description{font-size:1.1rem;margin-bottom:2rem;color:#2c5530;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.8}
-.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+/* ---------- hero ---------- */
+.hero{position:relative;padding:calc(var(--nav-h) + 54px) 0 66px;overflow:hidden}
+.hero-aura{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.orbe{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:deriva 22s ease-in-out infinite}
+.orbe.a{width:420px;height:420px;left:-90px;top:-40px;background:radial-gradient(circle,rgba(217,143,58,.55),transparent 70%)}
+.orbe.b{width:520px;height:520px;right:-130px;top:60px;background:radial-gradient(circle,rgba(107,95,208,.42),transparent 70%);animation-delay:-7s}
+.orbe.c{width:380px;height:380px;left:44%;bottom:-160px;background:radial-gradient(circle,rgba(168,213,186,.7),transparent 70%);animation-delay:-13s}
+@keyframes deriva{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(38px,-30px) scale(1.09)}66%{transform:translate(-26px,22px) scale(.95)}}
 
-.btn{padding:15px 30px;border:none;border-radius:50px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .3s ease;font-size:1.1rem;cursor:pointer;position:relative;overflow:hidden;z-index:1}
-.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s;z-index:-1}
-.btn:hover::before{left:100%}
-.btn-primary{background:linear-gradient(135deg,#c9b37c,#d4c189);color:#333;box-shadow:0 4px 15px rgba(201,179,124,.4)}
-.btn-primary:hover{background:linear-gradient(135deg,#d4c189,#e0ce96);transform:translateY(-3px);box-shadow:0 6px 20px rgba(201,179,124,.6)}
-.btn-secondary{background:transparent;color:#2c5530;border:2px solid #2c5530;box-shadow:0 4px 15px rgba(44,85,48,.2)}
-.btn-secondary:hover{background:#2c5530;color:#fff;transform:translateY(-3px)}
-
-/* Sections */
-.section-title{text-align:center;font-size:2.5rem;margin-bottom:2.5rem;color:#333;position:relative;font-weight:600}
-.section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(135deg,#2c5530,#4a7c59);border-radius:2px}
-.section-title::before{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);width:100px;height:1px;background:linear-gradient(135deg,transparent,#2c5530,transparent)}
-.terapias{padding:80px 0;background:rgba(255,255,255,.2);backdrop-filter:blur(5px);position:relative}
-.sobre{background:rgba(255,255,255,.25);padding:80px 0;backdrop-filter:blur(5px)}
-.terapia-category{margin-bottom:2rem;position:relative;z-index:2}
-.category-title{font-size:1.8rem;margin-bottom:1.5rem;color:#2c5530;display:flex;align-items:center;gap:15px;font-weight:600}
-.category-title i{font-size:2rem;background:linear-gradient(135deg,#2c5530,#c9b37c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.terapia-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem}
-.terapia-card{background:rgba(255,255,255,.8);border-radius:20px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.1);transition:all .3s ease;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);position:relative}
-.terapia-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#5f8471,#c9b37c,#5f8471);opacity:0;transition:opacity .3s ease}
-.terapia-card:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,.15)}
-.terapia-card:hover::before{opacity:1}
-.terapia-header{padding:2rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.5rem;transition:all .3s ease}
-.terapia-header:hover{background:rgba(44,85,48,.05)}
-.terapia-image{width:100px;height:100px;border-radius:15px;object-fit:cover;flex-shrink:0;box-shadow:0 4px 15px rgba(0,0,0,.2);transition:transform .3s ease}
-.terapia-header:hover .terapia-image{transform:scale(1.05)}
-.terapia-icone{width:100px;height:100px;border-radius:15px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:2.6rem;color:#fff;background:linear-gradient(135deg,#2c5530,#4a7c59);box-shadow:0 4px 15px rgba(0,0,0,.2);transition:transform .3s ease}
-.terapia-header:hover .terapia-icone{transform:scale(1.05)}
-.terapia-info{width:100%}
-.terapia-header h4{font-size:1.4rem;margin-bottom:1rem;color:#333;display:flex;align-items:center;justify-content:space-between;font-weight:600;gap:10px}
-.expand-icon{font-size:1rem;transition:transform .3s ease;color:#2c5530;flex-shrink:0}
-.terapia-content{max-height:0;overflow:hidden;transition:max-height .4s ease-out;background:rgba(245,243,238,.5)}
-.terapia-content.active{max-height:2600px;transition:max-height .6s ease-in}
-.terapia-content-inner{padding:0 2rem 2rem}
-.terapia-content h5{color:#2c5530;margin-bottom:1rem;margin-top:1.5rem;font-weight:600;font-size:1.1rem}
-.terapia-content h5:first-child{margin-top:1rem}
-.terapia-content p{margin-bottom:1rem;line-height:1.7;color:#555}
-.terapia-content ul{list-style:none;padding-left:0;margin-bottom:1rem}
-.terapia-content li{margin-bottom:.8rem;display:flex;align-items:flex-start;gap:12px;line-height:1.6;color:#555}
-.terapia-content li i{color:#2c5530;margin-top:3px;font-size:.9rem}
-.terapia-content strong{color:#333;font-weight:600}
-
-/* Contato */
-.contato{background:linear-gradient(135deg,#2c5530 0%,#4a7c59 100%);color:#fff;padding:80px 0;position:relative}
-.contato .section-title{color:#fff}
-.contato .section-title::after{background:linear-gradient(135deg,#c9b37c,#d4c189)}
-.contato .section-title::before{background:linear-gradient(135deg,transparent,#c9b37c,transparent)}
-.contato-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:3rem;position:relative;z-index:2}
-.contato-info h3{margin-bottom:1.5rem;font-size:1.8rem;font-weight:600;color:#c9b37c}
-.contato-info>p{margin-bottom:1.5rem;line-height:1.8}
-.contato-item{display:flex;align-items:center;gap:15px;margin-bottom:1.2rem;padding:1rem;background:rgba(255,255,255,.1);border-radius:10px;transition:all .3s ease}
-.contato-item:hover{background:rgba(255,255,255,.2);transform:translateX(5px)}
-.contato-item i{font-size:1.5rem;color:#c9b37c;width:30px;text-align:center;flex-shrink:0}
-.contato-item span{font-size:1.05rem}
-.contato-item a{color:#fff;text-decoration:underline}
-.social-links{display:flex;gap:1rem;margin-top:2rem;justify-content:center;flex-wrap:wrap}
-.social-links a{color:#fff;font-size:1.6rem;transition:all .3s ease;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);text-decoration:none}
-.social-links a:hover{color:#c9b37c;background:rgba(255,255,255,.2);transform:translateY(-3px)}
-.contato-form h3{margin-bottom:2rem;font-size:1.8rem;font-weight:600;color:#c9b37c}
-.form-group{margin-bottom:1.5rem}
-.form-group label{display:block;margin-bottom:.5rem;font-weight:500;color:#f0f0f0}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 15px;border:2px solid rgba(255,255,255,.3);border-radius:10px;font-size:1rem;font-family:'Poppins',sans-serif;background:rgba(255,255,255,.95);color:#333;transition:all .3s ease}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#c9b37c;background:#fff;box-shadow:0 0 0 3px rgba(201,179,124,.2)}
-.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:40px}
-.form-group textarea{min-height:120px;resize:vertical}
-.form-check{display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;line-height:1.6;font-weight:400;color:#f0f0f0}
-.form-check input{width:auto;margin-top:.3rem;flex-shrink:0}
-.btn-form{background:linear-gradient(135deg,#c9b37c,#d4c189);color:#333;border:none;padding:15px 30px;border-radius:10px;font-weight:600;font-size:1.1rem;cursor:pointer;width:100%;transition:all .3s ease;margin-bottom:1rem}
-.btn-form:hover{background:linear-gradient(135deg,#d4c189,#e0ce96);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,179,124,.4)}
-.btn-whatsapp{background:transparent;color:#fff;border:2px solid #fff;width:100%;justify-content:center;padding:15px 30px;margin-top:.5rem}
-.btn-whatsapp:hover{background:#fff;color:#2c5530}
-.status-msg{display:none;margin-top:15px;padding:12px;border-radius:8px;text-align:center;font-weight:500}
-.status-msg.sending{display:block;background:#ffc107;color:#333}
-.status-msg.success{display:block;background:#28a745;color:#fff}
-.status-msg.error{display:block;background:#dc3545;color:#fff}
-.loading{display:inline-block;width:18px;height:18px;border:3px solid rgba(255,255,255,.3);border-radius:50%;border-top-color:#fff;animation:spin 1s linear infinite;vertical-align:middle}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* Footer */
-.footer{background:#333;color:#fff;text-align:center;padding:3rem 0 2rem}
-.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
-.footer-section h4{margin-bottom:1rem;color:#c9b37c;font-weight:600}
-.footer-section p,.footer-section a{color:#ccc;text-decoration:none;margin-bottom:.5rem;display:block;transition:color .3s ease}
-.footer-section a:hover{color:#c9b37c}
-.footer-logo-img{height:60px;width:auto;margin:0 auto 1rem;display:block}
-.footer-bottom{border-top:1px solid #555;padding-top:2rem}
-.footer-bottom p{margin:.5rem 0;color:#aaa}
-
-/* Flutuantes */
-.whatsapp-float{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background:#25d366;color:#fff;border-radius:50%;font-size:30px;box-shadow:2px 2px 8px rgba(0,0,0,.3);z-index:1000;display:flex;align-items:center;justify-content:center;transition:all .3s ease;text-decoration:none;animation:pulse 2s infinite}
-.whatsapp-float:hover{background:#20ba5a;transform:scale(1.1)}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.scroll-top{position:fixed;bottom:120px;right:40px;width:50px;height:50px;background:linear-gradient(135deg,#2c5530,#4a7c59);color:#fff;border:none;border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s ease;z-index:999;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
-.scroll-top.visible{opacity:1;visibility:visible}
-.scroll-top:hover{transform:translateY(-3px)}
-
-/* ===== Componentes desta página (yk-) ===== */
-.yk-lead{font-size:1.05rem;line-height:1.8;color:#4a5c4e;max-width:800px;margin:0 auto 1rem;text-align:center}
-.yk-pill-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0;justify-content:center}
-.yk-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid rgba(44,85,48,.3);border-radius:999px;font-size:.85rem;font-weight:500;color:#2c5530;background:rgba(255,255,255,.5)}
-.yk-note{border-left:3px solid #c9b37c;padding:1rem 1.2rem;margin:1.8rem 0;font-size:.93rem;line-height:1.75;background:rgba(255,255,255,.6);border-radius:0 10px 10px 0;color:#4a5c4e}
-.yk-note strong{color:#2c5530}
-.yk-grid{display:grid;gap:1.2rem;margin-top:1.6rem}
-.yk-grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.yk-grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-.yk-box{border:1px solid rgba(44,85,48,.15);border-radius:15px;padding:1.6rem;background:rgba(255,255,255,.65);box-shadow:0 5px 15px rgba(0,0,0,.06);transition:transform .3s ease}
-.yk-box:hover{transform:translateY(-5px)}
-.yk-box h4{margin:0 0 .6rem;font-size:1.1rem;font-weight:600;color:#2c5530}
-.yk-box p{margin:0;font-size:.94rem;line-height:1.75;color:#555}
-.yk-box i.yk-ico{font-size:1.8rem;margin-bottom:.8rem;display:block;color:#c9b37c}
-.yk-janelas{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;margin-top:1.8rem}
-.yk-janela{border:1px solid rgba(44,85,48,.15);border-radius:12px;padding:.9rem 1.1rem;font-size:.92rem;line-height:1.5;background:rgba(255,255,255,.65);color:#3d5c42}
-.yk-janela b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#c9b37c;margin-bottom:.3rem;font-weight:700}
-.yk-steps{counter-reset:yk;list-style:none;padding:0;margin:2rem 0 0}
-.yk-steps li{counter-increment:yk;position:relative;padding:0 0 1.5rem 3.4rem;border-left:2px solid rgba(44,85,48,.2);margin-left:1rem}
-.yk-steps li:last-child{border-left-color:transparent;padding-bottom:0}
-.yk-steps li::before{content:counter(yk);position:absolute;left:-1rem;top:0;width:2rem;height:2rem;border-radius:50%;background:linear-gradient(135deg,#2c5530,#4a7c59);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600}
-.yk-steps strong{display:block;font-size:1.05rem;margin-bottom:.3rem;color:#2c5530}
-.yk-steps span{font-size:.93rem;line-height:1.7;color:#555}
-.yk-table-wrap{overflow-x:auto;margin-top:1.8rem;border-radius:15px;background:rgba(255,255,255,.65);box-shadow:0 5px 15px rgba(0,0,0,.06)}
-.yk-table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px}
-.yk-table th,.yk-table td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid rgba(44,85,48,.12);vertical-align:top;color:#555}
-.yk-table th{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:#2c5530;font-weight:700;background:rgba(201,179,124,.15)}
-.yk-table tr:last-child td{border-bottom:none}
-.yk-faq{margin-top:1.8rem}
-.yk-faq details{border:1px solid rgba(44,85,48,.15);border-radius:12px;padding:1rem 1.2rem;margin-bottom:.8rem;background:rgba(255,255,255,.65)}
-.yk-faq summary{cursor:pointer;font-weight:500;font-size:1rem;list-style:none;color:#2c5530}
-.yk-faq summary::-webkit-details-marker{display:none}
-.yk-faq summary::after{content:"＋";float:right;color:#c9b37c;font-weight:700}
-.yk-faq details[open] summary::after{content:"－"}
-.yk-faq p{margin:.9rem 0 0;font-size:.94rem;line-height:1.8;color:#555}
-.yk-cta{text-align:center;border:2px solid rgba(201,179,124,.5);border-radius:20px;padding:2.5rem 1.8rem;margin-top:1rem;background:linear-gradient(135deg,rgba(201,179,124,.2),rgba(95,132,113,.2));position:relative;z-index:2}
-.yk-cta h3{margin:0 0 .8rem;font-size:1.6rem;color:#fff}
-.yk-cta p{margin:0 auto 1.6rem;max-width:620px;font-size:.98rem;line-height:1.8;color:#f0f0f0}
-.yk-check{list-style:none;padding:0;margin:.8rem 0 0;font-size:.94rem;line-height:1.8}
-.yk-check li{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.5rem;color:#555}
-.yk-check i{margin-top:.4rem;font-size:.8rem;color:#c9b37c;flex-shrink:0}
-.yk-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;margin-bottom:1rem;color:#2c5530;text-decoration:none;opacity:.8}
-.yk-back:hover{opacity:1;text-decoration:underline}
-
-/* Responsivo */
-@media (max-width:768px){
-.hamburger{display:flex}
-.nav-menu{position:fixed;left:-100%;top:70px;flex-direction:column;background:linear-gradient(135deg,#2c5530 0%,#4a7c59 100%);width:100%;text-align:center;transition:.3s;box-shadow:0 10px 27px rgba(0,0,0,.05);padding:2rem 0}
-.nav-menu.active{left:0}
-.hero{flex-direction:column;padding:120px 0 70px;min-height:auto}
-.hero-content{order:2;margin-top:2rem}
-.hero-image{order:1;margin-bottom:1rem}
-.hero-title{font-size:2.1rem}
-.hero-subtitle{font-size:1.15rem}
-.hero-description{font-size:1rem}
-.hero-logo{max-width:220px}
-.terapia-grid,.contato-grid{grid-template-columns:1fr}
-.terapia-image,.terapia-icone{width:80px;height:80px;font-size:2.1rem}
-.hero-buttons{flex-direction:column;align-items:center}
-.btn{width:100%;max-width:320px;justify-content:center}
-.footer-content{grid-template-columns:1fr}
-.whatsapp-float{bottom:20px;right:20px;width:55px;height:55px;font-size:25px}
-.scroll-top{bottom:90px;right:20px;width:45px;height:45px;font-size:1rem}
-.section-title{font-size:1.9rem}
-.category-title{font-size:1.4rem}
-.yk-cta{padding:1.8rem 1.2rem}
-.yk-cta h3{font-size:1.3rem}
+.hero-intro{max-width:840px;margin:0 auto 2.6rem;text-align:center}
+.hero-voltar{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--verde);text-decoration:none;opacity:.78;margin-bottom:1rem;letter-spacing:.09em;text-transform:uppercase;font-weight:500}
+.hero-voltar:hover{opacity:1;color:var(--terra)}
+.hero-selo{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.34rem .9rem;border-radius:999px;
+  background:linear-gradient(120deg,rgba(217,143,58,.18),rgba(107,95,208,.18));
+  border:1px solid rgba(201,179,124,.55);color:var(--terra);
+  font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:1.1rem;
 }
-@media (max-width:480px){
-.container{padding:0 15px}
-.nav-container{padding:1rem 1.5rem}
-.hero-title{font-size:1.8rem}
-.terapia-header{padding:1.5rem}
-.terapia-content-inner{padding:0 1.5rem 1.5rem}
-.btn{padding:12px 25px;font-size:1rem}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5.4vw,4rem);
+  line-height:1.06;font-weight:600;color:var(--verde-abismo);margin-bottom:.7rem;letter-spacing:-.015em;
 }
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:#f1f1f1}
-::-webkit-scrollbar-thumb{background:linear-gradient(135deg,#2c5530,#4a7c59);border-radius:5px}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2.3vw,1.55rem);color:var(--verde-medio);font-weight:400;margin-bottom:1.1rem}
+.hero-desc{font-size:1rem;color:var(--tinta-suave);line-height:1.85;max-width:660px;margin:0 auto 1.5rem}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.7rem;justify-content:center}
+.pill{
+  display:inline-flex;align-items:center;gap:.45rem;padding:.38rem .85rem;border-radius:999px;
+  font-size:.79rem;font-weight:500;color:var(--verde);background:rgba(255,255,255,.72);
+  border:1px solid rgba(44,85,48,.20);box-shadow:var(--sombra-s);
+}
+.pill i{color:var(--ouro);font-size:.78rem}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:14px 28px;border-radius:999px;font-weight:600;font-size:.97rem;
+  text-decoration:none;border:0;cursor:pointer;position:relative;overflow:hidden;
+  transition:transform .28s cubic-bezier(.2,.8,.3,1),box-shadow .28s,background .28s;font-family:inherit;
+}
+.btn::before{content:'';position:absolute;top:0;left:-110%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);transition:left .6s}
+.btn:hover::before{left:110%}
+.btn-ouro{background:linear-gradient(135deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo);box-shadow:0 6px 20px rgba(201,179,124,.48)}
+.btn-ouro:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(201,179,124,.66)}
+.btn-contorno{background:transparent;color:var(--verde);border:2px solid var(--verde);box-shadow:var(--sombra-s)}
+.btn-contorno:hover{background:var(--verde);color:#fff;transform:translateY(-3px)}
+.btn-verde{background:linear-gradient(135deg,var(--verde),var(--verde-medio));color:#fff;box-shadow:0 6px 20px rgba(44,85,48,.34)}
+.btn-verde:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(44,85,48,.48)}
+
+/* ---------- seções ---------- */
+section{position:relative;padding:78px 0}
+.sec-clara{background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.22))}
+.sec-escura{
+  background:linear-gradient(155deg,var(--verde-abismo) 0%,var(--verde-profundo) 42%,var(--verde) 100%);
+  color:#e9f2eb;
+}
+.sec-escura::before{
+  content:'';position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background:radial-gradient(700px 420px at 12% 0%,rgba(201,179,124,.22),transparent 62%),
+             radial-gradient(620px 400px at 92% 100%,rgba(107,95,208,.28),transparent 62%);
+}
+.rotulo{
+  display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin-bottom:.7rem;
+}
+.sec-escura .rotulo{color:var(--ouro)}
+.rotulo::before{content:'';width:26px;height:2px;background:linear-gradient(90deg,var(--ouro),transparent);border-radius:2px}
+.titulo{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.7vw,2.75rem);
+  font-weight:600;line-height:1.14;color:var(--verde-abismo);margin-bottom:.85rem;letter-spacing:-.01em;
+}
+.sec-escura .titulo{color:#fff}
+.titulo em{font-style:italic;color:var(--terra)}
+.sec-escura .titulo em{color:var(--ouro-vivo)}
+.lead{font-size:1rem;line-height:1.85;color:var(--tinta-suave);max-width:760px}
+.sec-escura .lead{color:#c9dccf}
+.cabeca{margin-bottom:2.4rem}
+.cabeca.centro{text-align:center}
+.cabeca.centro .lead{margin-inline:auto}
+.cabeca.centro .rotulo{justify-content:center}
+
+/* ---------- tríptico panorâmico (hero) ---------- */
+.triptico{
+  position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sombra-l);
+  border:1px solid rgba(201,179,124,.42);background:linear-gradient(120deg,#12281a,#2f2a63);
+  margin-bottom:1.1rem;aspect-ratio:16/7;
+}
+.triptico-img{width:100%;height:100%;display:block;object-fit:cover;animation:respira 20s ease-in-out infinite}
+@keyframes respira{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.triptico-veu{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,40,26,.16) 0%,transparent 34%,rgba(18,40,26,.5) 100%)}
+.triptico-fb{display:none;position:absolute;inset:0}
+.triptico.sem-imagem .triptico-img{display:none}
+.triptico.sem-imagem .triptico-fb{display:flex}
+.triptico-fb>div{flex:1;display:grid;place-items:center;position:relative;overflow:hidden}
+.triptico-fb>div:nth-child(1){background:linear-gradient(150deg,#5c3a17,#d98f3a 135%)}
+.triptico-fb>div:nth-child(2){background:linear-gradient(150deg,#1b3a20,#7fa98c 135%)}
+.triptico-fb>div:nth-child(3){background:linear-gradient(150deg,#201c47,#6b5fd0 135%)}
+.triptico-fb>div::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 125%,rgba(255,255,255,.24),transparent 62%)}
+.triptico-fb i{font-size:clamp(1.9rem,5vw,3.4rem);color:rgba(255,255,255,.92);filter:drop-shadow(0 6px 18px rgba(0,0,0,.4));position:relative;z-index:1}
+
+.zona{
+  position:absolute;top:0;bottom:0;width:33.334%;pointer-events:none;
+  background:rgba(10,22,15,0);
+  transition:background .45s ease,box-shadow .45s ease;
+}
+.zona[data-z="0"]{left:0}
+.zona[data-z="1"]{left:33.333%}
+.zona[data-z="2"]{left:66.666%}
+.triptico.focado .zona{background:rgba(9,20,14,.66)}
+.triptico.focado .zona.acesa{background:rgba(9,20,14,0);box-shadow:inset 0 0 0 2px rgba(224,206,150,.78),inset 0 0 60px rgba(224,206,150,.22)}
+.zona-nome{
+  position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
+  display:inline-flex;align-items:center;gap:.42rem;
+  background:rgba(18,40,26,.74);border:1px solid rgba(224,206,150,.45);color:#f0e6cf;
+  padding:.34rem .82rem;border-radius:999px;font-size:.71rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;white-space:nowrap;transition:all .4s;
+}
+.zona-nome i{font-size:.74rem}
+.zona[data-z="0"] .zona-nome i{color:var(--ambar)}
+.zona[data-z="1"] .zona-nome i{color:var(--verde-claro)}
+.zona[data-z="2"] .zona-nome i{color:var(--indigo-luz)}
+.triptico.focado .zona:not(.acesa) .zona-nome{opacity:.3}
+.zona.acesa .zona-nome{background:linear-gradient(135deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo);border-color:transparent;transform:translateX(-50%) translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.zona.acesa .zona-nome i{color:var(--verde-abismo)}
+
+.triptico-controles{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.1rem}
+.aba{
+  flex:1 1 190px;display:flex;align-items:center;gap:.7rem;padding:.85rem 1.05rem;
+  border-radius:14px;border:1px solid rgba(44,85,48,.2);background:rgba(255,255,255,.78);
+  cursor:pointer;font-family:inherit;font-size:.9rem;font-weight:600;color:var(--verde);
+  transition:all .3s cubic-bezier(.2,.8,.3,1);text-align:left;box-shadow:var(--sombra-s);
+}
+.aba .num{
+  width:28px;height:28px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
+  font-size:.76rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--verde),var(--verde-medio));
+}
+.aba[data-p="0"] .num{background:linear-gradient(135deg,var(--terra),var(--ambar))}
+.aba[data-p="1"] .num{background:linear-gradient(135deg,var(--verde),var(--verde-claro))}
+.aba[data-p="2"] .num{background:linear-gradient(135deg,var(--indigo),var(--indigo-luz))}
+.aba:hover{transform:translateY(-3px);box-shadow:var(--sombra-m);border-color:rgba(201,179,124,.7)}
+.aba.ativa{background:linear-gradient(135deg,var(--verde-profundo),var(--verde));color:#fff;border-color:var(--ouro);box-shadow:var(--sombra-m)}
+.aba.ativa .num{background:linear-gradient(135deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo)}
+.aba-reset{
+  flex:0 0 auto;padding:.85rem 1.15rem;border-radius:14px;border:1px dashed rgba(44,85,48,.35);
+  background:transparent;color:var(--verde-medio);cursor:pointer;font-family:inherit;font-size:.84rem;font-weight:500;
+  transition:all .28s;display:inline-flex;align-items:center;gap:.5rem;
+}
+.aba-reset:hover{background:rgba(44,85,48,.08);border-style:solid;color:var(--verde)}
+.triptico-texto{
+  background:rgba(255,255,255,.8);border:1px solid rgba(201,179,124,.4);
+  border-left:4px solid var(--ouro);border-radius:0 16px 16px 0;padding:1.2rem 1.4rem;
+  box-shadow:var(--sombra-s);min-height:104px;
+}
+.triptico-texto h4{font-size:1.06rem;color:var(--verde-abismo);margin-bottom:.4rem;font-weight:600}
+.triptico-texto p{font-size:.94rem;color:var(--tinta-suave);line-height:1.8;margin:0}
+.triptico-texto .dica{display:inline-flex;align-items:center;gap:.45rem;margin-top:.6rem;font-size:.8rem;color:var(--terra);font-weight:500}
+
+/* ---------- cards práticas ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;margin-top:2.2rem}
+.card{
+  background:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.7);border-radius:var(--raio);
+  overflow:hidden;box-shadow:var(--sombra-s);transition:transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .35s;
+  position:relative;
+}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .4s;z-index:2}
+.card[data-k="0"]::before{background:linear-gradient(90deg,var(--terra),var(--ambar))}
+.card[data-k="1"]::before{background:linear-gradient(90deg,var(--verde),var(--verde-claro))}
+.card[data-k="2"]::before{background:linear-gradient(90deg,var(--indigo),var(--indigo-luz))}
+.card:hover{transform:translateY(-7px);box-shadow:var(--sombra-m)}
+.card:hover::before,.card.aberto::before{transform:scaleX(1)}
+.card-topo{padding:1.6rem 1.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.05rem;cursor:pointer;background:none;border:0;width:100%;font-family:inherit;transition:background .3s}
+.card-topo:hover{background:rgba(44,85,48,.045)}
+.card-midia{width:100px;height:100px;position:relative;flex-shrink:0}
+.card-midia img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:0 8px 22px rgba(18,40,26,.24);transition:transform .38s cubic-bezier(.2,.8,.3,1)}
+.card:hover .card-midia img{transform:scale(1.06) rotate(-2deg)}
+.card-ico{
+  display:none;position:absolute;inset:0;width:100%;height:100%;border-radius:18px;
+  place-items:center;font-size:2.4rem;color:#fff;box-shadow:0 8px 22px rgba(18,40,26,.24);
+  transition:transform .38s cubic-bezier(.2,.8,.3,1);
+}
+.card-midia.sem-imagem img{display:none}
+.card-midia.sem-imagem .card-ico{display:grid}
+.card:hover .card-midia.sem-imagem .card-ico{transform:scale(1.06) rotate(-2deg)}
+.card-ico.a{background:linear-gradient(140deg,var(--terra),var(--ambar))}
+.card-ico.b{background:linear-gradient(140deg,var(--verde),var(--verde-salvia))}
+.card-ico.c{background:linear-gradient(140deg,var(--indigo),var(--indigo-luz))}
+.card-tit{font-size:1.14rem;color:var(--verde-abismo);font-weight:600;display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;line-height:1.3}
+.card-tit i{font-size:.82rem;color:var(--verde-medio);transition:transform .35s;flex-shrink:0}
+.card.aberto .card-tit i{transform:rotate(180deg)}
+.card-resumo{font-size:.88rem;color:var(--tinta-suave);margin:0;line-height:1.65}
+.card-corpo{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.8,.3,1);background:rgba(245,243,238,.6)}
+.card.aberto .card-corpo{max-height:2400px}
+.card-inner{padding:0 1.5rem 1.5rem}
+.card-inner h5{color:var(--verde);font-size:.98rem;font-weight:600;margin:1.25rem 0 .6rem}
+.card-inner h5:first-child{margin-top:1rem}
+.card-inner p{font-size:.91rem;color:var(--tinta-suave);line-height:1.78;margin-bottom:.8rem}
+.card-inner ul{list-style:none;display:grid;gap:.55rem}
+.card-inner li{display:flex;gap:.65rem;font-size:.9rem;color:var(--tinta-suave);line-height:1.65}
+.card-inner li i{color:var(--ouro);margin-top:.28rem;font-size:.78rem;flex-shrink:0}
+.card-inner strong{color:var(--verde-abismo)}
+
+/* ---------- janelas ---------- */
+.janelas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem;margin-top:1.9rem}
+.janela{
+  background:rgba(255,255,255,.09);border:1px solid rgba(201,179,124,.28);border-radius:14px;
+  padding:.9rem 1rem;cursor:pointer;font-family:inherit;text-align:left;color:#dfeee5;
+  transition:all .3s cubic-bezier(.2,.8,.3,1);position:relative;overflow:hidden;
+}
+.janela::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--ouro),var(--verde-claro));transform:scaleY(0);transform-origin:top;transition:transform .35s}
+.janela:hover{background:rgba(255,255,255,.16);transform:translateY(-4px);border-color:rgba(224,206,150,.6)}
+.janela:hover::before,.janela.ativa::before{transform:scaleY(1)}
+.janela.ativa{background:linear-gradient(135deg,rgba(201,179,124,.24),rgba(107,95,208,.2));border-color:var(--ouro)}
+.janela b{display:block;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ouro);margin-bottom:.28rem;font-weight:700}
+.janela span{font-size:.9rem;line-height:1.45;display:block}
+.janela-detalhe{
+  margin-top:1.3rem;background:rgba(255,255,255,.08);border:1px solid rgba(201,179,124,.35);
+  border-radius:16px;padding:1.25rem 1.45rem;display:flex;gap:1.1rem;align-items:flex-start;
+}
+.janela-detalhe .chave{
+  width:46px;height:46px;border-radius:12px;flex-shrink:0;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo);font-weight:700;font-size:1.05rem;
+}
+.janela-detalhe h4{color:#fff;font-size:1.02rem;margin-bottom:.35rem;font-weight:600}
+.janela-detalhe p{color:#c9dccf;font-size:.93rem;line-height:1.75;margin:0}
+.janela-detalhe .pergunta{display:block;margin-top:.55rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--ouro-vivo)}
+
+.pilares{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem;margin-top:2rem}
+.pilar{
+  background:rgba(255,255,255,.08);border:1px solid rgba(201,179,124,.26);border-radius:16px;padding:1.4rem;
+  transition:transform .35s,background .35s;
+}
+.pilar:hover{transform:translateY(-6px);background:rgba(255,255,255,.14)}
+.pilar i{font-size:1.7rem;color:var(--ouro);margin-bottom:.75rem;display:block}
+.pilar h4{color:#fff;font-size:1.02rem;margin-bottom:.45rem;font-weight:600}
+.pilar p{color:#c1d6c6;font-size:.9rem;line-height:1.75;margin:0}
+
+/* ---------- timeline ---------- */
+.passos{list-style:none;margin-top:2rem;position:relative}
+.passos::before{content:'';position:absolute;left:19px;top:8px;bottom:34px;width:2px;background:linear-gradient(180deg,var(--ambar),var(--ouro) 34%,var(--verde-medio) 68%,var(--indigo-luz))}
+.passo{position:relative;padding:0 0 1.5rem 4rem;opacity:0;transform:translateX(-14px);transition:opacity .6s,transform .6s}
+.passo.visivel{opacity:1;transform:none}
+.passo:last-child{padding-bottom:0}
+.passo .marca{
+  position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--verde-profundo),var(--verde-medio));color:var(--ouro-vivo);
+  font-weight:700;font-size:.9rem;border:2px solid var(--creme);box-shadow:var(--sombra-s);z-index:1;
+}
+.passo:nth-child(1) .marca{background:linear-gradient(140deg,var(--terra),var(--ambar))}
+.passo:nth-child(3) .marca{background:linear-gradient(140deg,#5c3a17,var(--ambar))}
+.passo:nth-child(6) .marca{background:linear-gradient(140deg,var(--verde),var(--verde-claro))}
+.passo:nth-child(8) .marca{background:linear-gradient(140deg,var(--indigo),var(--indigo-luz))}
+.passo-cab{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.28rem}
+.passo-cab strong{font-size:1.02rem;color:var(--verde-abismo);font-weight:600}
+.passo-cab .tempo{
+  font-size:.72rem;font-weight:700;letter-spacing:.07em;color:var(--terra);
+  background:rgba(217,143,58,.14);border:1px solid rgba(217,143,58,.34);padding:.14rem .6rem;border-radius:999px;
+}
+.passo p{font-size:.92rem;color:var(--tinta-suave);line-height:1.78;margin:0}
+.barra-tempo{display:flex;height:12px;border-radius:999px;overflow:hidden;margin-top:2rem;box-shadow:var(--sombra-s);border:1px solid rgba(255,255,255,.6)}
+.barra-tempo span{display:block;transition:flex-grow .5s}
+.legenda-tempo{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:.8rem;font-size:.76rem;color:var(--tinta-suave)}
+.legenda-tempo i{width:9px;height:9px;border-radius:3px;display:inline-block;margin-right:.35rem}
+
+/* ---------- nota ---------- */
+.nota{
+  border-left:4px solid var(--ouro);background:rgba(255,255,255,.72);
+  border-radius:0 14px 14px 0;padding:1.05rem 1.25rem;margin-top:1.8rem;
+  font-size:.92rem;line-height:1.8;color:var(--tinta-suave);box-shadow:var(--sombra-s);
+}
+.nota strong{color:var(--verde-abismo)}
+.sec-escura .nota{background:rgba(255,255,255,.08);color:#c9dccf;border-left-color:var(--ouro)}
+.sec-escura .nota strong{color:var(--ouro-vivo)}
+.nota.alerta{border-left-color:var(--alerta);background:rgba(224,166,60,.12)}
+
+/* ---------- tabela ---------- */
+.tabela-wrap{overflow-x:auto;margin-top:1.9rem;border-radius:16px;box-shadow:var(--sombra-m);background:rgba(255,255,255,.88);border:1px solid rgba(201,179,124,.34)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:620px}
+th,td{text-align:left;padding:.85rem 1.05rem;border-bottom:1px solid rgba(44,85,48,.11);vertical-align:top}
+th{background:linear-gradient(120deg,rgba(44,85,48,.1),rgba(201,179,124,.2));font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--verde-abismo);font-weight:700}
+tbody tr{transition:background .25s}
+tbody tr:hover{background:rgba(201,179,124,.13)}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--terra);width:64px}
+td .apoio{display:block;font-size:.76rem;color:var(--verde-medio);margin-top:.15rem}
+
+/* ---------- caixas ---------- */
+.caixas{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.15rem;margin-top:1.9rem}
+.caixa{
+  background:rgba(255,255,255,.82);border:1px solid rgba(44,85,48,.14);border-radius:16px;padding:1.5rem;
+  box-shadow:var(--sombra-s);transition:transform .35s,box-shadow .35s;
+}
+.caixa:hover{transform:translateY(-6px);box-shadow:var(--sombra-m)}
+.caixa>i{font-size:1.65rem;color:var(--ouro);margin-bottom:.75rem;display:block}
+.caixa h4{font-size:1.04rem;color:var(--verde-abismo);margin-bottom:.55rem;font-weight:600}
+.caixa p{font-size:.92rem;color:var(--tinta-suave);line-height:1.78;margin:0}
+.lista-check{list-style:none;display:grid;gap:.55rem;margin-top:.7rem}
+.lista-check li{display:flex;gap:.65rem;font-size:.91rem;color:var(--tinta-suave);line-height:1.65}
+.lista-check i{color:var(--ok);margin-top:.3rem;font-size:.78rem;flex-shrink:0}
+
+/* ---------- faq ---------- */
+.faq{margin-top:1.9rem;display:grid;gap:.7rem}
+.faq details{
+  background:rgba(255,255,255,.82);border:1px solid rgba(44,85,48,.15);border-radius:14px;
+  padding:1rem 1.2rem;transition:box-shadow .3s,border-color .3s;
+}
+.faq details[open]{box-shadow:var(--sombra-s);border-color:rgba(201,179,124,.6)}
+.faq summary{cursor:pointer;font-weight:500;font-size:.97rem;color:var(--verde-abismo);list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--ouro);font-size:1.35rem;font-weight:300;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:.85rem 0 0;font-size:.92rem;color:var(--tinta-suave);line-height:1.82}
+
+/* ---------- inscrição ---------- */
+.cta-demo{
+  text-align:center;border:1px solid rgba(201,179,124,.5);border-radius:22px;padding:2.5rem 1.8rem;
+  background:linear-gradient(140deg,rgba(217,143,58,.2),rgba(107,95,208,.22));
+  box-shadow:var(--sombra-m);position:relative;overflow:hidden;
+}
+.cta-demo::after{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(224,206,150,.28),transparent 70%);top:-140px;right:-90px;pointer-events:none}
+.cta-demo h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin-bottom:.7rem;font-weight:600;position:relative;z-index:1}
+.cta-demo p{max-width:640px;margin:0 auto 1.5rem;color:#d6e6da;font-size:.96rem;line-height:1.82;position:relative;z-index:1}
+.cta-demo .btn{position:relative;z-index:1}
+.grade-contato{display:grid;grid-template-columns:1fr 1.1fr;gap:2.6rem;margin-top:2.8rem;align-items:start}
+.contato-info h3{font-family:'Cormorant Garamond',serif;color:var(--ouro-vivo);font-size:1.7rem;margin-bottom:.6rem;font-weight:600}
+.contato-info>p{color:#c1d6c6;font-size:.94rem;margin-bottom:1.4rem;line-height:1.75}
+.linha-contato{
+  display:flex;align-items:center;gap:.9rem;padding:.85rem 1rem;margin-bottom:.65rem;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.09);border-radius:12px;
+  transition:background .3s,transform .3s;font-size:.93rem;color:#e2eee5;
+}
+.linha-contato:hover{background:rgba(255,255,255,.15);transform:translateX(5px)}
+.linha-contato i{color:var(--ouro);width:22px;text-align:center;font-size:1.05rem;flex-shrink:0}
+.linha-contato a{color:var(--ouro-vivo);text-decoration:none;border-bottom:1px dotted rgba(224,206,150,.5)}
+.linha-contato a:hover{color:#fff}
+.sociais{display:flex;gap:.7rem;margin-top:1.4rem;flex-wrap:wrap}
+.sociais a{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#e9f2eb;font-size:1.15rem;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);text-decoration:none;transition:all .3s;
+}
+.sociais a:hover{background:var(--ouro);color:var(--verde-abismo);transform:translateY(-4px)}
+.form-cartao{
+  background:rgba(255,255,255,.07);border:1px solid rgba(201,179,124,.32);border-radius:20px;padding:1.9rem;
+  box-shadow:var(--sombra-m);
+}
+.form-cartao h3{font-family:'Cormorant Garamond',serif;color:var(--ouro-vivo);font-size:1.55rem;margin-bottom:1.3rem;font-weight:600}
+.campo{margin-bottom:1.05rem}
+.campo label{display:block;font-size:.83rem;font-weight:500;color:#cfe0d3;margin-bottom:.4rem;letter-spacing:.02em}
+.campo input,.campo select,.campo textarea{
+  width:100%;padding:12px 14px;border-radius:11px;font-family:inherit;font-size:.94rem;
+  border:1.5px solid rgba(255,255,255,.24);background:rgba(255,255,255,.94);color:var(--tinta);
+  transition:border-color .25s,box-shadow .25s,background .25s;
+}
+.campo textarea{min-height:112px;resize:vertical}
+.campo select{
+  appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:38px;
+  background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c5530' stroke-width='2.4' stroke-linecap='round'%3e%3cpolyline points='6,9 12,15 18,9'/%3e%3c/svg%3e");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:15px;
+}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:0;border-color:var(--ouro);background:#fff;box-shadow:0 0 0 3px rgba(201,179,124,.3)}
+.campo input.invalido,.campo textarea.invalido{border-color:var(--erro);background:rgba(201,80,63,.08)}
+.check{display:flex;gap:.7rem;align-items:flex-start;font-size:.84rem;color:#cfe0d3;line-height:1.6;cursor:pointer}
+.check input{width:17px;height:17px;margin-top:.18rem;flex-shrink:0;accent-color:var(--ouro);cursor:pointer}
+.btn-enviar{
+  width:100%;padding:14px;border-radius:12px;border:0;cursor:pointer;font-family:inherit;font-weight:600;font-size:1rem;
+  background:linear-gradient(135deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo);
+  transition:transform .28s,box-shadow .28s;display:flex;align-items:center;justify-content:center;gap:.6rem;
+}
+.btn-enviar:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 10px 26px rgba(201,179,124,.5)}
+.btn-enviar:disabled{opacity:.72;cursor:wait}
+.btn-zap{
+  width:100%;margin-top:.7rem;padding:13px;border-radius:12px;background:transparent;color:#fff;
+  border:2px solid rgba(255,255,255,.55);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:.6rem;
+  font-weight:600;font-size:.95rem;transition:all .28s;
+}
+.btn-zap:hover{background:#fff;color:var(--verde)}
+.aviso{display:none;margin-top:.9rem;padding:.85rem 1rem;border-radius:11px;font-size:.88rem;text-align:center;line-height:1.6}
+.aviso.enviando{display:block;background:rgba(224,166,60,.9);color:#2b2100}
+.aviso.ok{display:block;background:rgba(63,157,99,.94);color:#fff}
+.aviso.erro{display:block;background:rgba(201,80,63,.94);color:#fff}
+.girando{width:16px;height:16px;border:2.5px solid rgba(18,40,26,.28);border-top-color:var(--verde-abismo);border-radius:50%;animation:gira .8s linear infinite;display:inline-block}
+@keyframes gira{to{transform:rotate(360deg)}}
+
+/* ---------- rodapé ---------- */
+.rodape{background:linear-gradient(180deg,#161f18,#0e150f);color:#b9c9bd;padding:3.2rem 0 1.8rem;position:relative}
+.rodape::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ambar),var(--ouro),var(--verde-claro),var(--indigo-luz))}
+.rodape-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2rem;margin-bottom:2rem}
+.rodape h4{color:var(--ouro);font-size:.95rem;margin-bottom:.9rem;font-weight:600;letter-spacing:.03em}
+.rodape p,.rodape a{color:#9fb3a4;font-size:.87rem;text-decoration:none;display:block;margin-bottom:.45rem;line-height:1.65;transition:color .25s}
+.rodape a:hover{color:var(--ouro-vivo)}
+.rodape-logo{height:52px;width:auto;margin-bottom:.9rem}
+.rodape-base{border-top:1px solid rgba(255,255,255,.09);padding-top:1.5rem;text-align:center}
+.rodape-base p{font-size:.8rem;color:#7d9184;margin-bottom:.4rem}
+
+/* ---------- flutuantes ---------- */
+.zap-flutua{
+  position:fixed;right:26px;bottom:26px;width:58px;height:58px;border-radius:50%;z-index:1050;
+  background:linear-gradient(140deg,#25d366,#1da851);color:#fff;display:grid;place-items:center;font-size:1.7rem;
+  box-shadow:0 8px 26px rgba(37,211,102,.46);text-decoration:none;transition:transform .3s;animation:pulsa 2.6s ease-in-out infinite;
+}
+.zap-flutua:hover{transform:scale(1.1)}
+@keyframes pulsa{0%,100%{box-shadow:0 8px 26px rgba(37,211,102,.46)}50%{box-shadow:0 8px 34px rgba(37,211,102,.72)}}
+.topo-btn{
+  position:fixed;right:30px;bottom:96px;width:46px;height:46px;border-radius:50%;z-index:1049;border:0;cursor:pointer;
+  background:linear-gradient(140deg,var(--verde),var(--verde-medio));color:var(--ouro-vivo);font-size:1rem;
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:all .32s;box-shadow:var(--sombra-m);
+}
+.topo-btn.visivel{opacity:1;visibility:visible;transform:none}
+.topo-btn:hover{background:linear-gradient(140deg,var(--ouro),var(--ouro-vivo));color:var(--verde-abismo)}
+
+/* ---------- reveal ---------- */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.8,.3,1),transform .75s cubic-bezier(.2,.8,.3,1)}
+.rev.visivel{opacity:1;transform:none}
+.rev.d1{transition-delay:.09s}.rev.d2{transition-delay:.18s}.rev.d3{transition-delay:.27s}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.btn:focus,.nav-link:focus,input:focus,textarea:focus,button:focus,summary:focus{outline:2px solid #c9b37c;outline-offset:2px}
-@media print{.header,.whatsapp-float,.scroll-top{display:none!important}body{background:#fff!important}}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[role="button"]:focus-visible{outline:2px solid var(--ouro);outline-offset:3px;border-radius:6px}
+
+/* ---------- responsivo ---------- */
+@media(max-width:980px){
+  .grade-contato{grid-template-columns:1fr;gap:2rem}
+}
+@media(max-width:768px){
+  :root{--nav-h:64px}
+  .hamburger{display:flex}
+  .nav-menu{
+    position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:.2rem;
+    background:linear-gradient(160deg,var(--verde-abismo),var(--verde));padding:1.1rem 1.2rem 1.5rem;
+    transform:translateY(-14px);opacity:0;visibility:hidden;pointer-events:none;
+    transition:transform .35s cubic-bezier(.2,.8,.3,1),opacity .3s,visibility .3s;
+    box-shadow:0 20px 40px rgba(0,0,0,.36);max-height:calc(100vh - var(--nav-h));overflow-y:auto;
+    border-bottom:1px solid rgba(201,179,124,.25);
+  }
+  .nav-menu.aberto{transform:none;opacity:1;visibility:visible;pointer-events:auto}
+  .nav-link{padding:.75rem .9rem;font-size:.95rem}
+  .nav-link::after{display:none}
+  .nav-cta{text-align:center;margin-top:.5rem}
+  section{padding:56px 0}
+  .hero{padding:calc(var(--nav-h) + 36px) 0 48px}
+  .hero-intro{margin-bottom:2rem}
+  .triptico{aspect-ratio:4/3;border-radius:20px}
+  .zona-nome{font-size:.56rem;padding:.24rem .5rem;bottom:10px;gap:.28rem}
+  .zona-nome i{font-size:.62rem}
+  .aba{flex:1 1 100%}
+  .aba-reset{flex:1 1 100%;justify-content:center}
+  .hero-acoes .btn{width:100%}
+  .passos::before{left:15px}
+  .passo{padding-left:3.2rem}
+  .passo .marca{width:32px;height:32px;font-size:.78rem}
+  .zap-flutua{right:16px;bottom:16px;width:52px;height:52px;font-size:1.5rem}
+  .topo-btn{right:19px;bottom:80px;width:42px;height:42px}
+  .form-cartao{padding:1.4rem}
+  .janela-detalhe{flex-direction:column;gap:.8rem}
+  .cta-demo{padding:1.9rem 1.2rem}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .cards{grid-template-columns:1fr}
+  .janelas{grid-template-columns:1fr 1fr}
+  .pilares{grid-template-columns:1fr}
+  .caixas{grid-template-columns:1fr}
+  .card-midia{width:88px;height:88px}
+  .card-ico{font-size:2.1rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rev{opacity:1;transform:none}
+  .passo{opacity:1;transform:none}
+}
+@media print{.header,.zap-flutua,.topo-btn,#progresso{display:none!important}body{background:#fff}}
 </style>
 </head>
 <body>
 
-<a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Vi%20a%20p%C3%A1gina%20de%20Yoga%20Kundalini%20e%20quero%20saber%20mais." target="_blank" class="whatsapp-float" title="Conversar no WhatsApp" aria-label="Abrir conversa no WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<button class="scroll-top" onclick="scrollToTop()" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+<div id="progresso" role="presentation"></div>
 
-<!-- Header -->
-<header class="header">
-<nav class="navbar" role="navigation" aria-label="Menu principal">
-<div class="nav-container">
-<div class="logo">
-<a href="index.html"><img src="assets/logo.png" data-base="assets/logo" data-try="0" onerror="imgFallback(this)" alt="Lunara Terapias" class="logo-img"></a>
-<span class="img-fb">Lunara Terapias</span>
-</div>
-<ul class="nav-menu">
-<li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-<li class="nav-item"><a href="#praticas" class="nav-link">As Práticas</a></li>
-<li class="nav-item"><a href="#janelas" class="nav-link">As 11 Janelas</a></li>
-<li class="nav-item"><a href="#aula" class="nav-link">A Aula</a></li>
-<li class="nav-item"><a href="#ciclo" class="nav-link">O Ciclo</a></li>
-<li class="nav-item"><a href="#faq" class="nav-link">Dúvidas</a></li>
-<li class="nav-item"><a href="#inscricao" class="nav-link">Inscrição</a></li>
-</ul>
-<div class="hamburger" aria-label="Menu mobile" role="button" tabindex="0"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-</div>
-</nav>
+<a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Vi%20a%20p%C3%A1gina%20de%20Yoga%20Kundalini%20e%20quero%20saber%20mais." target="_blank" rel="noopener" class="zap-flutua" aria-label="Conversar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="topo-btn" id="topoBtn" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+
+<header class="header" id="cabecalho">
+  <nav class="nav-container" aria-label="Menu principal">
+    <a href="index.html" class="logo" data-fallback-host>
+      <img src="assets/logo.png" data-base="assets/logo" data-try="0" onerror="imgFallback(this)" alt="Lunara Terapias" class="logo-img">
+      <span class="img-fb">Lunara Terapias</span>
+    </a>
+    <ul class="nav-menu" id="menu">
+      <li><a href="index.html" class="nav-link">Início</a></li>
+      <li><a href="#praticas" class="nav-link" data-alvo="praticas">As Práticas</a></li>
+      <li><a href="#janelas" class="nav-link" data-alvo="janelas">11 Janelas</a></li>
+      <li><a href="#aula" class="nav-link" data-alvo="aula">A Aula</a></li>
+      <li><a href="#ciclo" class="nav-link" data-alvo="ciclo">O Ciclo</a></li>
+      <li><a href="#faq" class="nav-link" data-alvo="faq">Dúvidas</a></li>
+      <li><a href="#inscricao" class="nav-link nav-cta" data-alvo="inscricao">Quero participar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </nav>
 </header>
 
-<!-- Hero -->
-<section id="home" class="hero">
-<div class="hero-content">
-<a href="index.html" class="yk-back"><i class="fas fa-arrow-left"></i> Lunara Terapias</a>
-<h1 class="hero-title">Yoga Kundalini, Meditação &amp; Bioenergética</h1>
-<p class="hero-subtitle">Três práticas, um mesmo caminho: voltar para si.</p>
-<p class="hero-description">Aulas presenciais noturnas de 50 minutos, em grupo, para <strong>iniciantes absolutos</strong>. Você não precisa ser flexível, experiente ou "espiritual" — precisa só chegar e respirar. Cada aula trabalha uma área da consciência, e você leva para casa um guia digital completo para praticar entre os encontros.</p>
-<div class="yk-pill-row">
-<span class="yk-pill"><i class="fas fa-clock"></i> 50 minutos</span>
-<span class="yk-pill"><i class="fas fa-moon"></i> Período noturno</span>
-<span class="yk-pill"><i class="fas fa-users"></i> Turma em grupo</span>
-<span class="yk-pill"><i class="fas fa-chair"></i> Cadeira sempre disponível</span>
-<span class="yk-pill"><i class="fas fa-seedling"></i> Sem experiência prévia</span>
-</div>
-<div class="hero-buttons">
-<a href="#inscricao" class="btn btn-primary"><i class="fas fa-heart"></i> Quero participar</a>
-<a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" class="btn btn-secondary"><i class="fas fa-book-open"></i> Ver o guia do aluno</a>
-</div>
-</div>
-<div class="hero-image">
-<img src="assets/yoga_kundalini.png" data-base="assets/yoga_kundalini" data-try="0" onerror="imgFallback(this)" alt="Yoga Kundalini e Meditação" class="hero-logo">
-</div>
+<!-- HERO — panorama das três práticas juntas -->
+<section class="hero" id="home">
+  <div class="hero-aura" aria-hidden="true">
+    <span class="orbe a"></span><span class="orbe b"></span><span class="orbe c"></span>
+  </div>
+  <div class="container">
+    <div class="hero-intro">
+      <a href="index.html" class="hero-voltar"><i class="fas fa-arrow-left"></i> Lunara Terapias</a>
+      <div class="hero-selo"><i class="fas fa-om"></i> Aulas presenciais · Araraquara</div>
+      <h1>Yoga Kundalini, Meditação<br>&amp; <em>Bioenergética</em></h1>
+      <p class="hero-sub">Três práticas, um só caminho: voltar para si.</p>
+      <p class="hero-desc">Aulas noturnas de 50 minutos, em grupo, para <strong>iniciantes absolutos</strong>. Você não precisa ser flexível, experiente ou "espiritual" — precisa só chegar e respirar. Cada aula cuida de uma área da consciência, e você leva para casa um guia digital completo para praticar entre os encontros.</p>
+      <div class="pills">
+        <span class="pill"><i class="fas fa-clock"></i> 50 minutos</span>
+        <span class="pill"><i class="fas fa-moon"></i> Noturno</span>
+        <span class="pill"><i class="fas fa-users"></i> Em grupo</span>
+        <span class="pill"><i class="fas fa-chair"></i> Cadeira sempre válida</span>
+        <span class="pill"><i class="fas fa-seedling"></i> Sem experiência</span>
+      </div>
+      <div class="hero-acoes">
+        <a href="#inscricao" class="btn btn-ouro"><i class="fas fa-heart"></i> Quero participar</a>
+        <a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" rel="noopener" class="btn btn-contorno"><i class="fas fa-book-open"></i> Ver o guia do aluno</a>
+      </div>
+    </div>
+
+    <div class="triptico rev" id="triptico" data-fallback-host>
+      <img src="assets/tres-praticas.png" data-base="assets/tres-praticas" data-try="0" onerror="imgFallback(this)" alt="As três práticas em transição: corpo enraizado, energia que sobe, silêncio que assenta" class="triptico-img">
+      <div class="triptico-fb" aria-hidden="true">
+        <div><i class="fas fa-shoe-prints"></i></div>
+        <div><i class="fas fa-om"></i></div>
+        <div><i class="fas fa-spa"></i></div>
+      </div>
+      <span class="triptico-veu" aria-hidden="true"></span>
+      <div class="zona" data-z="0"><span class="zona-nome"><i class="fas fa-shoe-prints"></i> Bioenergética</span></div>
+      <div class="zona" data-z="1"><span class="zona-nome"><i class="fas fa-om"></i> Yoga Kundalini</span></div>
+      <div class="zona" data-z="2"><span class="zona-nome"><i class="fas fa-spa"></i> Meditação</span></div>
+    </div>
+
+    <div class="triptico-controles rev d1" role="group" aria-label="Selecionar prática em destaque">
+      <button class="aba" data-p="0" aria-pressed="false"><span class="num">1</span> Bioenergética</button>
+      <button class="aba" data-p="1" aria-pressed="false"><span class="num">2</span> Yoga Kundalini</button>
+      <button class="aba" data-p="2" aria-pressed="false"><span class="num">3</span> Meditação</button>
+      <button class="aba-reset" id="verTudo"><i class="fas fa-expand"></i> Ver o percurso inteiro</button>
+    </div>
+
+    <div class="triptico-texto rev d1" id="tripticoTexto" aria-live="polite">
+      <h4>Um só movimento, do chão ao silêncio</h4>
+      <p>A aula começa enraizando o corpo, segue mobilizando a energia pela respiração e pelo movimento, e termina dissolvendo tudo no silêncio. Cada prática prepara a seguinte — é por isso que elas não se ensinam separadas.</p>
+      <span class="dica"><i class="fas fa-hand-pointer"></i> Toque em uma das três acima para isolá-la na imagem.</span>
+    </div>
+  </div>
 </section>
 
-<!-- As três práticas -->
-<section id="praticas" class="terapias">
-<div class="container">
-<h2 class="section-title">As três práticas — e por que juntas</h2>
-<p class="yk-lead">Cada uma trabalha uma porta de entrada diferente. O corpo abre pela respiração e pelo movimento; o som abre pela vibração; a percepção corporal abre pelo que está tenso e não foi escutado. Juntas, elas se sustentam: a prática física prepara o silêncio, e o silêncio dá sentido à prática física.</p>
+<!-- AS TRÊS PRÁTICAS — uma imagem para cada -->
+<section id="praticas" class="sec-clara">
+  <div class="container">
+    <div class="cabeca centro rev">
+      <div class="rotulo"><i class="fas fa-layer-group"></i> Uma a uma</div>
+      <h2 class="titulo">As três práticas — e por que <em>juntas</em></h2>
+      <p class="lead">Cada uma trabalha uma porta de entrada diferente. O corpo abre pela respiração e pelo movimento; o som abre pela vibração; a percepção corporal abre pelo que está tenso e não foi escutado. Toque em cada cartão para abrir a explicação completa.</p>
+    </div>
 
-<div class="terapia-category">
-<div class="terapia-grid">
+    <div class="cards">
+      <article class="card rev" data-k="0">
+        <div class="card-topo" role="button" tabindex="0" aria-expanded="false">
+          <span class="card-midia" data-fallback-host>
+           <img src="assets/bioenergetica.png" data-base="assets/bioenergetica" data-try="0" onerror="imgFallback(this)" alt="Bioenergética e consciência corporal">
+            <span class="card-ico a"><i class="fas fa-shoe-prints"></i></span>
+          </span>
+          <span class="card-tit">Bioenergética &amp; Consciência Corporal <i class="fas fa-chevron-down"></i></span>
+          <span class="card-resumo">Enraizamento, liberação de tensão e percepção do corpo em movimento.</span>
+        </div>
+        <div class="card-corpo"><div class="card-inner">
+          <h5>O que é</h5>
+          <p>O trabalho de voltar a habitar o corpo. Usamos "bioenergética" aqui como <strong>vocabulário de consciência corporal</strong>: perceber onde a tensão se instala, dar chão ao corpo e permitir que a energia se mova em vez de ficar retida.</p>
+          <h5>Como aparece na aula</h5>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Enraizamento em pé</strong> — pés paralelos, joelhos moles, peso descendo</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Tremor como descarga</strong> — se as pernas vibrarem, é tensão saindo; não é erro</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Abertura com som</strong> — soltar pela boca o que ficou preso no peito</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Soltura de ombros, mandíbula e garganta</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Varredura corporal no relaxamento — dos pés ao rosto</span></li>
+          </ul>
+          <h5>O relaxamento é inegociável</h5>
+          <p>Toda aula tem de 7 a 10 minutos de relaxamento deitado, com manta. É ali que o corpo absorve o que fez. Levantar direto depois dos exercícios é como tirar o bolo do forno antes da hora.</p>
+        </div></div>
+      </article>
 
-<div class="terapia-card">
-<div class="terapia-header" onclick="toggleContent(this)">
-<img src="assets/yoga_kundalini.png" data-base="assets/yoga_kundalini" data-try="0" onerror="imgFallback(this)" alt="Yoga Kundalini" class="terapia-image">
-<div class="terapia-info">
-<h4>Yoga Kundalini <i class="fas fa-chevron-down expand-icon"></i></h4>
-<p>Sequências de movimento, respiração e som — o "Yoga da Consciência".</p>
-</div>
-</div>
-<div class="terapia-content">
-<div class="terapia-content-inner">
-<h5>O que é</h5>
-<p>Uma tradição do yoga que combina <strong>kriyas</strong> (sequências de exercícios em ordem fixa, com um efeito específico), <strong>pranayama</strong> (técnicas respiratórias), <strong>mudras</strong> (selos das mãos) e <strong>mantras</strong> (sons com direção). Não é uma aula de alongamento nem de performance física.</p>
-<h5>Como é na prática</h5>
-<p>Exercícios curtos, de 1 a 3 minutos, com descansos entre eles. Muitos são sentados. Cada um tem versão suave. A coluna é o eixo do trabalho: flexões, torções e aberturas coordenadas com a respiração.</p>
-<h5>O que você aprende no ciclo</h5>
-<ul>
-<li><i class="fas fa-check-circle"></i> Respiração longa e profunda — a base de tudo</li>
-<li><i class="fas fa-check-circle"></i> Respiração pela narina esquerda e alternada</li>
-<li><i class="fas fa-check-circle"></i> Respiração de 4 partes, para recarregar</li>
-<li><i class="fas fa-check-circle"></i> Dez mudras, com função e momento de uso</li>
-<li><i class="fas fa-check-circle"></i> Dezessete exercícios guiados passo a passo</li>
-</ul>
-</div>
-</div>
-</div>
+      <article class="card rev d1" data-k="1">
+        <div class="card-topo" role="button" tabindex="0" aria-expanded="false">
+          <span class="card-midia" data-fallback-host>
+            <img src="assets/yoga_kundalini.png" data-base="assets/yoga_kundalini" data-try="0" onerror="imgFallback(this)" alt="Yoga Kundalini">
+            <span class="card-ico b"><i class="fas fa-om"></i></span>
+          </span>
+          <span class="card-tit">Yoga Kundalini <i class="fas fa-chevron-down"></i></span>
+          <span class="card-resumo">Sequências de movimento, respiração e som — o "Yoga da Consciência".</span>
+        </div>
+        <div class="card-corpo"><div class="card-inner">
+          <h5>O que é</h5>
+          <p>Uma tradição do yoga que combina <strong>kriyas</strong> (sequências em ordem fixa, com efeito específico), <strong>pranayama</strong> (técnicas respiratórias), <strong>mudras</strong> (selos das mãos) e <strong>mantras</strong> (sons com direção). Não é aula de alongamento nem de performance física.</p>
+          <h5>Como é na prática</h5>
+          <p>Exercícios curtos, de 1 a 3 minutos, com descansos entre eles. Muitos são sentados. Cada um tem versão suave. A coluna é o eixo do trabalho: flexões, torções e aberturas coordenadas com a respiração.</p>
+          <h5>O que você aprende no ciclo</h5>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <span>Respiração longa e profunda — a base de tudo</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Respiração pela narina esquerda e alternada</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Respiração de 4 partes, para recarregar</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Dez mudras, com função e momento de uso</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Dezessete exercícios guiados passo a passo</span></li>
+          </ul>
+        </div></div>
+      </article>
 
-<div class="terapia-card">
-<div class="terapia-header" onclick="toggleContent(this)">
-<div class="terapia-icone"><i class="fas fa-spa"></i></div>
-<div class="terapia-info">
-<h4>Meditação <i class="fas fa-chevron-down expand-icon"></i></h4>
-<p>Mantra, respiração e silêncio — com pronúncia ensinada sílaba por sílaba.</p>
-</div>
-</div>
-<div class="terapia-content">
-<div class="terapia-content-inner">
-<h5>O que é</h5>
-<p>Meditar não é parar a mente — é trocar de canal. Aqui você aprende técnicas concretas: onde colocar a atenção, o que fazer com o ar, como dizer cada sílaba e como encerrar. Nada de "esvaziar a cabeça".</p>
-<h5>O repertório do ciclo</h5>
-<ul>
-<li><i class="fas fa-check-circle"></i> <strong>Ong Namo Guru Dev Namo</strong> — a sintonização que abre toda aula</li>
-<li><i class="fas fa-check-circle"></i> <strong>Sat Kar Tar</strong> — autenticidade, com movimento das mãos</li>
-<li><i class="fas fa-check-circle"></i> <strong>Long Sat Nams</strong> — para neutralizar a tensão do dia</li>
-<li><i class="fas fa-check-circle"></i> <strong>Wha Hey Guru</strong> — equanimidade, sem controlar a respiração</li>
-<li><i class="fas fa-check-circle"></i> <strong>Om So Ham</strong> — reconhecimento da própria luz</li>
-<li><i class="fas fa-check-circle"></i> <strong>Kirtan Kriya</strong> — voz alta, sussurro e silêncio, com selos dos dedos</li>
-<li><i class="fas fa-check-circle"></i> <strong>Silêncio e Escuta</strong> — ouvir a própria intuição</li>
-<li><i class="fas fa-check-circle"></i> <strong>Gurprasad</strong> — o momento de receber</li>
-</ul>
-<h5>Por que meditar</h5>
-<p>A resposta da tradição é simples: as respostas que você procura estão dentro, não fora. E a prática não termina quando você levanta — ela se mede ao longo do dia, em como você trata a primeira pessoa que cruza seu caminho.</p>
-</div>
-</div>
-</div>
-
-<div class="terapia-card">
-<div class="terapia-header" onclick="toggleContent(this)">
-<div class="terapia-icone"><i class="fas fa-person-rays"></i></div>
-<div class="terapia-info">
-<h4>Bioenergética &amp; Consciência Corporal <i class="fas fa-chevron-down expand-icon"></i></h4>
-<p>Enraizamento, liberação de tensão e percepção do corpo em movimento.</p>
-</div>
-</div>
-<div class="terapia-content">
-<div class="terapia-content-inner">
-<h5>O que é</h5>
-<p>O trabalho de voltar a habitar o corpo. Usamos "bioenergética" aqui como <strong>vocabulário de consciência corporal</strong>: perceber onde a tensão se instala, dar chão ao corpo e permitir que a energia se mova em vez de ficar retida.</p>
-<h5>Como aparece na aula</h5>
-<ul>
-<li><i class="fas fa-check-circle"></i> <strong>Enraizamento em pé</strong> — pés paralelos, joelhos moles, peso descendo</li>
-<li><i class="fas fa-check-circle"></i> <strong>Tremor como descarga</strong> — se as pernas vibrarem, é tensão saindo; não é erro</li>
-<li><i class="fas fa-check-circle"></i> <strong>Abertura com som</strong> — soltar pela boca o que ficou preso no peito</li>
-<li><i class="fas fa-check-circle"></i> <strong>Soltura de ombros, mandíbula e garganta</strong></li>
-<li><i class="fas fa-check-circle"></i> <strong>Varredura corporal no relaxamento</strong> — dos pés ao rosto, soltando cada região</li>
-</ul>
-<h5>O relaxamento é inegociável</h5>
-<p>Toda aula tem de 7 a 10 minutos de relaxamento deitado, com manta. É ali que o corpo absorve o que fez. Levantar direto depois dos exercícios é como tirar o bolo do forno antes da hora.</p>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
+      <article class="card rev d2" data-k="2">
+        <div class="card-topo" role="button" tabindex="0" aria-expanded="false">
+          <span class="card-midia" data-fallback-host>
+            <img src="assets/meditacao.png" data-base="assets/meditacao" data-try="0" onerror="imgFallback(this)" alt="Meditação">
+            <span class="card-ico c"><i class="fas fa-spa"></i></span>
+          </span>
+          <span class="card-tit">Meditação <i class="fas fa-chevron-down"></i></span>
+          <span class="card-resumo">Mantra, respiração e silêncio — com pronúncia ensinada sílaba por sílaba.</span>
+        </div>
+        <div class="card-corpo"><div class="card-inner">
+          <h5>O que é</h5>
+          <p>Meditar não é parar a mente — é trocar de canal. Você aprende técnicas concretas: onde colocar a atenção, o que fazer com o ar, como dizer cada sílaba e como encerrar. Nada de "esvaziar a cabeça".</p>
+          <h5>O repertório do ciclo</h5>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Ong Namo Guru Dev Namo</strong> — a sintonização que abre toda aula</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Sat Kar Tar</strong> — autenticidade, com movimento das mãos</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Long Sat Nams</strong> — neutralizar a tensão do dia</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Wha Hey Guru</strong> — equanimidade, sem controlar a respiração</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Om So Ham</strong> — reconhecimento da própria luz</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Kirtan Kriya</strong> — voz alta, sussurro e silêncio, com selos dos dedos</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Silêncio e Escuta</strong> — ouvir a própria intuição</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Gurprasad</strong> — o momento de receber</span></li>
+          </ul>
+          <h5>Por que meditar</h5>
+          <p>As respostas que você procura estão dentro, não fora. E a prática não termina quando você levanta — ela se mede ao longo do dia, em como você trata a primeira pessoa que cruza seu caminho.</p>
+        </div></div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- As 11 janelas -->
-<section id="janelas" class="sobre">
-<div class="container">
-<h2 class="section-title">A metáfora que organiza o curso: as 11 janelas</h2>
-<p class="yk-lead">Você é uma casa com 11 janelas. A luz do sol já existe do lado de fora — é a sua alma, já completa. <strong>Nosso trabalho não é fabricar luz: é limpar as janelas.</strong> Quando uma fica transparente, a qualidade dela aparece sozinha.</p>
-<p class="yk-lead">Por isso não tentamos "cultivar" calma ou coragem à força. Trabalhamos a condição; a qualidade vem depois. Cada semana do ciclo limpa uma janela diferente.</p>
+<!-- 11 JANELAS -->
+<section id="janelas" class="sec-escura">
+  <div class="container">
+    <div class="cabeca centro rev">
+      <div class="rotulo"><i class="fas fa-house"></i> A metáfora que organiza o curso</div>
+      <h2 class="titulo">Você é uma casa com <em>11 janelas</em></h2>
+      <p class="lead">A luz do sol já existe do lado de fora — é a sua alma, já completa. Nosso trabalho não é fabricar luz: é limpar as janelas. Quando uma fica transparente, a qualidade dela aparece sozinha.</p>
+    </div>
 
-<div class="yk-janelas">
-<div class="yk-janela"><b>Janela 1</b>Alma — autenticidade</div>
-<div class="yk-janela"><b>Janela 2</b>Mente Negativa — comunhão e afeto seguro</div>
-<div class="yk-janela"><b>Janela 3</b>Mente Positiva — confiança</div>
-<div class="yk-janela"><b>Janela 4</b>Mente Neutra — equanimidade</div>
-<div class="yk-janela"><b>Janela 5</b>Corpo Físico — expressão</div>
-<div class="yk-janela"><b>Janela 6</b>Arco de Luz — escuta</div>
-<div class="yk-janela"><b>Janela 7</b>Aura — presença</div>
-<div class="yk-janela"><b>Janela 8</b>Corpo Prânico — vitalidade</div>
-<div class="yk-janela"><b>Janela 9</b>Corpo Sutil — calma</div>
-<div class="yk-janela"><b>Janela 10</b>Corpo Radiante — coragem</div>
-<div class="yk-janela"><b>Janela 11</b>Corpo Total — integração</div>
-</div>
+    <div class="janelas rev d1" id="gradeJanelas" role="group" aria-label="As onze janelas"></div>
 
-<h3 class="category-title" style="margin-top:2.8rem"><i class="fas fa-layer-group"></i> Os três pilares do trabalho</h3>
-<div class="yk-grid yk-grid-3">
-<div class="yk-box">
-<i class="fas fa-wind yk-ico"></i>
-<h4>Vitalidade</h4>
-<p>A respiração e as posturas ampliam o prana — a energia vital. É por isso que a aula começa respirando, não alongando.</p>
-</div>
-<div class="yk-box">
-<i class="fas fa-music yk-ico"></i>
-<h4>Vibração</h4>
-<p>O mantra e a meditação elevam a frequência em que você opera. Você não precisa acreditar em nada: precisa pronunciar e respirar.</p>
-</div>
-<div class="yk-box">
-<i class="fas fa-eye yk-ico"></i>
-<h4>Auto-observação</h4>
-<p>Perceber o automático é o que o desfaz. Cada janela vem com uma pergunta para você se observar — sem julgamento.</p>
-</div>
-</div>
+    <div class="janela-detalhe rev d1" id="janelaDetalhe" aria-live="polite">
+      <div class="chave" id="janelaNum">1</div>
+      <div>
+        <h4 id="janelaNome">Alma — autenticidade</h4>
+        <p id="janelaDesc">A janela da sua conexão mais íntima consigo. Quando está limpa, você age a partir do que é seu de verdade, sem precisar da aprovação de ninguém.</p>
+        <span class="pergunta" id="janelaPergunta">"Onde eu estou sendo eu de verdade?"</span>
+      </div>
+    </div>
 
-<div class="yk-note">
-<strong>Importante:</strong> o mapa das 11 janelas é uma ferramenta simbólica de auto-observação da tradição do yoga. Não é diagnóstico médico, psicológico ou energético.
-</div>
-</div>
+    <h3 class="titulo rev" style="font-size:1.5rem;margin-top:3rem"><i class="fas fa-layer-group" style="color:var(--ouro);font-size:1.2rem"></i> Os três pilares do trabalho</h3>
+    <div class="pilares">
+      <div class="pilar rev"><i class="fas fa-wind"></i><h4>Vitalidade</h4><p>A respiração e as posturas ampliam o prana — a energia vital. É por isso que a aula começa respirando, não alongando.</p></div>
+      <div class="pilar rev d1"><i class="fas fa-music"></i><h4>Vibração</h4><p>O mantra e a meditação elevam a frequência em que você opera. Você não precisa acreditar em nada: precisa pronunciar e respirar.</p></div>
+      <div class="pilar rev d2"><i class="fas fa-eye"></i><h4>Auto-observação</h4><p>Perceber o automático é o que o desfaz. Cada janela vem com uma pergunta para você se observar — sem julgamento.</p></div>
+    </div>
+
+    <div class="nota rev"><strong>Importante:</strong> o mapa das 11 janelas é uma ferramenta simbólica de auto-observação da tradição do yoga. Não é diagnóstico médico, psicológico ou energético.</div>
+  </div>
 </section>
 
-<!-- Como é uma aula -->
-<section id="aula" class="terapias">
-<div class="container">
-<h2 class="section-title">Como é uma aula de 50 minutos</h2>
-<p class="yk-lead">A estrutura é sempre a mesma — e isso é o que torna a prática segura. Só o conteúdo do meio muda a cada semana.</p>
+<!-- A AULA -->
+<section id="aula" class="sec-clara">
+  <div class="container">
+    <div class="cabeca rev">
+      <div class="rotulo"><i class="fas fa-clock"></i> Estrutura fixa</div>
+      <h2 class="titulo">Como é uma aula de <em>50 minutos</em></h2>
+      <p class="lead">A estrutura é sempre a mesma — e isso é o que torna a prática segura. Só o conteúdo do meio muda a cada semana.</p>
+    </div>
 
-<ol class="yk-steps">
-<li><strong>Sintonização · 4 min</strong><span>Palmas unidas no peito e o mantra de abertura, três vezes, cada um numa respiração própria. Depois, alguns segundos de silêncio. Não é ritual vazio: é avisar ao sistema nervoso que o mundo lá fora fica lá fora.</span></li>
-<li><strong>Aquecimento · 3 min</strong><span>Circulação dos olhos e soltura do pescoço. Aquietar o olhar aquieta a mente — alívio imediato para quem passa o dia em telas.</span></li>
-<li><strong>Enraizamento · 7 min</strong><span>Em pé, pés paralelos, joelhos levemente dobrados, respiração longa descendo na barriga. Você volta para o corpo antes de trabalhar o corpo.</span></li>
-<li><strong>Kriya da semana · 10 min</strong><span>Quatro exercícios em ordem fixa, com descansos de 30 segundos a 1 minuto entre eles. O descanso é parte do exercício, não perda de tempo.</span></li>
-<li><strong>Abertura e descarga · 3 min</strong><span>Abrir o peito e soltar o que ficou preso. Sempre com versão suave disponível.</span></li>
-<li><strong>Relaxamento · 8 min</strong><span>Deitado, com manta, varredura corporal dos pés ao rosto. Nunca menos de 5 minutos — é a parte mais importante.</span></li>
-<li><strong>Meditação · 10 min</strong><span>A técnica da semana, com pronúncia e respiração ensinadas, seguida de silêncio.</span></li>
-<li><strong>Encerramento · 5 min</strong><span>Canção do Sol, três Sat Nams longos e uma roda breve de compartilhamento — falar é voluntário; ouvir já é participar.</span></li>
-</ol>
+    <ol class="passos" id="passos">
+      <li class="passo"><span class="marca">1</span><div class="passo-cab"><strong>Sintonização</strong><span class="tempo">4 min</span></div><p>Palmas unidas no peito e o mantra de abertura, três vezes, cada um numa respiração própria. Depois, alguns segundos de silêncio. Não é ritual vazio: é avisar ao sistema nervoso que o mundo lá fora fica lá fora.</p></li>
+      <li class="passo"><span class="marca">2</span><div class="passo-cab"><strong>Aquecimento</strong><span class="tempo">3 min</span></div><p>Circulação dos olhos e soltura do pescoço. Aquietar o olhar aquieta a mente — alívio imediato para quem passa o dia em telas.</p></li>
+      <li class="passo"><span class="marca">3</span><div class="passo-cab"><strong>Enraizamento</strong><span class="tempo">7 min</span></div><p>Em pé, pés paralelos, joelhos levemente dobrados, respiração longa descendo na barriga. Você volta para o corpo antes de trabalhar o corpo.</p></li>
+      <li class="passo"><span class="marca">4</span><div class="passo-cab"><strong>Kriya da semana</strong><span class="tempo">10 min</span></div><p>Quatro exercícios em ordem fixa, com descansos de 30 segundos a 1 minuto entre eles. O descanso é parte do exercício, não perda de tempo.</p></li>
+      <li class="passo"><span class="marca">5</span><div class="passo-cab"><strong>Abertura e descarga</strong><span class="tempo">3 min</span></div><p>Abrir o peito e soltar o que ficou preso. Sempre com versão suave disponível.</p></li>
+      <li class="passo"><span class="marca">6</span><div class="passo-cab"><strong>Relaxamento</strong><span class="tempo">8 min</span></div><p>Deitado, com manta, varredura corporal dos pés ao rosto. Nunca menos de 5 minutos — é a parte mais importante.</p></li>
+      <li class="passo"><span class="marca">7</span><div class="passo-cab"><strong>Meditação</strong><span class="tempo">10 min</span></div><p>A técnica da semana, com pronúncia e respiração ensinadas, seguida de silêncio.</p></li>
+      <li class="passo"><span class="marca">8</span><div class="passo-cab"><strong>Encerramento</strong><span class="tempo">5 min</span></div><p>Canção do Sol, três Sat Nams longos e uma roda breve de compartilhamento — falar é voluntário; ouvir já é participar.</p></li>
+    </ol>
 
-<div class="yk-note">
-À noite, tudo é mais suave. Preferimos respiração longa à respiração rápida, e as técnicas mais intensas só entram na segunda metade do percurso, com acompanhamento.
-</div>
-</div>
+    <div class="barra-tempo rev" aria-hidden="true">
+      <span style="flex:4;background:linear-gradient(90deg,#8a5a2b,#d98f3a)"></span>
+      <span style="flex:3;background:#c9a05a"></span>
+      <span style="flex:7;background:#7fa98c"></span>
+      <span style="flex:10;background:#4a7c59"></span>
+      <span style="flex:3;background:#a8d5ba"></span>
+      <span style="flex:8;background:#2c5530"></span>
+      <span style="flex:10;background:#6b5fd0"></span>
+      <span style="flex:5;background:#2f2a63"></span>
+    </div>
+    <div class="legenda-tempo rev">
+      <span><i style="background:#d98f3a"></i>Sintonizar</span>
+      <span><i style="background:#7fa98c"></i>Enraizar</span>
+      <span><i style="background:#4a7c59"></i>Kriya</span>
+      <span><i style="background:#2c5530"></i>Relaxar</span>
+      <span><i style="background:#6b5fd0"></i>Meditar</span>
+      <span><i style="background:#2f2a63"></i>Encerrar</span>
+    </div>
+
+    <div class="nota rev">À noite, tudo é mais suave. Preferimos respiração longa à respiração rápida, e as técnicas mais intensas só entram na segunda metade do percurso, com acompanhamento.</div>
+  </div>
 </section>
 
-<!-- O ciclo -->
-<section id="ciclo" class="sobre">
-<div class="container">
-<h2 class="section-title">O percurso: 8 semanas, 11 janelas</h2>
-<p class="yk-lead">Cada semana tem uma janela em foco e uma prática-chave. As 11 janelas aparecem ao longo do ciclo — algumas como foco principal, outras como apoio.</p>
+<!-- O CICLO -->
+<section id="ciclo" class="sec-clara" style="background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(168,213,186,.22))">
+  <div class="container">
+    <div class="cabeca centro rev">
+      <div class="rotulo"><i class="fas fa-route"></i> O percurso</div>
+      <h2 class="titulo">8 semanas, <em>11 janelas</em></h2>
+      <p class="lead">Cada semana tem uma janela em foco e uma prática-chave. As onze aparecem ao longo do ciclo — algumas como foco principal, outras como apoio.</p>
+    </div>
 
-<div class="yk-table-wrap">
-<table class="yk-table">
-<thead><tr><th>Semana</th><th>Janela</th><th>Meditação</th><th>O que se convida</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Alma</td><td>Sat Kar Tar</td><td>Autenticidade — voltar ao que é seu de verdade</td></tr>
-<tr><td>2</td><td>Mente Negativa <span style="opacity:.65">(+ Corpo Físico)</span></td><td>Long Sat Nams</td><td>Aproximar-se sem se perder; afastar-se sem se fechar</td></tr>
-<tr><td>3</td><td>Mente Neutra</td><td>Wha Hey Guru</td><td>Ver os dois lados sem tomar partido</td></tr>
-<tr><td>4</td><td>Mente Positiva</td><td>Om So Ham</td><td>Reconhecer a própria luz e dar um passo</td></tr>
-<tr><td>5</td><td>Corpo Prânico <span style="opacity:.65">(+ Corpo Físico)</span></td><td>Respiração de 4 Partes</td><td>Vitalidade — achar as reservas que o cansaço esconde</td></tr>
-<tr><td>6</td><td>Aura</td><td>Kirtan Kriya</td><td>Presença — reorganizar o que ficou grudado</td></tr>
-<tr><td>7</td><td>Arco de Luz <span style="opacity:.65">(+ Corpo Sutil)</span></td><td>Silêncio e Escuta</td><td>Escuta — abaixar o ruído para ouvir a intuição</td></tr>
-<tr><td>8</td><td>Corpo Total <span style="opacity:.65">(+ Corpo Radiante)</span></td><td>Gurprasad</td><td>Integração — receber também é prática</td></tr>
-</tbody>
-</table>
-</div>
+    <div class="tabela-wrap rev d1">
+      <table>
+        <thead><tr><th>Sem.</th><th>Janela</th><th>Meditação</th><th>O que se convida</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Alma</td><td>Sat Kar Tar</td><td>Autenticidade — voltar ao que é seu de verdade</td></tr>
+          <tr><td>2</td><td>Mente Negativa<span class="apoio">+ Corpo Físico</span></td><td>Long Sat Nams</td><td>Aproximar-se sem se perder; afastar-se sem se fechar</td></tr>
+          <tr><td>3</td><td>Mente Neutra</td><td>Wha Hey Guru</td><td>Ver os dois lados sem tomar partido</td></tr>
+          <tr><td>4</td><td>Mente Positiva</td><td>Om So Ham</td><td>Reconhecer a própria luz e dar um passo</td></tr>
+          <tr><td>5</td><td>Corpo Prânico<span class="apoio">+ Corpo Físico</span></td><td>Respiração de 4 Partes</td><td>Vitalidade — achar as reservas que o cansaço esconde</td></tr>
+          <tr><td>6</td><td>Aura</td><td>Kirtan Kriya</td><td>Presença — reorganizar o que ficou grudado</td></tr>
+          <tr><td>7</td><td>Arco de Luz<span class="apoio">+ Corpo Sutil</span></td><td>Silêncio e Escuta</td><td>Escuta — abaixar o ruído para ouvir a intuição</td></tr>
+          <tr><td>8</td><td>Corpo Total<span class="apoio">+ Corpo Radiante</span></td><td>Gurprasad</td><td>Integração — receber também é prática</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-<h3 class="category-title" style="margin-top:2.8rem"><i class="fas fa-gift"></i> O que você recebe</h3>
-<div class="yk-grid yk-grid-2">
-<div class="yk-box">
-<i class="fas fa-mobile-screen yk-ico"></i>
-<h4>Guia digital de prática</h4>
-<p>Um guia completo no celular, com todas as técnicas ilustradas: posição, respiração, tempo, como terminar e cuidados. Serve para praticar em casa e como referência depois do curso.</p>
-</div>
-<div class="yk-box">
-<i class="fas fa-chart-simple yk-ico"></i>
-<h4>Mapa das Minhas Janelas</h4>
-<p>Uma ficha de auto-observação: você dá uma nota de 0 a 10 para cada janela hoje e refaz a cada 4 semanas. Não é prova — é uma foto do momento, para você ver o próprio movimento.</p>
-</div>
-<div class="yk-box">
-<i class="fas fa-calendar-check yk-ico"></i>
-<h4>Prática mínima e os 40 dias</h4>
-<p>Uma prática de 4 minutos para os dias impossíveis e uma de 20 minutos para os dias bons, mais a grade dos 40 dias. A tradição propõe 40 dias de constância para transformar um hábito.</p>
-</div>
-<div class="yk-box">
-<i class="fas fa-hashtag yk-ico"></i>
-<h4>Numerologia Tântrica <span style="font-weight:400;opacity:.7">(opcional)</span></h4>
-<p>Se você autorizar na ficha de inscrição, calculamos seus 5 números e entregamos sua ficha de resultado <strong>por escrito, em aula, no mesmo formato para todos</strong>. É um mapa simbólico para se observar — não é diagnóstico, não é previsão, e não há sessão individual decorrente do curso.</p>
-</div>
-</div>
+    <h3 class="titulo rev" style="font-size:1.5rem;margin-top:3rem"><i class="fas fa-gift" style="color:var(--ouro);font-size:1.2rem"></i> O que você recebe</h3>
+    <div class="caixas">
+      <div class="caixa rev"><i class="fas fa-mobile-screen"></i><h4>Guia digital de prática</h4><p>Um guia completo no celular, com todas as técnicas ilustradas: posição, respiração, tempo, como terminar e cuidados. Serve para praticar em casa e como referência depois do curso.</p></div>
+      <div class="caixa rev d1"><i class="fas fa-chart-simple"></i><h4>Mapa das Minhas Janelas</h4><p>Uma ficha de auto-observação: você dá uma nota de 0 a 10 para cada janela hoje e refaz a cada 4 semanas. Não é prova — é uma foto do momento, para você ver o próprio movimento.</p></div>
+      <div class="caixa rev d2"><i class="fas fa-calendar-check"></i><h4>Prática mínima e os 40 dias</h4><p>Uma prática de 4 minutos para os dias impossíveis e uma de 20 minutos para os dias bons, mais a grade dos 40 dias. A tradição propõe 40 dias de constância para transformar um hábito.</p></div>
+      <div class="caixa rev d3"><i class="fas fa-hashtag"></i><h4>Numerologia Tântrica <span style="font-weight:400;opacity:.7">(opcional)</span></h4><p>Se você autorizar na ficha de inscrição, calculamos seus 5 números e entregamos sua ficha <strong>por escrito, em aula, no mesmo formato para todos</strong>. É um mapa simbólico — não é diagnóstico, não é previsão, e não há sessão individual decorrente do curso.</p></div>
+    </div>
 
-<div class="yk-note">
-<strong>Sobre seus dados:</strong> a data de nascimento é um dado pessoal e só é usada se você autorizar, exclusivamente para o cálculo e a entrega da ficha. Fica em local privado, não é exposta na roda, e você pode pedir exclusão a qualquer momento. A participação nas aulas não depende disso.
-</div>
-</div>
+    <div class="nota rev"><strong>Sobre seus dados:</strong> a data de nascimento é um dado pessoal e só é usada se você autorizar, exclusivamente para o cálculo e a entrega da ficha. Fica em local privado, não é exposta na roda, e você pode pedir exclusão a qualquer momento. A participação nas aulas não depende disso.</div>
+  </div>
 </section>
 
-<!-- Para quem é / segurança -->
-<section id="seguranca" class="terapias">
-<div class="container">
-<h2 class="section-title">Para quem é — e como cuidamos de você</h2>
+<!-- PARA QUEM É -->
+<section id="seguranca" class="sec-clara">
+  <div class="container">
+    <div class="cabeca centro rev">
+      <div class="rotulo"><i class="fas fa-shield-heart"></i> Cuidado e escopo</div>
+      <h2 class="titulo">Para quem é — e como <em>cuidamos de você</em></h2>
+    </div>
 
-<div class="yk-grid yk-grid-2">
-<div class="yk-box">
-<i class="fas fa-user-check yk-ico"></i>
-<h4>É para você se…</h4>
-<ul class="yk-check">
-<li><i class="fas fa-check"></i> você nunca praticou yoga e acha que "não é flexível o bastante"</li>
-<li><i class="fas fa-check"></i> você quer algo concreto, com técnica explicada, não só relaxamento</li>
-<li><i class="fas fa-check"></i> você busca autoconhecimento com método e registro</li>
-<li><i class="fas fa-check"></i> você prefere praticar em grupo, perto de casa, à noite</li>
-<li><i class="fas fa-check"></i> você quer aprender a praticar sozinho depois</li>
-</ul>
-</div>
-<div class="yk-box">
-<i class="fas fa-shield-heart yk-ico"></i>
-<h4>Adaptações e segurança</h4>
-<ul class="yk-check">
-<li><i class="fas fa-check"></i> todo exercício tem versão suave; cadeira sempre válida</li>
-<li><i class="fas fa-check"></i> dor aguda = parar; tontura = sentar. Você é a autoridade sobre seu corpo</li>
-<li><i class="fas fa-check"></i> ajustes para ciclo menstrual, sem constrangimento</li>
-<li><i class="fas fa-check"></i> posição lateral no relaxamento para gestantes</li>
-<li><i class="fas fa-check"></i> condições de saúde são conversadas em particular, sem exposição</li>
-</ul>
-</div>
-</div>
+    <div class="caixas">
+      <div class="caixa rev">
+        <i class="fas fa-user-check"></i><h4>É para você se…</h4>
+        <ul class="lista-check">
+          <li><i class="fas fa-check"></i><span>você nunca praticou yoga e acha que "não é flexível o bastante"</span></li>
+          <li><i class="fas fa-check"></i><span>você quer algo concreto, com técnica explicada, não só relaxamento</span></li>
+          <li><i class="fas fa-check"></i><span>você busca autoconhecimento com método e registro</span></li>
+          <li><i class="fas fa-check"></i><span>você prefere praticar em grupo, perto de casa, à noite</span></li>
+          <li><i class="fas fa-check"></i><span>você quer aprender a praticar sozinho depois</span></li>
+        </ul>
+      </div>
+      <div class="caixa rev d1">
+        <i class="fas fa-hand-holding-heart"></i><h4>Adaptações e segurança</h4>
+        <ul class="lista-check">
+          <li><i class="fas fa-check"></i><span>todo exercício tem versão suave; cadeira sempre válida</span></li>
+          <li><i class="fas fa-check"></i><span>dor aguda = parar; tontura = sentar. Você é a autoridade sobre seu corpo</span></li>
+          <li><i class="fas fa-check"></i><span>ajustes para ciclo menstrual, sem constrangimento</span></li>
+          <li><i class="fas fa-check"></i><span>posição lateral no relaxamento para gestantes</span></li>
+          <li><i class="fas fa-check"></i><span>condições de saúde conversadas em particular, sem exposição</span></li>
+        </ul>
+      </div>
+    </div>
 
-<div class="yk-note">
-<strong>Escopo:</strong> a aula é uma prática educativa em grupo, de auto-observação. <strong>Não é psicoterapia, atendimento individual nem consulta de saúde.</strong> As práticas não substituem acompanhamento médico ou psicológico, e você não deve alterar medicação por conta própria. Se algo pessoal pedir cuidado, procure um profissional de sua confiança.
-</div>
+    <div class="nota alerta rev"><strong>Escopo:</strong> a aula é uma prática educativa em grupo, de auto-observação. <strong>Não é psicoterapia, atendimento individual nem consulta de saúde.</strong> As práticas não substituem acompanhamento médico ou psicológico, e você não deve alterar medicação por conta própria.</div>
 
-<h3 class="category-title" style="margin-top:2.8rem"><i class="fas fa-flask"></i> O que os estudos sobre meditação observam</h3>
-<p class="yk-lead">Pesquisas sobre meditação <em>em geral</em> — atenção plena, bondade amorosa, meditação transcendental — observaram efeitos como redução do estresse e da ansiedade, melhora do sono, aumento do tempo de atenção, mais autoconsciência e maior capacidade de lidar com a dor. Um dos métodos citados nominalmente nessa literatura é o <strong>Kirtan Kriya</strong>, que você pratica na Semana 6.</p>
-<div class="yk-note">
-<strong>Leia com atenção:</strong> esses estudos não são sobre este curso especificamente. Resultados variam de pessoa para pessoa. Nada aqui é promessa de resultado, diagnóstico ou tratamento. Nenhum desses efeitos é o objetivo da prática — são consequência possível de algo mais simples: constância.
-</div>
-</div>
+    <h3 class="titulo rev" style="font-size:1.5rem;margin-top:3rem"><i class="fas fa-flask" style="color:var(--ouro);font-size:1.2rem"></i> O que os estudos sobre meditação observam</h3>
+    <p class="lead rev">Pesquisas sobre meditação <em>em geral</em> — atenção plena, bondade amorosa, meditação transcendental — observaram efeitos como redução do estresse e da ansiedade, melhora do sono, aumento do tempo de atenção, mais autoconsciência e maior capacidade de lidar com a dor. Um dos métodos citados nominalmente nessa literatura é o <strong>Kirtan Kriya</strong>, que você pratica na Semana 6.</p>
+    <div class="nota rev"><strong>Leia com atenção:</strong> esses estudos não são sobre este curso especificamente. Resultados variam de pessoa para pessoa. Nada aqui é promessa de resultado, diagnóstico ou tratamento. Nenhum desses efeitos é o objetivo da prática — são consequência possível de algo mais simples: constância.</div>
+  </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="sobre">
-<div class="container">
-<h2 class="section-title">Perguntas frequentes</h2>
-<div class="yk-faq">
-<details><summary>Preciso ser flexível ou ter experiência?</summary><p>Não. Muitos exercícios são sentados, e a cadeira é sempre uma opção legítima. O objetivo não é a postura — é a conexão interna. Cada exercício tem versão suave, e você nunca precisa acompanhar o desempenho de ninguém.</p></details>
-<details><summary>E se minha mente não parar?</summary><p>Nem a de ninguém. A mente produz pensamentos sem parar; isso é o funcionamento dela, não um defeito seu. Meditar não é parar a mente, é trocar de canal. Se você se distraiu e voltou, você meditou.</p></details>
-<details><summary>Preciso acreditar em algo?</summary><p>Não. Os mantras são sons com direção: você pronuncia e respira, e o resto acontece. A linguagem da tradição é apresentada como tradição — e o que a ciência observa é apresentado com a cautela da fonte.</p></details>
-<details><summary>O que preciso levar?</summary><p>Colchonete, almofada e manta. Praticamos descalços. Roupa confortável, simples e discreta, com boa cobertura durante os movimentos — somos um espaço de famílias, casais e vizinhos, e o cuidado com o vestir é um cuidado com todos. Evite refeição pesada na hora anterior e deixe o celular guardado.</p></details>
-<details><summary>Posso praticar durante o ciclo menstrual?</summary><p>Sim, com ajustes. Evitamos abdominais intensos, elevação de pernas e respirações rápidas, e priorizamos enraizamento e movimento suave. Avise o facilitador sem constrangimento — a adaptação é natural. Ajuste, não abandone.</p></details>
-<details><summary>Quanto tempo até sentir algo?</summary><p>Muita gente sente diferença já na primeira aula, no relaxamento. Mas os efeitos que interessam aparecem mais no seu dia do que na prática: dormir melhor, se irritar menos, reagir menos no automático. A tradição propõe 40 dias de constância — e cinco minutos por dia valem mais que uma hora uma vez por semana.</p></details>
-<details><summary>E depois das 8 semanas?</summary><p>Você continua com o guia digital, que funciona como manual de referência. Há um segundo nível introdutório para quem quer aprofundar — com técnicas que só entram depois que o corpo já está habituado e com acompanhamento.</p></details>
-<details><summary>Como faço para me inscrever?</summary><p>Pelo formulário abaixo ou pelo WhatsApp. Se preferir começar sem compromisso, a aula demonstração de 30 minutos é a porta de entrada. Dias e horário da turma são definidos conforme a formação do grupo.</p></details>
-</div>
-</div>
+<section id="faq" class="sec-clara" style="background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(201,179,124,.14))">
+  <div class="container">
+    <div class="cabeca centro rev">
+      <div class="rotulo"><i class="fas fa-comments"></i> Antes de começar</div>
+      <h2 class="titulo">Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq rev d1">
+      <details><summary>Preciso ser flexível ou ter experiência?</summary><p>Não. Muitos exercícios são sentados, e a cadeira é sempre uma opção legítima. O objetivo não é a postura — é a conexão interna. Cada exercício tem versão suave, e você nunca precisa acompanhar o desempenho de ninguém.</p></details>
+      <details><summary>E se minha mente não parar?</summary><p>Nem a de ninguém. A mente produz pensamentos sem parar; isso é o funcionamento dela, não um defeito seu. Meditar não é parar a mente, é trocar de canal. Se você se distraiu e voltou, você meditou.</p></details>
+      <details><summary>Preciso acreditar em algo?</summary><p>Não. Os mantras são sons com direção: você pronuncia e respira, e o resto acontece. A linguagem da tradição é apresentada como tradição — e o que a ciência observa é apresentado com a cautela da fonte.</p></details>
+      <details><summary>O que preciso levar?</summary><p>Colchonete, almofada e manta. Praticamos descalços. Roupa confortável, simples e discreta, com boa cobertura durante os movimentos — somos um espaço de famílias, casais e vizinhos, e o cuidado com o vestir é um cuidado com todos. Evite refeição pesada na hora anterior e deixe o celular guardado.</p></details>
+      <details><summary>Posso praticar durante o ciclo menstrual?</summary><p>Sim, com ajustes. Evitamos abdominais intensos, elevação de pernas e respirações rápidas, e priorizamos enraizamento e movimento suave. Avise o facilitador sem constrangimento — a adaptação é natural. Ajuste, não abandone.</p></details>
+      <details><summary>Quanto tempo até sentir algo?</summary><p>Muita gente sente diferença já na primeira aula, no relaxamento. Mas os efeitos que interessam aparecem mais no seu dia do que na prática: dormir melhor, se irritar menos, reagir menos no automático. A tradição propõe 40 dias de constância — e cinco minutos por dia valem mais que uma hora uma vez por semana.</p></details>
+      <details><summary>E depois das 8 semanas?</summary><p>Você continua com o guia digital, que funciona como manual de referência. Há um segundo nível introdutório para quem quer aprofundar — com técnicas que só entram depois que o corpo já está habituado e com acompanhamento.</p></details>
+      <details><summary>Como faço para me inscrever?</summary><p>Pelo formulário abaixo ou pelo WhatsApp. Se preferir começar sem compromisso, a aula demonstração de 30 minutos é a porta de entrada. Dias e horário da turma são definidos conforme a formação do grupo.</p></details>
+    </div>
+  </div>
 </section>
 
-<!-- Inscrição -->
-<section id="inscricao" class="contato">
-<div class="container">
-<h2 class="section-title">Aula demonstração &amp; inscrição</h2>
+<!-- INSCRIÇÃO -->
+<section id="inscricao" class="sec-escura">
+  <div class="container">
+    <div class="cabeca centro rev">
+      <div class="rotulo"><i class="fas fa-door-open"></i> Porta de entrada</div>
+      <h2 class="titulo">Aula demonstração &amp; <em>inscrição</em></h2>
+    </div>
 
-<div class="yk-cta">
-<h3>Comece pela aula demonstração de 30 minutos</h3>
-<p>Uma degustação da prática: sintonização com mantra, aquecimento dos olhos, três exercícios guiados, um relaxamento curto e uma respiração que você já sai sabendo usar. Sem técnica intensa, sem risco, sem compromisso. Você sai com um selo das mãos para usar no elevador amanhã.</p>
-<a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Quero participar da demonstração</a>
-</div>
+    <div class="cta-demo rev d1">
+      <h3>Comece pela aula demonstração de 30 minutos</h3>
+      <p>Uma degustação da prática: sintonização com mantra, aquecimento dos olhos, três exercícios guiados, um relaxamento curto e uma respiração que você já sai sabendo usar. Sem técnica intensa, sem risco, sem compromisso. Você sai com um selo das mãos para usar no elevador amanhã.</p>
+      <a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" rel="noopener" class="btn btn-ouro"><i class="fab fa-whatsapp"></i> Quero participar da demonstração</a>
+    </div>
 
-<div class="contato-grid" style="margin-top:3rem">
-<div class="contato-info">
-<h3>Fale comigo</h3>
-<p>Tire dúvidas sobre a turma, horários e adaptações. Respondo pessoalmente.</p>
-<div class="contato-item"><i class="fab fa-whatsapp"></i><span>+55 (16) 99793-4558</span></div>
-<div class="contato-item"><i class="fas fa-envelope"></i><span>celsot.holistics@gmail.com</span></div>
-<div class="contato-item"><i class="fas fa-map-marker-alt"></i><span>Condomínio Bella Vitta · Araraquara/SP</span></div>
-<div class="contato-item"><i class="fas fa-clock"></i><span>Dias e horário: a definir conforme a formação da turma</span></div>
-<div class="contato-item"><i class="fas fa-user"></i><span>Celso Luiz · Psicoterapeuta Holístico · CRTP 2.446</span></div>
-<div class="contato-item"><i class="fas fa-book-open"></i><span><a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank">Guia de prática do aluno</a></span></div>
+    <div class="grade-contato">
+      <div class="contato-info rev">
+        <h3>Fale comigo</h3>
+        <p>Tire dúvidas sobre a turma, horários e adaptações. Respondo pessoalmente.</p>
+        <div class="linha-contato"><i class="fab fa-whatsapp"></i><span>+55 (16) 99793-4558</span></div>
+        <div class="linha-contato"><i class="fas fa-envelope"></i><span>celsot.holistics@gmail.com</span></div>
+        <div class="linha-contato"><i class="fas fa-map-marker-alt"></i><span>Condomínio Bella Vitta · Araraquara/SP</span></div>
+        <div class="linha-contato"><i class="fas fa-clock"></i><span>Dias e horário a definir conforme a turma</span></div>
+        <div class="linha-contato"><i class="fas fa-user"></i><span>Celso Luiz · Psicoterapeuta Holístico · CRTP 2.446</span></div>
+        <div class="linha-contato"><i class="fas fa-book-open"></i><span><a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" rel="noopener">Guia de prática do aluno</a></span></div>
+        <div class="sociais">
+          <a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" rel="noopener" aria-label="Guia do aluno"><i class="fas fa-book-open"></i></a>
+          <a href="https://wa.me/5516997934558" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.youtube.com/channel/UCw5BZJvLIlDGLGQh8uy0wYw/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://linktr.ee/celsot.holistica" target="_blank" rel="noopener" aria-label="Linktree"><i class="fas fa-link"></i></a>
+          <a href="index.html" aria-label="Site Lunara Terapias"><i class="fas fa-house"></i></a>
+        </div>
+      </div>
 
-<div class="social-links">
-<a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" title="Guia de prática do aluno"><i class="fas fa-book-open"></i></a>
-<a href="https://wa.me/5516997934558" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<a href="https://www.youtube.com/channel/UCw5BZJvLIlDGLGQh8uy0wYw/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-<a href="https://linktr.ee/celsot.holistica" target="_blank" title="Linktree"><i class="fas fa-link"></i></a>
-<a href="index.html" title="Lunara Terapias"><i class="fas fa-house"></i></a>
-</div>
-</div>
-
-<div class="contato-form">
-<h3>Formulário de interesse</h3>
-<form id="inscricaoYoga">
-<div class="form-group">
-<label for="from_name">Nome completo *</label>
-<input type="text" id="from_name" name="from_name" required placeholder="Seu nome">
-</div>
-<div class="form-group">
-<label for="from_email">E-mail *</label>
-<input type="email" id="from_email" name="from_email" required placeholder="seu@email.com">
-</div>
-<div class="form-group">
-<label for="phone">WhatsApp</label>
-<input type="tel" id="phone" name="phone" placeholder="(16) 99999-9999">
-</div>
-<div class="form-group">
-<label for="terapia_interesse">Tenho interesse em</label>
-<select id="terapia_interesse" name="terapia_interesse">
-<option value="">Selecione</option>
-<option value="Yoga - Aula demonstração (30 min)">Aula demonstração (30 min)</option>
-<option value="Yoga - Ciclo de 8 semanas">Ciclo de 8 semanas (50 min por aula)</option>
-<option value="Yoga - Só receber informações">Só receber informações por enquanto</option>
-</select>
-</div>
-<div class="form-group">
-<label for="yk-experiencia">Já praticou yoga ou meditação?</label>
-<select id="yk-experiencia">
-<option value="">Selecione</option>
-<option value="Nunca pratiquei">Nunca pratiquei</option>
-<option value="Pratiquei pouco / por conta própria">Pratiquei pouco / por conta própria</option>
-<option value="Já pratico ou pratiquei regularmente">Já pratico ou pratiquei regularmente</option>
-</select>
-</div>
-<div class="form-group">
-<label for="message">Mensagem *</label>
-<textarea id="message" name="message" required placeholder="Conte o que você está buscando. Se precisar de adaptação, pode dizer apenas 'preciso de adaptação' — conversamos em particular."></textarea>
-</div>
-<div class="form-group">
-<label class="form-check">
-<input type="checkbox" id="yk-numerologia">
-<span>Tenho interesse na ficha opcional de Numerologia Tântrica (o cálculo usa a data de nascimento, coletada só na ficha de inscrição, com sua autorização).</span>
-</label>
-</div>
-<button type="submit" class="btn-form"><i class="fas fa-paper-plane"></i> Enviar</button>
-<div id="statusYoga" class="status-msg"></div>
-<a href="https://wa.me/5516997934558?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20Yoga%20Kundalini%20e%20gostaria%20de%20conversar." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Ou fale pelo WhatsApp</a>
-</form>
-</div>
-</div>
-</div>
+      <div class="form-cartao rev d1">
+        <h3>Formulário de interesse</h3>
+        <form id="formYoga" novalidate>
+          <div class="campo"><label for="from_name">Nome completo *</label><input type="text" id="from_name" name="from_name" required placeholder="Seu nome" autocomplete="name"></div>
+          <div class="campo"><label for="from_email">E-mail *</label><input type="email" id="from_email" name="from_email" required placeholder="seu@email.com" autocomplete="email"></div>
+          <div class="campo"><label for="phone">WhatsApp</label><input type="tel" id="phone" name="phone" placeholder="(16) 99999-9999" autocomplete="tel"></div>
+          <div class="campo"><label for="terapia_interesse">Tenho interesse em</label>
+            <select id="terapia_interesse" name="terapia_interesse">
+              <option value="">Selecione</option>
+              <option value="Yoga - Aula demonstração (30 min)">Aula demonstração (30 min)</option>
+              <option value="Yoga - Ciclo de 8 semanas">Ciclo de 8 semanas (50 min por aula)</option>
+              <option value="Yoga - Só receber informações">Só receber informações por enquanto</option>
+            </select>
+          </div>
+          <div class="campo"><label for="experiencia">Já praticou yoga ou meditação?</label>
+            <select id="experiencia">
+              <option value="">Selecione</option>
+              <option value="Nunca pratiquei">Nunca pratiquei</option>
+              <option value="Pratiquei pouco / por conta própria">Pratiquei pouco / por conta própria</option>
+              <option value="Já pratico ou pratiquei regularmente">Já pratico ou pratiquei regularmente</option>
+            </select>
+          </div>
+          <div class="campo"><label for="message">Mensagem *</label><textarea id="message" name="message" required placeholder="Conte o que você está buscando. Se precisar de adaptação, pode dizer apenas 'preciso de adaptação' — conversamos em particular."></textarea></div>
+          <div class="campo"><label class="check"><input type="checkbox" id="numInteresse"><span>Tenho interesse na ficha opcional de Numerologia Tântrica (o cálculo usa a data de nascimento, coletada só na ficha de inscrição, com sua autorização).</span></label></div>
+          <button type="submit" class="btn-enviar" id="btnEnviar"><i class="fas fa-paper-plane"></i> Enviar</button>
+          <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+          <a href="https://wa.me/5516997934558?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20Yoga%20Kundalini%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="btn-zap"><i class="fab fa-whatsapp"></i> Ou fale pelo WhatsApp</a>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-content">
-<div class="footer-section">
-<img src="assets/logo.png" data-base="assets/logo" data-try="0" onerror="imgFallback(this)" alt="Lunara Terapias" class="footer-logo-img">
-<h4>Lunara Terapias</h4>
-<p>Equilíbrio, Cura e Transformação</p>
-<p>Atuação em terapias integrativas desde 2020.<br>Marca Lunara desde 2025.</p>
-</div>
-<div class="footer-section">
-<h4>Nesta página</h4>
-<a href="#praticas">As Práticas</a>
-<a href="#janelas">As 11 Janelas</a>
-<a href="#aula">Como é a aula</a>
-<a href="#ciclo">O Ciclo</a>
-<a href="#faq">Dúvidas</a>
-<a href="#inscricao">Inscrição</a>
-</div>
-<div class="footer-section">
-<h4>Contato</h4>
-<p><i class="fab fa-whatsapp"></i> +55 (16) 99793-4558</p>
-<p><i class="fas fa-envelope"></i> celsot.holistics@gmail.com</p>
-<p><i class="fas fa-map-marker-alt"></i> Araraquara/SP</p>
-<a href="index.html">Site Lunara Terapias</a>
-<a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank">Guia de prática do aluno</a>
-</div>
-<div class="footer-section">
-<h4>Facilitador</h4>
-<p><strong>Celso Luiz</strong></p>
-<p>Psicoterapeuta Holístico desde 2020</p>
-<p>CRTP 2.446</p>
-<a href="https://linktr.ee/celsot.holistica" target="_blank">Linktree</a>
-</div>
-</div>
-<div class="footer-bottom">
-<p>&copy; 2026 Lunara Terapias. Todos os direitos reservados.</p>
-<p style="font-size:.85rem">As práticas têm caráter educativo e de auto-observação e não substituem acompanhamento médico ou psicológico.</p>
-</div>
-</div>
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape-grade">
+      <div data-fallback-host>
+        <img src="assets/logo.png" data-base="assets/logo" data-try="0" onerror="imgFallback(this)" alt="Lunara Terapias" class="rodape-logo">
+        <h4>Lunara Terapias</h4>
+        <p>Equilíbrio, Cura e Transformação</p>
+        <p>Atuação em terapias integrativas desde 2020.<br>Marca Lunara desde 2025.</p>
+      </div>
+      <div>
+        <h4>Nesta página</h4>
+        <a href="#praticas">As Práticas</a><a href="#janelas">As 11 Janelas</a><a href="#aula">Como é a aula</a>
+        <a href="#ciclo">O Ciclo</a><a href="#faq">Dúvidas</a><a href="#inscricao">Inscrição</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><i class="fab fa-whatsapp"></i> +55 (16) 99793-4558</p>
+        <p><i class="fas fa-envelope"></i> celsot.holistics@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Araraquara/SP</p>
+        <a href="index.html">Site Lunara Terapias</a>
+        <a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" rel="noopener">Guia de prática do aluno</a>
+      </div>
+      <div>
+        <h4>Facilitador</h4>
+        <p><strong style="color:#c9b37c">Celso Luiz</strong></p>
+        <p>Psicoterapeuta Holístico desde 2020</p>
+        <p>CRTP 2.446</p>
+        <a href="https://linktr.ee/celsot.holistica" target="_blank" rel="noopener">Linktree</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <p>&copy; 2026 Lunara Terapias. Todos os direitos reservados.</p>
+      <p>As práticas têm caráter educativo e de auto-observação e não substituem acompanhamento médico ou psicológico.</p>
+    </div>
+  </div>
 </footer>
 
 <script>
-function trackEvent(n,p){ if(typeof gtag!=='undefined'){ gtag('event',n,p||{}); } }
+(function(){
+'use strict';
 
-/* Cards expansíveis */
-function toggleContent(element){
-  const content = element.nextElementSibling;
-  const icon = element.querySelector('.expand-icon');
-  const isOpening = !content.classList.contains('active');
-  const category = element.closest('.terapia-category');
-  if(category){
-    category.querySelectorAll('.terapia-content.active').forEach(c=>{
-      if(c!==content){
-        c.classList.remove('active');
-        const oi = c.previousElementSibling.querySelector('.expand-icon');
-        if(oi) oi.style.transform='rotate(0deg)';
-      }
-    });
-  }
-  if(isOpening){ content.classList.add('active'); if(icon) icon.style.transform='rotate(180deg)'; }
-  else { content.classList.remove('active'); if(icon) icon.style.transform='rotate(0deg)'; }
-  trackEvent('yoga_card_toggle',{card:element.querySelector('h4').textContent.trim(),open:isOpening});
-}
+function track(n,p){ if(typeof gtag==='function'){ gtag('event',n,p||{}); } }
 
-/* Menu mobile */
-const hamburger=document.querySelector('.hamburger');
-const navMenu=document.querySelector('.nav-menu');
-hamburger.addEventListener('click',()=>{
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-  hamburger.setAttribute('aria-expanded',navMenu.classList.contains('active'));
+/* ---------- menu ---------- */
+var ham=document.getElementById('hamburguer'), menu=document.getElementById('menu');
+function fechaMenu(){ ham.classList.remove('active'); menu.classList.remove('aberto'); ham.setAttribute('aria-expanded','false'); }
+ham.addEventListener('click',function(){
+  var abre=!menu.classList.contains('aberto');
+  menu.classList.toggle('aberto',abre); ham.classList.toggle('active',abre);
+  ham.setAttribute('aria-expanded',String(abre));
 });
-hamburger.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();hamburger.click();} });
-document.querySelectorAll('.nav-link').forEach(l=>l.addEventListener('click',()=>{
-  hamburger.classList.remove('active'); navMenu.classList.remove('active');
-}));
+ham.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); ham.click(); } });
+menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',fechaMenu); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') fechaMenu(); });
+document.addEventListener('click',function(e){
+  if(menu.classList.contains('aberto') && !menu.contains(e.target) && !ham.contains(e.target)) fechaMenu();
+});
 
-/* Scroll suave */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',function(e){
-    const href=this.getAttribute('href');
-    if(href.length<2) return;
-    const t=document.querySelector(href);
-    if(t){ e.preventDefault();
-      window.scrollTo({top:t.offsetTop-document.querySelector('.header').offsetHeight-20,behavior:'smooth'});
-      trackEvent('yoga_nav',{target:href});
-    }
+/* ---------- scroll: progresso, header, topo, seção ativa ---------- */
+var progresso=document.getElementById('progresso'),
+    cab=document.getElementById('cabecalho'),
+    topoBtn=document.getElementById('topoBtn'),
+    links=[].slice.call(document.querySelectorAll('.nav-link[data-alvo]')),
+    secoes=links.map(function(l){ return document.getElementById(l.dataset.alvo); }).filter(Boolean),
+    pendente=false;
+
+function aoRolar(){
+  var y=window.scrollY||window.pageYOffset||0;
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  progresso.style.width=(h>0?Math.min(100,(y/h)*100):0)+'%';
+  cab.classList.toggle('rolou',y>40);
+  topoBtn.classList.toggle('visivel',y>560);
+  var atual=null, corte=y+150;
+  secoes.forEach(function(s){ if(s.getBoundingClientRect().top+y<=corte) atual=s.id; });
+  links.forEach(function(l){ l.classList.toggle('ativo',l.dataset.alvo===atual); });
+  pendente=false;
+}
+window.addEventListener('scroll',function(){ if(!pendente){ pendente=true; requestAnimationFrame(aoRolar); } },{passive:true});
+window.addEventListener('resize',aoRolar);
+topoBtn.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+aoRolar();
+
+/* ---------- reveal ---------- */
+var alvos=[].slice.call(document.querySelectorAll('.rev, .passo'));
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(ents){
+    ents.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visivel'); io.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  alvos.forEach(function(el){ io.observe(el); });
+}else{ alvos.forEach(function(el){ el.classList.add('visivel'); }); }
+
+/* ---------- tríptico panorâmico ---------- */
+var tri=document.getElementById('triptico'),
+    zonas=[].slice.call(tri.querySelectorAll('.zona')),
+    abas=[].slice.call(document.querySelectorAll('.aba')),
+    texto=document.getElementById('tripticoTexto'),
+    conteudos=[
+      {t:'Bioenergética — o corpo cria raiz',
+       d:'Antes de qualquer técnica, o corpo precisa de chão. Pés paralelos, joelhos moles, peso descendo. Se as pernas vibrarem, é tensão saindo — não é erro. É aqui que você deixa de morar só na cabeça.',
+       k:'Aparece no enraizamento (7 min) e na abertura com som (3 min).'},
+      {t:'Yoga Kundalini — a energia se move',
+       d:'Com o corpo enraizado, a respiração e o movimento mobilizam o que estava parado. Kriyas curtas, coluna como eixo, mantra coordenado com o ar. Cada exercício tem versão suave e descanso obrigatório.',
+       k:'Aparece na kriya da semana (10 min) e no pranayama.'},
+      {t:'Meditação — tudo assenta no silêncio',
+       d:'O que foi mobilizado precisa assentar. Depois do relaxamento, o mantra conduz a atenção e o silêncio faz o resto. Não é parar a mente: é trocar de canal e permanecer ali.',
+       k:'Aparece na meditação (10 min) e no encerramento (5 min).'}
+    ],
+    padrao=texto.innerHTML;
+
+function foca(i){
+  tri.classList.add('focado');
+  zonas.forEach(function(z,k){ z.classList.toggle('acesa',k===i); });
+  abas.forEach(function(a,k){ a.classList.toggle('ativa',k===i); a.setAttribute('aria-pressed',String(k===i)); });
+  var c=conteudos[i];
+  texto.innerHTML='<h4>'+c.t+'</h4><p>'+c.d+'</p><span class="dica"><i class="fas fa-clock"></i> '+c.k+'</span>';
+  track('yoga_triptico',{pratica:c.t});
+}
+function limpa(){
+  tri.classList.remove('focado');
+  zonas.forEach(function(z){ z.classList.remove('acesa'); });
+  abas.forEach(function(a){ a.classList.remove('ativa'); a.setAttribute('aria-pressed','false'); });
+  texto.innerHTML=padrao;
+}
+abas.forEach(function(a){
+  a.addEventListener('click',function(){
+    var i=parseInt(a.dataset.p,10);
+    if(a.classList.contains('ativa')) limpa(); else foca(i);
+  });
+});
+document.getElementById('verTudo').addEventListener('click',limpa);
+
+/* ---------- cards (div role=button, com teclado) ---------- */
+document.querySelectorAll('.card-topo').forEach(function(topo){
+  function alterna(){
+    var card=topo.closest('.card'), abre=!card.classList.contains('aberto');
+    var grade=card.parentElement;
+    grade.querySelectorAll('.card.aberto').forEach(function(c){
+      if(c!==card){ c.classList.remove('aberto'); c.querySelector('.card-topo').setAttribute('aria-expanded','false'); }
+    });
+    card.classList.toggle('aberto',abre);
+    topo.setAttribute('aria-expanded',String(abre));
+    if(abre) track('yoga_card',{card:topo.querySelector('.card-tit').textContent.trim()});
+  }
+  topo.addEventListener('click',alterna);
+  topo.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); alterna(); }
   });
 });
 
-/* Header + scroll top */
-let ticking=false;
-window.addEventListener('scroll',()=>{
-  if(!ticking){ requestAnimationFrame(()=>{
-    const h=document.querySelector('.header');
-    if(window.scrollY>100){ h.style.background='rgba(44,85,48,.95)'; h.style.backdropFilter='blur(15px)'; }
-    else { h.style.background='linear-gradient(135deg,#2c5530 0%,#4a7c59 100%)'; h.style.backdropFilter='blur(10px)'; }
-    const b=document.querySelector('.scroll-top');
-    if(window.scrollY>500) b.classList.add('visible'); else b.classList.remove('visible');
-    ticking=false;
-  }); ticking=true; }
+/* ---------- 11 janelas ---------- */
+var JANELAS=[
+  {n:1,nome:'Alma',q:'autenticidade',d:'A janela da sua conexão mais íntima consigo. Quando está limpa, você age a partir do que é seu de verdade, sem precisar da aprovação de ninguém.',p:'Onde eu estou sendo eu de verdade?'},
+  {n:2,nome:'Mente Negativa',q:'comunhão e afeto seguro',d:'O discernimento existe para proteger o vínculo, não para afastar. Limpa, esta janela permite chegar perto sem se perder e se afastar sem se fechar.',p:'Consigo me aproximar sem me perder, e me afastar sem me fechar?'},
+  {n:3,nome:'Mente Positiva',q:'confiança e esperança',d:'A capacidade de enxergar o núcleo luminoso em tudo e agir a partir dele. Limpa, dá clareza e assertividade — nem subserviência, nem autoritarismo.',p:'Onde posso dar um passo, mesmo pequeno?'},
+  {n:4,nome:'Mente Neutra',q:'equanimidade',d:'A percepção que integra os dois lados sem tomar partido. Quando está limpa, o seu interesse e o interesse do todo coincidem.',p:'Consigo ver os dois lados sem tomar partido?'},
+  {n:5,nome:'Corpo Físico',q:'equilíbrio e expressão',d:'A consciência estruturada no plano físico. Limpa, gera comunicação autêntica, ação criadora e harmonia com tempo e espaço.',p:'Estou habitando meu corpo? Minha voz sai?'},
+  {n:6,nome:'Arco de Luz',q:'intuição e escuta',d:'O campo que filtra influências e amplifica o foco. Limpo, dá clareza mental, congruência e capacidade de materializar o que se pretende.',p:'Estou ouvindo meus sinais internos?'},
+  {n:7,nome:'Aura',q:'presença e limites',d:'O escudo vibracional ao seu redor. Limpa, traz segurança, perdão espontâneo e compaixão — você chega nos ambientes sem se sentir invadido.',p:'Como eu chego nos ambientes? Me sinto invadido?'},
+  {n:8,nome:'Corpo Prânico',q:'vitalidade e alento',d:'A dinâmica da energia vital que alimenta todos os outros. Limpo, dá vigor, entusiasmo e mente executiva — o oposto da procrastinação.',p:'O que me drena? O que me recarrega?'},
+  {n:9,nome:'Corpo Sutil',q:'calma e refinamento',d:'O sensor que lê nuances além dos sentidos. Limpo, dá leitura fina dos processos, empatia e serenidade, sem completar as lacunas com imaginação.',p:'Consigo perceber sem pressa de explicar?'},
+  {n:10,nome:'Corpo Radiante',q:'coragem e brilho',d:'Seu brilho pessoal e a capacidade de impactar o ambiente. Limpo, expande a aura, dá carisma e proteção natural — você não precisa se apagar.',p:'Onde eu me escondo por medo de aparecer?'},
+  {n:11,nome:'Corpo Total',q:'integração',d:'A vivência da totalidade: todas as qualidades fundidas, reconhecendo o divino em tudo. É a janela que costura as outras dez.',p:'O que precisa voltar a fazer parte do todo?'}
+];
+var grade=document.getElementById('gradeJanelas'),
+    dNum=document.getElementById('janelaNum'),
+    dNome=document.getElementById('janelaNome'),
+    dDesc=document.getElementById('janelaDesc'),
+    dPerg=document.getElementById('janelaPergunta');
+
+JANELAS.forEach(function(j,i){
+  var b=document.createElement('button');
+  b.className='janela'+(i===0?' ativa':'');
+  b.type='button';
+  b.setAttribute('aria-pressed',String(i===0));
+  b.innerHTML='<b>Janela '+j.n+'</b><span>'+j.nome+' — '+j.q+'</span>';
+  b.addEventListener('click',function(){
+    grade.querySelectorAll('.janela').forEach(function(x){ x.classList.remove('ativa'); x.setAttribute('aria-pressed','false'); });
+    b.classList.add('ativa'); b.setAttribute('aria-pressed','true');
+    dNum.textContent=j.n; dNome.textContent=j.nome+' — '+j.q;
+    dDesc.textContent=j.d; dPerg.textContent='"'+j.p+'"';
+    track('yoga_janela',{janela:j.n});
+  });
+  grade.appendChild(b);
 });
-function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
 
-/* EmailJS — mesmo serviço e template do site principal */
-(function(){ if(typeof emailjs!=='undefined'){ emailjs.init("RF_SmtXIYxnb8plsM"); } })();
+/* ---------- formulário ---------- */
+(function(){ if(typeof emailjs!=='undefined'){ emailjs.init('RF_SmtXIYxnb8plsM'); } })();
+var form=document.getElementById('formYoga'),
+    aviso=document.getElementById('aviso'),
+    btn=document.getElementById('btnEnviar'),
+    msg=document.getElementById('message');
 
-document.getElementById('inscricaoYoga').addEventListener('submit',function(e){
+function valida(){
+  var ok=true;
+  ['from_name','from_email','message'].forEach(function(id){
+    var el=document.getElementById(id), v=el.value.trim(), bom=v.length>0;
+    if(id==='from_email') bom=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    el.classList.toggle('invalido',!bom);
+    if(!bom) ok=false;
+  });
+  return ok;
+}
+['from_name','from_email','message'].forEach(function(id){
+  var el=document.getElementById(id);
+  el.addEventListener('input',function(){ if(el.value.trim()) el.classList.remove('invalido'); });
+});
+
+form.addEventListener('submit',function(e){
   e.preventDefault();
-  const form=this;
-  const status=document.getElementById('statusYoga');
-  const btn=form.querySelector('button[type="submit"]');
-  const btnHTML=btn.innerHTML;
-  const msgField=document.getElementById('message');
-  const originalMsg=msgField.value;
+  if(!valida()){
+    aviso.className='aviso erro';
+    aviso.textContent='Confira nome, e-mail e mensagem antes de enviar.';
+    setTimeout(function(){ aviso.className='aviso'; },5000);
+    return;
+  }
+  if(typeof emailjs==='undefined'){
+    aviso.className='aviso erro';
+    aviso.innerHTML='Não foi possível carregar o envio. <a href="https://wa.me/5516997934558" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Fale pelo WhatsApp</a>.';
+    return;
+  }
+  var original=msg.value,
+      exp=document.getElementById('experiencia').value,
+      num=document.getElementById('numInteresse').checked,
+      extra=['','---','Origem: página Yoga Kundalini'];
+  if(exp) extra.push('Experiência prévia: '+exp);
+  extra.push('Interesse em Numerologia Tântrica: '+(num?'sim':'não informado'));
+  msg.value=original+'\n'+extra.join('\n');
 
-  const exp=document.getElementById('yk-experiencia').value;
-  const num=document.getElementById('yk-numerologia').checked;
-  const extras=['','---','Origem: página Yoga Kundalini'];
-  if(exp) extras.push('Experiência prévia: '+exp);
-  extras.push('Interesse em Numerologia Tântrica: '+(num?'sim':'não informado'));
-  msgField.value=originalMsg+'\n'+extras.join('\n');
+  var html=btn.innerHTML;
+  btn.disabled=true; btn.innerHTML='<span class="girando"></span> Enviando...';
+  aviso.className='aviso enviando'; aviso.textContent='Enviando sua mensagem...';
 
-  status.className='status-msg sending';
-  status.textContent='📤 Enviando...';
-  btn.innerHTML='<span class="loading"></span> Enviando...';
-  btn.disabled=true;
+  function restaura(){ msg.value=original; btn.disabled=false; btn.innerHTML=html; }
 
-  emailjs.sendForm("service_jg22i2i","template_contact",form)
-    .then(()=>{
-      status.className='status-msg success';
-      status.innerHTML='🎉 Recebido! Em breve entro em contato. <br><small>Se preferir resposta mais rápida, me chame no WhatsApp.</small>';
-      trackEvent('yoga_form_submitted',{success:true,interesse:document.getElementById('terapia_interesse').value});
+  emailjs.sendForm('service_jg22i2i','template_contact',form)
+    .then(function(){
+      restaura();
       form.reset();
-      setTimeout(()=>{status.className='status-msg';},9000);
+      aviso.className='aviso ok';
+      aviso.innerHTML='🎉 Recebido! Em breve entro em contato.<br><small>Para resposta mais rápida, me chame no WhatsApp.</small>';
+      track('yoga_form',{ok:true,interesse:document.getElementById('terapia_interesse').value});
+      setTimeout(function(){ aviso.className='aviso'; },10000);
     })
-    .catch(err=>{
-      status.className='status-msg error';
-      status.textContent='❌ Não foi possível enviar. Use o WhatsApp abaixo, por favor.';
+    .catch(function(err){
+      restaura();
       console.error('EmailJS:',err);
-      trackEvent('yoga_form_submitted',{success:false});
-      setTimeout(()=>{status.className='status-msg';},9000);
-    })
-    .finally(()=>{ msgField.value=originalMsg; btn.innerHTML=btnHTML; btn.disabled=false; });
+      aviso.className='aviso erro';
+      aviso.innerHTML='Não foi possível enviar. <a href="https://wa.me/5516997934558" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Use o WhatsApp</a>, por favor.';
+      track('yoga_form',{ok:false});
+      setTimeout(function(){ aviso.className='aviso'; },10000);
+    });
 });
 
-/* Acessibilidade */
-document.addEventListener('DOMContentLoaded',()=>{
-  const s=document.createElement('a');
-  s.href='#home'; s.className='sr-only'; s.textContent='Pular para o conteúdo';
-  s.addEventListener('focus',function(){this.classList.remove('sr-only');});
-  s.addEventListener('blur',function(){this.classList.add('sr-only');});
-  document.body.insertBefore(s,document.body.firstChild);
-  hamburger.setAttribute('aria-expanded','false');
-  hamburger.setAttribute('aria-controls','nav-menu');
-  navMenu.id='nav-menu';
+/* ---------- FAQ: um aberto por vez ---------- */
+var dets=[].slice.call(document.querySelectorAll('.faq details'));
+dets.forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(d.open) dets.forEach(function(o){ if(o!==d) o.open=false; });
+  });
 });
 
-console.log('🧘 Página Yoga Kundalini carregada.');
+/* ---------- acessibilidade ---------- */
+var skip=document.createElement('a');
+skip.href='#praticas'; skip.className='sr-only'; skip.textContent='Pular para o conteúdo';
+skip.addEventListener('focus',function(){ this.classList.remove('sr-only'); });
+skip.addEventListener('blur',function(){ this.classList.add('sr-only'); });
+document.body.insertBefore(skip,document.body.firstChild);
+
+console.log('%c🧘 Lunara · Yoga Kundalini','color:#c9b37c;font-weight:bold');
+})();
 </script>
 </body>
 </html>

@@ -579,25 +579,70 @@ body { background: white !important; }
 <div class="container">
 <h2 class="section-title">Nossas Terapias e Práticas</h2>
 
-<!-- Destaque Yoga -->
+<!-- ═══════════════════════════════════════════════════════════════════
+     INDEX GERAL — SIM, A IMAGEM ENTRA TAMBÉM.
+     Substitua o bloco <div class="yoga-destaque"> ... </div> inteiro
+     do seu index.html por este. Nada mais muda no arquivo.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<style>
+/* acrescentar ao <style> do index.html */
+.yoga-destaque{overflow:hidden;padding:0!important}
+.yoga-banner-img{position:relative;line-height:0;background:linear-gradient(120deg,#12281a,#2f2a63)}
+.yoga-banner-img img{width:100%;height:auto;display:block;aspect-ratio:16/7;object-fit:cover}
+.yoga-banner-img.sem-imagem{aspect-ratio:16/7;display:flex;align-items:center;justify-content:center}
+.yoga-banner-img.sem-imagem img{display:none}
+.yoga-banner-img.sem-imagem::after{content:'\f679';font-family:'Font Awesome 6 Free';font-weight:900;font-size:3.4rem;color:rgba(201,179,124,.55)}
+.yoga-banner-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 46%,rgba(18,40,26,.55));pointer-events:none}
+.yoga-banner-faixa{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;justify-content:space-around;
+  gap:.5rem;padding:.55rem .8rem;background:rgba(18,40,26,.6);backdrop-filter:blur(8px);
+  border-top:1px solid rgba(201,179,124,.32);
+}
+.yoga-banner-faixa span{
+  color:#e6f0e8;font-size:.72rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;
+}
+.yoga-banner-faixa span i{color:#e0ce96;font-size:.78rem}
+.yoga-corpo{padding:2rem 2rem 2.2rem}
+@media(max-width:600px){
+  .yoga-banner-img img,.yoga-banner-img.sem-imagem{aspect-ratio:4/3}
+  .yoga-banner-faixa{flex-direction:column;align-items:flex-start;gap:.25rem;padding:.5rem .7rem}
+  .yoga-banner-faixa span{font-size:.66rem}
+  .yoga-corpo{padding:1.4rem 1.2rem 1.6rem}
+}
+</style>
+
 <div class="yoga-destaque">
-<h3><i class="fas fa-om"></i> Yoga Kundalini, Meditação &amp; Bioenergética <span class="novo-badge">Novo</span></h3>
-<p>Aulas presenciais em grupo, à noite, para iniciantes absolutos. Três práticas integradas — movimento e respiração, mantra e silêncio, consciência corporal — em um ciclo de 8 semanas, com guia digital completo para praticar em casa.</p>
-<div class="yoga-pills">
-<span class="yoga-pill"><i class="fas fa-clock"></i> 50 minutos</span>
-<span class="yoga-pill"><i class="fas fa-moon"></i> Noturno</span>
-<span class="yoga-pill"><i class="fas fa-users"></i> Em grupo</span>
-<span class="yoga-pill"><i class="fas fa-seedling"></i> Sem experiência prévia</span>
-<span class="yoga-pill"><i class="fas fa-mobile-screen"></i> Guia digital incluído</span>
-</div>
-<div class="yoga-actions">
-<a href="yoga-kundalini.html" class="btn btn-primary" onclick="trackEvent('cta_click', {button_name: 'yoga_pagina', location: 'banner'})">
-<i class="fas fa-arrow-right"></i> Conhecer as aulas
-</a>
-<a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" class="btn btn-secondary" onclick="trackEvent('cta_click', {button_name: 'yoga_demo', location: 'banner'})">
-<i class="fab fa-whatsapp"></i> Aula demonstração 30 min
-</a>
-</div>
+  <div class="yoga-banner-img" data-fallback-host>
+    <img src="assets/tres-praticas.png" data-base="assets/tres-praticas" data-try="0"
+         onerror="imgFallback(this)"
+         alt="As três práticas em um só percurso: corpo enraizado, energia que sobe, silêncio que assenta">
+    <div class="yoga-banner-faixa">
+      <span><i class="fas fa-person-rays"></i> Bioenergética</span>
+      <span><i class="fas fa-om"></i> Yoga Kundalini</span>
+      <span><i class="fas fa-spa"></i> Meditação</span>
+    </div>
+  </div>
+  <div class="yoga-corpo">
+    <h3><i class="fas fa-om"></i> Yoga Kundalini, Meditação &amp; Bioenergética <span class="novo-badge">Novo</span></h3>
+    <p>Três práticas, um só método. Aulas presenciais em grupo, à noite, para iniciantes absolutos — movimento e respiração, mantra e silêncio, consciência corporal — em um ciclo de 8 semanas, com guia digital completo para praticar em casa.</p>
+    <div class="yoga-pills">
+      <span class="yoga-pill"><i class="fas fa-clock"></i> 50 minutos</span>
+      <span class="yoga-pill"><i class="fas fa-moon"></i> Noturno</span>
+      <span class="yoga-pill"><i class="fas fa-users"></i> Em grupo</span>
+      <span class="yoga-pill"><i class="fas fa-seedling"></i> Sem experiência prévia</span>
+      <span class="yoga-pill"><i class="fas fa-mobile-screen"></i> Guia digital incluído</span>
+    </div>
+    <div class="yoga-actions">
+      <a href="yoga-kundalini.html" class="btn btn-primary" onclick="trackEvent('cta_click',{button_name:'yoga_pagina',location:'banner'})">
+        <i class="fas fa-arrow-right"></i> Conhecer as aulas
+      </a>
+      <a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" rel="noopener" class="btn btn-secondary" onclick="trackEvent('cta_click',{button_name:'yoga_demo',location:'banner'})">
+        <i class="fab fa-whatsapp"></i> Aula demonstração 30 min
+      </a>
+    </div>
+  </div>
 </div>
 
 <!-- Práticas em Grupo -->
@@ -937,7 +982,7 @@ body { background: white !important; }
 <!-- Sessão Integrativa -->
 <div class="terapia-card">
 <div class="terapia-header" onclick="toggleContent(this)">
-<img src="assets/harmonizacao.png" data-base="assets/harmonizacao" data-try="0" onerror="imgFallback(this)" alt="Sessão Integrativa" class="terapia-image">
+<img src="assets/bioenergetica.png" data-base="assets/bioenergetica" data-try="0" onerror="imgFallback(this)" alt="Sessão Integrativa" class="terapia-image">
 <div class="terapia-info">
 <h4>Sessão Integrativa <i class="fas fa-chevron-down expand-icon"></i></h4>
 <p>Um atendimento que combina as técnicas mais adequadas ao seu momento — a porta de entrada para quem não sabe por onde começar.</p>
