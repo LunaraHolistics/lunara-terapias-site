@@ -3,530 +3,830 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yoga Kundalini, Meditação & Bioenergética | Lunara Terapias</title>
-<meta name="description" content="Aulas presenciais de Yoga Kundalini, meditação e consciência corporal. 50 minutos, à noite, para iniciantes absolutos. Ciclo de 8 semanas com guia digital de prática em casa.">
-<link rel="stylesheet" href="style.css">
+<title>Yoga Kundalini, Meditação &amp; Bioenergética | Lunara Terapias</title>
+<meta name="description" content="Aulas presenciais de Yoga Kundalini, Meditação e consciência corporal em Araraquara. 50 minutos, à noite, para iniciantes absolutos. Ciclo de 8 semanas com guia digital de prática em casa.">
+<meta name="keywords" content="yoga kundalini, meditação, bioenergética, consciência corporal, aulas de yoga araraquara, iniciantes, pranayama, mantra, kriya">
+<meta name="author" content="Celso Luiz - Lunara Terapias">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yoga Kundalini, Meditação &amp; Bioenergética | Lunara Terapias">
+<meta property="og:description" content="Três práticas, um mesmo caminho: voltar para si. Aulas de 50 min, à noite, para iniciantes absolutos, com guia digital incluído.">
+<meta property="og:image" content="assets/yoga_kundalini.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="assets/yoga_kundalini.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLZBB3EN7X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PLZBB3EN7X');
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<script>
+function imgFallback(img){
+  var exts = ['.png','.webp','.jpg','.jpeg'];
+  var base = img.getAttribute('data-base');
+  var i = parseInt(img.getAttribute('data-try') || '0', 10) + 1;
+  if (base && i < exts.length){ img.setAttribute('data-try', i); img.src = base + exts[i]; }
+  else {
+    img.style.display = 'none';
+    var fb = img.nextElementSibling;
+    if (fb && fb.classList.contains('img-fb')) fb.style.display = 'block';
+  }
+}
+</script>
+
 <style>
-/* Componentes exclusivos desta página — prefixo yk- para não conflitar com style.css */
-.yk-lead{font-size:1.05rem;line-height:1.8;opacity:.9;max-width:760px}
-.yk-pill-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0}
-.yk-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid rgba(140,140,140,.35);border-radius:999px;font-size:.85rem;font-weight:500}
-.yk-note{border-left:3px solid rgba(140,140,140,.5);padding:.9rem 1.1rem;margin:1.4rem 0;font-size:.92rem;line-height:1.7;background:rgba(140,140,140,.06);border-radius:0 8px 8px 0}
-.yk-grid{display:grid;gap:1.1rem;margin-top:1.6rem}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;background:linear-gradient(135deg,#f5f1e8 0%,#e8f5f0 50%,#a8d5ba 100%);background-attachment:fixed;min-height:100vh;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.header{background:linear-gradient(135deg,#2c5530 0%,#4a7c59 100%);box-shadow:0 2px 15px rgba(0,0,0,.1);position:fixed;width:100%;top:0;z-index:1000;backdrop-filter:blur(10px);transition:all .3s ease}
+.nav-container{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center}
+.logo-img{height:50px;width:auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));transition:transform .3s ease}
+.logo-img:hover{transform:scale(1.05)}
+.img-fb{display:none;color:#fff;font-weight:600;font-size:1.1rem}
+.nav-menu{display:flex;list-style:none;gap:1.5rem;margin:0;padding:0}
+.nav-link{color:#fff;text-decoration:none;font-weight:500;transition:color .3s;padding:.5rem .9rem;border-radius:5px;display:block}
+.nav-link:hover{color:#c9b37c;background:rgba(255,255,255,.1)}
+.hamburger{display:none;flex-direction:column;cursor:pointer;padding:5px}
+.bar{width:25px;height:3px;background:#fff;margin:3px 0;transition:.3s;border-radius:2px}
+.hamburger.active .bar:nth-child(2){opacity:0}
+.hamburger.active .bar:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.active .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#f5f1e8 0%,#e8f5f0 25%,#d4e4d8 50%,#a8d5ba 75%,#8bb8a6 100%);color:#2c5530;padding:150px 0 100px;text-align:center;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');opacity:.3;animation:twinkle 4s infinite}
+@keyframes twinkle{0%,100%{opacity:.3}50%{opacity:.6}}
+.hero-content{max-width:800px;margin:0 auto;padding:0 20px;flex:1;z-index:2;position:relative}
+.hero-image{flex:1;display:flex;justify-content:center;align-items:center;max-width:400px;z-index:2;position:relative}
+.hero-logo{max-width:300px;height:auto;border-radius:20px;opacity:.95;animation:float 6s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(0,0,0,.3))}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}33%{transform:translateY(-10px) rotate(1deg)}66%{transform:translateY(-5px) rotate(-1deg)}}
+.hero-title{font-size:3rem;font-weight:700;margin-bottom:1rem;color:#2c5530;text-shadow:2px 2px 4px rgba(44,85,48,.1)}
+.hero-subtitle{font-size:1.4rem;margin-bottom:1.5rem;font-weight:300;color:#4a7c59}
+.hero-description{font-size:1.1rem;margin-bottom:2rem;color:#2c5530;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.8}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+
+.btn{padding:15px 30px;border:none;border-radius:50px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .3s ease;font-size:1.1rem;cursor:pointer;position:relative;overflow:hidden;z-index:1}
+.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s;z-index:-1}
+.btn:hover::before{left:100%}
+.btn-primary{background:linear-gradient(135deg,#c9b37c,#d4c189);color:#333;box-shadow:0 4px 15px rgba(201,179,124,.4)}
+.btn-primary:hover{background:linear-gradient(135deg,#d4c189,#e0ce96);transform:translateY(-3px);box-shadow:0 6px 20px rgba(201,179,124,.6)}
+.btn-secondary{background:transparent;color:#2c5530;border:2px solid #2c5530;box-shadow:0 4px 15px rgba(44,85,48,.2)}
+.btn-secondary:hover{background:#2c5530;color:#fff;transform:translateY(-3px)}
+
+/* Sections */
+.section-title{text-align:center;font-size:2.5rem;margin-bottom:2.5rem;color:#333;position:relative;font-weight:600}
+.section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(135deg,#2c5530,#4a7c59);border-radius:2px}
+.section-title::before{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);width:100px;height:1px;background:linear-gradient(135deg,transparent,#2c5530,transparent)}
+.terapias{padding:80px 0;background:rgba(255,255,255,.2);backdrop-filter:blur(5px);position:relative}
+.sobre{background:rgba(255,255,255,.25);padding:80px 0;backdrop-filter:blur(5px)}
+.terapia-category{margin-bottom:2rem;position:relative;z-index:2}
+.category-title{font-size:1.8rem;margin-bottom:1.5rem;color:#2c5530;display:flex;align-items:center;gap:15px;font-weight:600}
+.category-title i{font-size:2rem;background:linear-gradient(135deg,#2c5530,#c9b37c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.terapia-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem}
+.terapia-card{background:rgba(255,255,255,.8);border-radius:20px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.1);transition:all .3s ease;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);position:relative}
+.terapia-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#5f8471,#c9b37c,#5f8471);opacity:0;transition:opacity .3s ease}
+.terapia-card:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,.15)}
+.terapia-card:hover::before{opacity:1}
+.terapia-header{padding:2rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.5rem;transition:all .3s ease}
+.terapia-header:hover{background:rgba(44,85,48,.05)}
+.terapia-image{width:100px;height:100px;border-radius:15px;object-fit:cover;flex-shrink:0;box-shadow:0 4px 15px rgba(0,0,0,.2);transition:transform .3s ease}
+.terapia-header:hover .terapia-image{transform:scale(1.05)}
+.terapia-icone{width:100px;height:100px;border-radius:15px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:2.6rem;color:#fff;background:linear-gradient(135deg,#2c5530,#4a7c59);box-shadow:0 4px 15px rgba(0,0,0,.2);transition:transform .3s ease}
+.terapia-header:hover .terapia-icone{transform:scale(1.05)}
+.terapia-info{width:100%}
+.terapia-header h4{font-size:1.4rem;margin-bottom:1rem;color:#333;display:flex;align-items:center;justify-content:space-between;font-weight:600;gap:10px}
+.expand-icon{font-size:1rem;transition:transform .3s ease;color:#2c5530;flex-shrink:0}
+.terapia-content{max-height:0;overflow:hidden;transition:max-height .4s ease-out;background:rgba(245,243,238,.5)}
+.terapia-content.active{max-height:2600px;transition:max-height .6s ease-in}
+.terapia-content-inner{padding:0 2rem 2rem}
+.terapia-content h5{color:#2c5530;margin-bottom:1rem;margin-top:1.5rem;font-weight:600;font-size:1.1rem}
+.terapia-content h5:first-child{margin-top:1rem}
+.terapia-content p{margin-bottom:1rem;line-height:1.7;color:#555}
+.terapia-content ul{list-style:none;padding-left:0;margin-bottom:1rem}
+.terapia-content li{margin-bottom:.8rem;display:flex;align-items:flex-start;gap:12px;line-height:1.6;color:#555}
+.terapia-content li i{color:#2c5530;margin-top:3px;font-size:.9rem}
+.terapia-content strong{color:#333;font-weight:600}
+
+/* Contato */
+.contato{background:linear-gradient(135deg,#2c5530 0%,#4a7c59 100%);color:#fff;padding:80px 0;position:relative}
+.contato .section-title{color:#fff}
+.contato .section-title::after{background:linear-gradient(135deg,#c9b37c,#d4c189)}
+.contato .section-title::before{background:linear-gradient(135deg,transparent,#c9b37c,transparent)}
+.contato-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:3rem;position:relative;z-index:2}
+.contato-info h3{margin-bottom:1.5rem;font-size:1.8rem;font-weight:600;color:#c9b37c}
+.contato-info>p{margin-bottom:1.5rem;line-height:1.8}
+.contato-item{display:flex;align-items:center;gap:15px;margin-bottom:1.2rem;padding:1rem;background:rgba(255,255,255,.1);border-radius:10px;transition:all .3s ease}
+.contato-item:hover{background:rgba(255,255,255,.2);transform:translateX(5px)}
+.contato-item i{font-size:1.5rem;color:#c9b37c;width:30px;text-align:center;flex-shrink:0}
+.contato-item span{font-size:1.05rem}
+.contato-item a{color:#fff;text-decoration:underline}
+.social-links{display:flex;gap:1rem;margin-top:2rem;justify-content:center;flex-wrap:wrap}
+.social-links a{color:#fff;font-size:1.6rem;transition:all .3s ease;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);text-decoration:none}
+.social-links a:hover{color:#c9b37c;background:rgba(255,255,255,.2);transform:translateY(-3px)}
+.contato-form h3{margin-bottom:2rem;font-size:1.8rem;font-weight:600;color:#c9b37c}
+.form-group{margin-bottom:1.5rem}
+.form-group label{display:block;margin-bottom:.5rem;font-weight:500;color:#f0f0f0}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 15px;border:2px solid rgba(255,255,255,.3);border-radius:10px;font-size:1rem;font-family:'Poppins',sans-serif;background:rgba(255,255,255,.95);color:#333;transition:all .3s ease}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#c9b37c;background:#fff;box-shadow:0 0 0 3px rgba(201,179,124,.2)}
+.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:40px}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-check{display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;line-height:1.6;font-weight:400;color:#f0f0f0}
+.form-check input{width:auto;margin-top:.3rem;flex-shrink:0}
+.btn-form{background:linear-gradient(135deg,#c9b37c,#d4c189);color:#333;border:none;padding:15px 30px;border-radius:10px;font-weight:600;font-size:1.1rem;cursor:pointer;width:100%;transition:all .3s ease;margin-bottom:1rem}
+.btn-form:hover{background:linear-gradient(135deg,#d4c189,#e0ce96);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,179,124,.4)}
+.btn-whatsapp{background:transparent;color:#fff;border:2px solid #fff;width:100%;justify-content:center;padding:15px 30px;margin-top:.5rem}
+.btn-whatsapp:hover{background:#fff;color:#2c5530}
+.status-msg{display:none;margin-top:15px;padding:12px;border-radius:8px;text-align:center;font-weight:500}
+.status-msg.sending{display:block;background:#ffc107;color:#333}
+.status-msg.success{display:block;background:#28a745;color:#fff}
+.status-msg.error{display:block;background:#dc3545;color:#fff}
+.loading{display:inline-block;width:18px;height:18px;border:3px solid rgba(255,255,255,.3);border-radius:50%;border-top-color:#fff;animation:spin 1s linear infinite;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Footer */
+.footer{background:#333;color:#fff;text-align:center;padding:3rem 0 2rem}
+.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+.footer-section h4{margin-bottom:1rem;color:#c9b37c;font-weight:600}
+.footer-section p,.footer-section a{color:#ccc;text-decoration:none;margin-bottom:.5rem;display:block;transition:color .3s ease}
+.footer-section a:hover{color:#c9b37c}
+.footer-logo-img{height:60px;width:auto;margin:0 auto 1rem;display:block}
+.footer-bottom{border-top:1px solid #555;padding-top:2rem}
+.footer-bottom p{margin:.5rem 0;color:#aaa}
+
+/* Flutuantes */
+.whatsapp-float{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background:#25d366;color:#fff;border-radius:50%;font-size:30px;box-shadow:2px 2px 8px rgba(0,0,0,.3);z-index:1000;display:flex;align-items:center;justify-content:center;transition:all .3s ease;text-decoration:none;animation:pulse 2s infinite}
+.whatsapp-float:hover{background:#20ba5a;transform:scale(1.1)}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.scroll-top{position:fixed;bottom:120px;right:40px;width:50px;height:50px;background:linear-gradient(135deg,#2c5530,#4a7c59);color:#fff;border:none;border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s ease;z-index:999;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.scroll-top.visible{opacity:1;visibility:visible}
+.scroll-top:hover{transform:translateY(-3px)}
+
+/* ===== Componentes desta página (yk-) ===== */
+.yk-lead{font-size:1.05rem;line-height:1.8;color:#4a5c4e;max-width:800px;margin:0 auto 1rem;text-align:center}
+.yk-pill-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0;justify-content:center}
+.yk-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid rgba(44,85,48,.3);border-radius:999px;font-size:.85rem;font-weight:500;color:#2c5530;background:rgba(255,255,255,.5)}
+.yk-note{border-left:3px solid #c9b37c;padding:1rem 1.2rem;margin:1.8rem 0;font-size:.93rem;line-height:1.75;background:rgba(255,255,255,.6);border-radius:0 10px 10px 0;color:#4a5c4e}
+.yk-note strong{color:#2c5530}
+.yk-grid{display:grid;gap:1.2rem;margin-top:1.6rem}
 .yk-grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.yk-grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.yk-box{border:1px solid rgba(140,140,140,.25);border-radius:12px;padding:1.4rem;background:rgba(140,140,140,.04)}
-.yk-box h4{margin:0 0 .6rem;font-size:1.05rem;font-weight:600}
-.yk-box p{margin:0;font-size:.93rem;line-height:1.7;opacity:.9}
-.yk-box i.yk-ico{font-size:1.4rem;margin-bottom:.7rem;display:block;opacity:.75}
-.yk-janelas{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.7rem;margin-top:1.5rem}
-.yk-janela{border:1px solid rgba(140,140,140,.25);border-radius:10px;padding:.85rem 1rem;font-size:.9rem;line-height:1.5}
-.yk-janela b{display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;opacity:.6;margin-bottom:.25rem}
-.yk-steps{counter-reset:yk;list-style:none;padding:0;margin:1.6rem 0 0}
-.yk-steps li{counter-increment:yk;position:relative;padding:0 0 1.3rem 3.2rem;border-left:2px solid rgba(140,140,140,.25);margin-left:1rem}
+.yk-grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.yk-box{border:1px solid rgba(44,85,48,.15);border-radius:15px;padding:1.6rem;background:rgba(255,255,255,.65);box-shadow:0 5px 15px rgba(0,0,0,.06);transition:transform .3s ease}
+.yk-box:hover{transform:translateY(-5px)}
+.yk-box h4{margin:0 0 .6rem;font-size:1.1rem;font-weight:600;color:#2c5530}
+.yk-box p{margin:0;font-size:.94rem;line-height:1.75;color:#555}
+.yk-box i.yk-ico{font-size:1.8rem;margin-bottom:.8rem;display:block;color:#c9b37c}
+.yk-janelas{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;margin-top:1.8rem}
+.yk-janela{border:1px solid rgba(44,85,48,.15);border-radius:12px;padding:.9rem 1.1rem;font-size:.92rem;line-height:1.5;background:rgba(255,255,255,.65);color:#3d5c42}
+.yk-janela b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#c9b37c;margin-bottom:.3rem;font-weight:700}
+.yk-steps{counter-reset:yk;list-style:none;padding:0;margin:2rem 0 0}
+.yk-steps li{counter-increment:yk;position:relative;padding:0 0 1.5rem 3.4rem;border-left:2px solid rgba(44,85,48,.2);margin-left:1rem}
 .yk-steps li:last-child{border-left-color:transparent;padding-bottom:0}
-.yk-steps li::before{content:counter(yk);position:absolute;left:-1rem;top:0;width:2rem;height:2rem;border-radius:50%;background:rgba(140,140,140,.15);border:1px solid rgba(140,140,140,.35);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600}
-.yk-steps strong{display:block;font-size:1rem;margin-bottom:.2rem}
-.yk-steps span{font-size:.9rem;line-height:1.65;opacity:.88}
-.yk-table-wrap{overflow-x:auto;margin-top:1.5rem}
-.yk-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:520px}
-.yk-table th,.yk-table td{text-align:left;padding:.75rem .8rem;border-bottom:1px solid rgba(140,140,140,.2);vertical-align:top}
-.yk-table th{font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;opacity:.65;font-weight:600}
-.yk-faq{margin-top:1.5rem}
-.yk-faq details{border:1px solid rgba(140,140,140,.25);border-radius:10px;padding:.9rem 1.1rem;margin-bottom:.7rem}
-.yk-faq summary{cursor:pointer;font-weight:500;font-size:.97rem;list-style:none}
+.yk-steps li::before{content:counter(yk);position:absolute;left:-1rem;top:0;width:2rem;height:2rem;border-radius:50%;background:linear-gradient(135deg,#2c5530,#4a7c59);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600}
+.yk-steps strong{display:block;font-size:1.05rem;margin-bottom:.3rem;color:#2c5530}
+.yk-steps span{font-size:.93rem;line-height:1.7;color:#555}
+.yk-table-wrap{overflow-x:auto;margin-top:1.8rem;border-radius:15px;background:rgba(255,255,255,.65);box-shadow:0 5px 15px rgba(0,0,0,.06)}
+.yk-table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px}
+.yk-table th,.yk-table td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid rgba(44,85,48,.12);vertical-align:top;color:#555}
+.yk-table th{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:#2c5530;font-weight:700;background:rgba(201,179,124,.15)}
+.yk-table tr:last-child td{border-bottom:none}
+.yk-faq{margin-top:1.8rem}
+.yk-faq details{border:1px solid rgba(44,85,48,.15);border-radius:12px;padding:1rem 1.2rem;margin-bottom:.8rem;background:rgba(255,255,255,.65)}
+.yk-faq summary{cursor:pointer;font-weight:500;font-size:1rem;list-style:none;color:#2c5530}
 .yk-faq summary::-webkit-details-marker{display:none}
-.yk-faq summary::after{content:"＋";float:right;opacity:.5}
+.yk-faq summary::after{content:"＋";float:right;color:#c9b37c;font-weight:700}
 .yk-faq details[open] summary::after{content:"－"}
-.yk-faq p{margin:.8rem 0 0;font-size:.92rem;line-height:1.75;opacity:.9}
-.yk-cta{text-align:center;border:1px solid rgba(140,140,140,.3);border-radius:16px;padding:2.4rem 1.6rem;margin-top:2rem;background:rgba(140,140,140,.05)}
-.yk-cta h3{margin:0 0 .7rem;font-size:1.4rem}
-.yk-cta p{margin:0 auto 1.5rem;max-width:560px;font-size:.96rem;line-height:1.75;opacity:.9}
-.yk-check{list-style:none;padding:0;margin:.8rem 0 0;font-size:.92rem;line-height:1.9}
-.yk-check li{display:flex;gap:.6rem;align-items:flex-start}
-.yk-check i{margin-top:.35rem;font-size:.8rem;opacity:.6}
-.yk-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;margin-bottom:1rem;opacity:.75}
+.yk-faq p{margin:.9rem 0 0;font-size:.94rem;line-height:1.8;color:#555}
+.yk-cta{text-align:center;border:2px solid rgba(201,179,124,.5);border-radius:20px;padding:2.5rem 1.8rem;margin-top:1rem;background:linear-gradient(135deg,rgba(201,179,124,.2),rgba(95,132,113,.2));position:relative;z-index:2}
+.yk-cta h3{margin:0 0 .8rem;font-size:1.6rem;color:#fff}
+.yk-cta p{margin:0 auto 1.6rem;max-width:620px;font-size:.98rem;line-height:1.8;color:#f0f0f0}
+.yk-check{list-style:none;padding:0;margin:.8rem 0 0;font-size:.94rem;line-height:1.8}
+.yk-check li{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.5rem;color:#555}
+.yk-check i{margin-top:.4rem;font-size:.8rem;color:#c9b37c;flex-shrink:0}
+.yk-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;margin-bottom:1rem;color:#2c5530;text-decoration:none;opacity:.8}
+.yk-back:hover{opacity:1;text-decoration:underline}
+
+/* Responsivo */
+@media (max-width:768px){
+.hamburger{display:flex}
+.nav-menu{position:fixed;left:-100%;top:70px;flex-direction:column;background:linear-gradient(135deg,#2c5530 0%,#4a7c59 100%);width:100%;text-align:center;transition:.3s;box-shadow:0 10px 27px rgba(0,0,0,.05);padding:2rem 0}
+.nav-menu.active{left:0}
+.hero{flex-direction:column;padding:120px 0 70px;min-height:auto}
+.hero-content{order:2;margin-top:2rem}
+.hero-image{order:1;margin-bottom:1rem}
+.hero-title{font-size:2.1rem}
+.hero-subtitle{font-size:1.15rem}
+.hero-description{font-size:1rem}
+.hero-logo{max-width:220px}
+.terapia-grid,.contato-grid{grid-template-columns:1fr}
+.terapia-image,.terapia-icone{width:80px;height:80px;font-size:2.1rem}
+.hero-buttons{flex-direction:column;align-items:center}
+.btn{width:100%;max-width:320px;justify-content:center}
+.footer-content{grid-template-columns:1fr}
+.whatsapp-float{bottom:20px;right:20px;width:55px;height:55px;font-size:25px}
+.scroll-top{bottom:90px;right:20px;width:45px;height:45px;font-size:1rem}
+.section-title{font-size:1.9rem}
+.category-title{font-size:1.4rem}
+.yk-cta{padding:1.8rem 1.2rem}
+.yk-cta h3{font-size:1.3rem}
+}
+@media (max-width:480px){
+.container{padding:0 15px}
+.nav-container{padding:1rem 1.5rem}
+.hero-title{font-size:1.8rem}
+.terapia-header{padding:1.5rem}
+.terapia-content-inner{padding:0 1.5rem 1.5rem}
+.btn{padding:12px 25px;font-size:1rem}
+}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#f1f1f1}
+::-webkit-scrollbar-thumb{background:linear-gradient(135deg,#2c5530,#4a7c59);border-radius:5px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.btn:focus,.nav-link:focus,input:focus,textarea:focus,button:focus,summary:focus{outline:2px solid #c9b37c;outline-offset:2px}
+@media print{.header,.whatsapp-float,.scroll-top{display:none!important}body{background:#fff!important}}
 </style>
 </head>
 <body>
 
+<a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Vi%20a%20p%C3%A1gina%20de%20Yoga%20Kundalini%20e%20quero%20saber%20mais." target="_blank" class="whatsapp-float" title="Conversar no WhatsApp" aria-label="Abrir conversa no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" onclick="scrollToTop()" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+
 <!-- Header -->
 <header class="header">
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html"><img src="logo_lunara.jpg" alt="Lunara Terapias" class="logo-img"></a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="#praticas" class="nav-link">As Práticas</a></li>
-                <li class="nav-item"><a href="#aula" class="nav-link">A Aula</a></li>
-                <li class="nav-item"><a href="#ciclo" class="nav-link">O Ciclo</a></li>
-                <li class="nav-item"><a href="#inscricao" class="nav-link">Inscrição</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar" role="navigation" aria-label="Menu principal">
+<div class="nav-container">
+<div class="logo">
+<a href="index.html"><img src="assets/logo.png" data-base="assets/logo" data-try="0" onerror="imgFallback(this)" alt="Lunara Terapias" class="logo-img"></a>
+<span class="img-fb">Lunara Terapias</span>
+</div>
+<ul class="nav-menu">
+<li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+<li class="nav-item"><a href="#praticas" class="nav-link">As Práticas</a></li>
+<li class="nav-item"><a href="#janelas" class="nav-link">As 11 Janelas</a></li>
+<li class="nav-item"><a href="#aula" class="nav-link">A Aula</a></li>
+<li class="nav-item"><a href="#ciclo" class="nav-link">O Ciclo</a></li>
+<li class="nav-item"><a href="#faq" class="nav-link">Dúvidas</a></li>
+<li class="nav-item"><a href="#inscricao" class="nav-link">Inscrição</a></li>
+</ul>
+<div class="hamburger" aria-label="Menu mobile" role="button" tabindex="0"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+</div>
+</nav>
 </header>
 
 <!-- Hero -->
 <section id="home" class="hero">
-    <div class="hero-content">
-        <a href="index.html" class="yk-back"><i class="fas fa-arrow-left"></i> Lunara Terapias</a>
-        <h1 class="hero-title">Yoga Kundalini, Meditação &amp; Bioenergética</h1>
-        <p class="hero-subtitle">Três práticas, um mesmo caminho: voltar para si.</p>
-        <p class="hero-description">Aulas presenciais noturnas de 50 minutos, em grupo, para <strong>iniciantes absolutos</strong>. Você não precisa ser flexível, experiente ou "espiritual" — precisa só chegar e respirar. Cada aula trabalha uma área da consciência, e você leva para casa um guia digital completo para praticar entre os encontros.</p>
-        <div class="yk-pill-row">
-            <span class="yk-pill"><i class="fas fa-clock"></i> 50 minutos</span>
-            <span class="yk-pill"><i class="fas fa-moon"></i> Período noturno</span>
-            <span class="yk-pill"><i class="fas fa-users"></i> Turma em grupo</span>
-            <span class="yk-pill"><i class="fas fa-chair"></i> Cadeira sempre disponível</span>
-            <span class="yk-pill"><i class="fas fa-seedling"></i> Sem experiência prévia</span>
-        </div>
-        <div class="hero-buttons">
-            <a href="#inscricao" class="btn btn-primary">Quero participar</a>
-            <a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" class="btn btn-secondary">
-                <i class="fas fa-book-open"></i> Ver o guia do aluno
-            </a>
-        </div>
-    </div>
-    <div class="hero-image">
-        <img src="logo_contorno.png" alt="Símbolo Lunara" class="hero-logo">
-    </div>
+<div class="hero-content">
+<a href="index.html" class="yk-back"><i class="fas fa-arrow-left"></i> Lunara Terapias</a>
+<h1 class="hero-title">Yoga Kundalini, Meditação &amp; Bioenergética</h1>
+<p class="hero-subtitle">Três práticas, um mesmo caminho: voltar para si.</p>
+<p class="hero-description">Aulas presenciais noturnas de 50 minutos, em grupo, para <strong>iniciantes absolutos</strong>. Você não precisa ser flexível, experiente ou "espiritual" — precisa só chegar e respirar. Cada aula trabalha uma área da consciência, e você leva para casa um guia digital completo para praticar entre os encontros.</p>
+<div class="yk-pill-row">
+<span class="yk-pill"><i class="fas fa-clock"></i> 50 minutos</span>
+<span class="yk-pill"><i class="fas fa-moon"></i> Período noturno</span>
+<span class="yk-pill"><i class="fas fa-users"></i> Turma em grupo</span>
+<span class="yk-pill"><i class="fas fa-chair"></i> Cadeira sempre disponível</span>
+<span class="yk-pill"><i class="fas fa-seedling"></i> Sem experiência prévia</span>
+</div>
+<div class="hero-buttons">
+<a href="#inscricao" class="btn btn-primary"><i class="fas fa-heart"></i> Quero participar</a>
+<a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" class="btn btn-secondary"><i class="fas fa-book-open"></i> Ver o guia do aluno</a>
+</div>
+</div>
+<div class="hero-image">
+<img src="assets/yoga_kundalini.png" data-base="assets/yoga_kundalini" data-try="0" onerror="imgFallback(this)" alt="Yoga Kundalini e Meditação" class="hero-logo">
+</div>
 </section>
 
 <!-- As três práticas -->
 <section id="praticas" class="terapias">
-    <div class="container">
-        <h2 class="section-title">As três práticas — e por que juntas</h2>
-        <p class="yk-lead">Cada uma trabalha uma porta de entrada diferente. O corpo abre a porta pela respiração e pelo movimento; o som abre pela vibração; a percepção corporal abre pelo que está tenso e não foi escutado. Juntas, elas se sustentam: a prática física prepara o silêncio, e o silêncio dá sentido à prática física.</p>
+<div class="container">
+<h2 class="section-title">As três práticas — e por que juntas</h2>
+<p class="yk-lead">Cada uma trabalha uma porta de entrada diferente. O corpo abre pela respiração e pelo movimento; o som abre pela vibração; a percepção corporal abre pelo que está tenso e não foi escutado. Juntas, elas se sustentam: a prática física prepara o silêncio, e o silêncio dá sentido à prática física.</p>
 
-        <div class="terapia-category">
-            <div class="terapia-grid">
+<div class="terapia-category">
+<div class="terapia-grid">
 
-                <div class="terapia-card">
-                    <div class="terapia-header" onclick="toggleContent(this)">
-                        <i class="fas fa-om terapia-icon"></i>
-                        <h4>Yoga Kundalini <i class="fas fa-chevron-down expand-icon"></i></h4>
-                        <p>Sequências de movimento, respiração e som — o "Yoga da Consciência".</p>
-                    </div>
-                    <div class="terapia-content">
-                        <div class="terapia-content-inner">
-                            <h5>O que é</h5>
-                            <p>Uma tradição do yoga que combina <strong>kriyas</strong> (sequências de exercícios em ordem fixa, com um efeito específico), <strong>pranayama</strong> (técnicas respiratórias), <strong>mudras</strong> (selos das mãos) e <strong>mantras</strong> (sons com direção). Não é uma aula de alongamento nem de performance física.</p>
-                            <h5>Como é na prática</h5>
-                            <p>Exercícios curtos, de 1 a 3 minutos, com descansos entre eles. Muitos são sentados. Cada um tem versão suave. A coluna é o eixo do trabalho: flexões, torções e aberturas coordenadas com a respiração.</p>
-                            <h5>O que você aprende no ciclo</h5>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Respiração longa e profunda — a base de tudo</li>
-                                <li><i class="fas fa-check-circle"></i> Respiração pela narina esquerda e alternada</li>
-                                <li><i class="fas fa-check-circle"></i> Respiração de 4 partes, para recarregar</li>
-                                <li><i class="fas fa-check-circle"></i> Dez mudras, com função e momento de uso</li>
-                                <li><i class="fas fa-check-circle"></i> Dezessete exercícios guiados passo a passo</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<div class="terapia-card">
+<div class="terapia-header" onclick="toggleContent(this)">
+<img src="assets/yoga_kundalini.png" data-base="assets/yoga_kundalini" data-try="0" onerror="imgFallback(this)" alt="Yoga Kundalini" class="terapia-image">
+<div class="terapia-info">
+<h4>Yoga Kundalini <i class="fas fa-chevron-down expand-icon"></i></h4>
+<p>Sequências de movimento, respiração e som — o "Yoga da Consciência".</p>
+</div>
+</div>
+<div class="terapia-content">
+<div class="terapia-content-inner">
+<h5>O que é</h5>
+<p>Uma tradição do yoga que combina <strong>kriyas</strong> (sequências de exercícios em ordem fixa, com um efeito específico), <strong>pranayama</strong> (técnicas respiratórias), <strong>mudras</strong> (selos das mãos) e <strong>mantras</strong> (sons com direção). Não é uma aula de alongamento nem de performance física.</p>
+<h5>Como é na prática</h5>
+<p>Exercícios curtos, de 1 a 3 minutos, com descansos entre eles. Muitos são sentados. Cada um tem versão suave. A coluna é o eixo do trabalho: flexões, torções e aberturas coordenadas com a respiração.</p>
+<h5>O que você aprende no ciclo</h5>
+<ul>
+<li><i class="fas fa-check-circle"></i> Respiração longa e profunda — a base de tudo</li>
+<li><i class="fas fa-check-circle"></i> Respiração pela narina esquerda e alternada</li>
+<li><i class="fas fa-check-circle"></i> Respiração de 4 partes, para recarregar</li>
+<li><i class="fas fa-check-circle"></i> Dez mudras, com função e momento de uso</li>
+<li><i class="fas fa-check-circle"></i> Dezessete exercícios guiados passo a passo</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <div class="terapia-card">
-                    <div class="terapia-header" onclick="toggleContent(this)">
-                        <i class="fas fa-spa terapia-icon"></i>
-                        <h4>Meditação <i class="fas fa-chevron-down expand-icon"></i></h4>
-                        <p>Mantra, respiração e silêncio — com pronúncia ensinada sílaba por sílaba.</p>
-                    </div>
-                    <div class="terapia-content">
-                        <div class="terapia-content-inner">
-                            <h5>O que é</h5>
-                            <p>Meditar não é parar a mente — é trocar de canal. Aqui você aprende técnicas concretas: onde colocar a atenção, o que fazer com o ar, como dizer cada sílaba e como encerrar. Nada de "esvaziar a cabeça".</p>
-                            <h5>O repertório do ciclo</h5>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> <strong>Ong Namo Guru Dev Namo</strong> — a sintonização que abre toda aula</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Sat Kar Tar</strong> — autenticidade, com movimento das mãos</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Long Sat Nams</strong> — para neutralizar a tensão do dia</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Wha Hey Guru</strong> — equanimidade, sem controlar a respiração</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Om So Ham</strong> — reconhecimento da própria luz</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Kirtan Kriya</strong> — voz alta, sussurro e silêncio, com selos dos dedos</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Silêncio e Escuta</strong> — ouvir a própria intuição</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Gurprasad</strong> — o momento de receber</li>
-                            </ul>
-                            <h5>Por que meditar</h5>
-                            <p>A resposta da tradição é simples: as respostas que você procura estão dentro, não fora. E a prática não termina quando você levanta — ela se mede ao longo do dia, em como você trata a primeira pessoa que cruza seu caminho.</p>
-                        </div>
-                    </div>
-                </div>
+<div class="terapia-card">
+<div class="terapia-header" onclick="toggleContent(this)">
+<div class="terapia-icone"><i class="fas fa-spa"></i></div>
+<div class="terapia-info">
+<h4>Meditação <i class="fas fa-chevron-down expand-icon"></i></h4>
+<p>Mantra, respiração e silêncio — com pronúncia ensinada sílaba por sílaba.</p>
+</div>
+</div>
+<div class="terapia-content">
+<div class="terapia-content-inner">
+<h5>O que é</h5>
+<p>Meditar não é parar a mente — é trocar de canal. Aqui você aprende técnicas concretas: onde colocar a atenção, o que fazer com o ar, como dizer cada sílaba e como encerrar. Nada de "esvaziar a cabeça".</p>
+<h5>O repertório do ciclo</h5>
+<ul>
+<li><i class="fas fa-check-circle"></i> <strong>Ong Namo Guru Dev Namo</strong> — a sintonização que abre toda aula</li>
+<li><i class="fas fa-check-circle"></i> <strong>Sat Kar Tar</strong> — autenticidade, com movimento das mãos</li>
+<li><i class="fas fa-check-circle"></i> <strong>Long Sat Nams</strong> — para neutralizar a tensão do dia</li>
+<li><i class="fas fa-check-circle"></i> <strong>Wha Hey Guru</strong> — equanimidade, sem controlar a respiração</li>
+<li><i class="fas fa-check-circle"></i> <strong>Om So Ham</strong> — reconhecimento da própria luz</li>
+<li><i class="fas fa-check-circle"></i> <strong>Kirtan Kriya</strong> — voz alta, sussurro e silêncio, com selos dos dedos</li>
+<li><i class="fas fa-check-circle"></i> <strong>Silêncio e Escuta</strong> — ouvir a própria intuição</li>
+<li><i class="fas fa-check-circle"></i> <strong>Gurprasad</strong> — o momento de receber</li>
+</ul>
+<h5>Por que meditar</h5>
+<p>A resposta da tradição é simples: as respostas que você procura estão dentro, não fora. E a prática não termina quando você levanta — ela se mede ao longo do dia, em como você trata a primeira pessoa que cruza seu caminho.</p>
+</div>
+</div>
+</div>
 
-                <div class="terapia-card">
-                    <div class="terapia-header" onclick="toggleContent(this)">
-                        <i class="fas fa-person-rays terapia-icon"></i>
-                        <h4>Bioenergética &amp; Consciência Corporal <i class="fas fa-chevron-down expand-icon"></i></h4>
-                        <p>Enraizamento, liberação de tensão e percepção do corpo em movimento.</p>
-                    </div>
-                    <div class="terapia-content">
-                        <div class="terapia-content-inner">
-                            <h5>O que é</h5>
-                            <p>O trabalho de voltar a habitar o corpo. Usamos "bioenergética" aqui como <strong>vocabulário de consciência corporal</strong>: perceber onde a tensão se instala, dar chão ao corpo e permitir que a energia se mova em vez de ficar retida.</p>
-                            <h5>Como aparece na aula</h5>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> <strong>Enraizamento em pé</strong> — pés paralelos, joelhos moles, peso descendo</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Tremor como descarga</strong> — se as pernas vibrarem, é tensão saindo; não é erro</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Abertura com som</strong> — soltar pela boca o que ficou preso no peito</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Soltura de ombros, mandíbula e garganta</strong></li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Varredura corporal no relaxamento</strong> — dos pés ao rosto, soltando cada região</li>
-                            </ul>
-                            <h5>O relaxamento é inegociável</h5>
-                            <p>Toda aula tem de 7 a 10 minutos de relaxamento deitado, com manta. É ali que o corpo absorve o que fez. Levantar direto depois dos exercícios é como tirar o bolo do forno antes da hora.</p>
-                        </div>
-                    </div>
-                </div>
+<div class="terapia-card">
+<div class="terapia-header" onclick="toggleContent(this)">
+<div class="terapia-icone"><i class="fas fa-person-rays"></i></div>
+<div class="terapia-info">
+<h4>Bioenergética &amp; Consciência Corporal <i class="fas fa-chevron-down expand-icon"></i></h4>
+<p>Enraizamento, liberação de tensão e percepção do corpo em movimento.</p>
+</div>
+</div>
+<div class="terapia-content">
+<div class="terapia-content-inner">
+<h5>O que é</h5>
+<p>O trabalho de voltar a habitar o corpo. Usamos "bioenergética" aqui como <strong>vocabulário de consciência corporal</strong>: perceber onde a tensão se instala, dar chão ao corpo e permitir que a energia se mova em vez de ficar retida.</p>
+<h5>Como aparece na aula</h5>
+<ul>
+<li><i class="fas fa-check-circle"></i> <strong>Enraizamento em pé</strong> — pés paralelos, joelhos moles, peso descendo</li>
+<li><i class="fas fa-check-circle"></i> <strong>Tremor como descarga</strong> — se as pernas vibrarem, é tensão saindo; não é erro</li>
+<li><i class="fas fa-check-circle"></i> <strong>Abertura com som</strong> — soltar pela boca o que ficou preso no peito</li>
+<li><i class="fas fa-check-circle"></i> <strong>Soltura de ombros, mandíbula e garganta</strong></li>
+<li><i class="fas fa-check-circle"></i> <strong>Varredura corporal no relaxamento</strong> — dos pés ao rosto, soltando cada região</li>
+</ul>
+<h5>O relaxamento é inegociável</h5>
+<p>Toda aula tem de 7 a 10 minutos de relaxamento deitado, com manta. É ali que o corpo absorve o que fez. Levantar direto depois dos exercícios é como tirar o bolo do forno antes da hora.</p>
+</div>
+</div>
+</div>
 
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- As 11 janelas -->
 <section id="janelas" class="sobre">
-    <div class="container">
-        <h2 class="section-title">A metáfora que organiza o curso: as 11 janelas</h2>
-        <p class="yk-lead">Você é uma casa com 11 janelas. A luz do sol já existe do lado de fora — é a sua alma, já completa. <strong>Nosso trabalho não é fabricar luz: é limpar as janelas.</strong> Quando uma fica transparente, a qualidade dela aparece sozinha.</p>
-        <p class="yk-lead">Por isso não tentamos "cultivar" calma ou coragem à força. Trabalhamos a condição; a qualidade vem depois. Cada semana do ciclo limpa uma janela diferente.</p>
+<div class="container">
+<h2 class="section-title">A metáfora que organiza o curso: as 11 janelas</h2>
+<p class="yk-lead">Você é uma casa com 11 janelas. A luz do sol já existe do lado de fora — é a sua alma, já completa. <strong>Nosso trabalho não é fabricar luz: é limpar as janelas.</strong> Quando uma fica transparente, a qualidade dela aparece sozinha.</p>
+<p class="yk-lead">Por isso não tentamos "cultivar" calma ou coragem à força. Trabalhamos a condição; a qualidade vem depois. Cada semana do ciclo limpa uma janela diferente.</p>
 
-        <div class="yk-janelas">
-            <div class="yk-janela"><b>Janela 1</b>Alma — autenticidade</div>
-            <div class="yk-janela"><b>Janela 2</b>Mente Negativa — comunhão e afeto seguro</div>
-            <div class="yk-janela"><b>Janela 3</b>Mente Positiva — confiança</div>
-            <div class="yk-janela"><b>Janela 4</b>Mente Neutra — equanimidade</div>
-            <div class="yk-janela"><b>Janela 5</b>Corpo Físico — expressão</div>
-            <div class="yk-janela"><b>Janela 6</b>Arco de Luz — escuta</div>
-            <div class="yk-janela"><b>Janela 7</b>Aura — presença</div>
-            <div class="yk-janela"><b>Janela 8</b>Corpo Prânico — vitalidade</div>
-            <div class="yk-janela"><b>Janela 9</b>Corpo Sutil — calma</div>
-            <div class="yk-janela"><b>Janela 10</b>Corpo Radiante — coragem</div>
-            <div class="yk-janela"><b>Janela 11</b>Corpo Total — integração</div>
-        </div>
+<div class="yk-janelas">
+<div class="yk-janela"><b>Janela 1</b>Alma — autenticidade</div>
+<div class="yk-janela"><b>Janela 2</b>Mente Negativa — comunhão e afeto seguro</div>
+<div class="yk-janela"><b>Janela 3</b>Mente Positiva — confiança</div>
+<div class="yk-janela"><b>Janela 4</b>Mente Neutra — equanimidade</div>
+<div class="yk-janela"><b>Janela 5</b>Corpo Físico — expressão</div>
+<div class="yk-janela"><b>Janela 6</b>Arco de Luz — escuta</div>
+<div class="yk-janela"><b>Janela 7</b>Aura — presença</div>
+<div class="yk-janela"><b>Janela 8</b>Corpo Prânico — vitalidade</div>
+<div class="yk-janela"><b>Janela 9</b>Corpo Sutil — calma</div>
+<div class="yk-janela"><b>Janela 10</b>Corpo Radiante — coragem</div>
+<div class="yk-janela"><b>Janela 11</b>Corpo Total — integração</div>
+</div>
 
-        <h3 class="category-title" style="margin-top:2.5rem"><i class="fas fa-layer-group"></i> Os três pilares do trabalho</h3>
-        <div class="yk-grid yk-grid-3">
-            <div class="yk-box">
-                <i class="fas fa-wind yk-ico"></i>
-                <h4>Vitalidade</h4>
-                <p>A respiração e as posturas ampliam o prana — a energia vital. É por isso que a aula começa respirando, não alongando.</p>
-            </div>
-            <div class="yk-box">
-                <i class="fas fa-music yk-ico"></i>
-                <h4>Vibração</h4>
-                <p>O mantra e a meditação elevam a frequência em que você opera. Você não precisa acreditar em nada: precisa pronunciar e respirar.</p>
-            </div>
-            <div class="yk-box">
-                <i class="fas fa-eye yk-ico"></i>
-                <h4>Auto-observação</h4>
-                <p>Perceber o automático é o que o desfaz. Cada janela vem com uma pergunta para você se observar — sem julgamento.</p>
-            </div>
-        </div>
+<h3 class="category-title" style="margin-top:2.8rem"><i class="fas fa-layer-group"></i> Os três pilares do trabalho</h3>
+<div class="yk-grid yk-grid-3">
+<div class="yk-box">
+<i class="fas fa-wind yk-ico"></i>
+<h4>Vitalidade</h4>
+<p>A respiração e as posturas ampliam o prana — a energia vital. É por isso que a aula começa respirando, não alongando.</p>
+</div>
+<div class="yk-box">
+<i class="fas fa-music yk-ico"></i>
+<h4>Vibração</h4>
+<p>O mantra e a meditação elevam a frequência em que você opera. Você não precisa acreditar em nada: precisa pronunciar e respirar.</p>
+</div>
+<div class="yk-box">
+<i class="fas fa-eye yk-ico"></i>
+<h4>Auto-observação</h4>
+<p>Perceber o automático é o que o desfaz. Cada janela vem com uma pergunta para você se observar — sem julgamento.</p>
+</div>
+</div>
 
-        <div class="yk-note">
-            <strong>Importante:</strong> o mapa das 11 janelas é uma ferramenta simbólica de auto-observação da tradição do yoga. Não é diagnóstico médico, psicológico ou energético.
-        </div>
-    </div>
+<div class="yk-note">
+<strong>Importante:</strong> o mapa das 11 janelas é uma ferramenta simbólica de auto-observação da tradição do yoga. Não é diagnóstico médico, psicológico ou energético.
+</div>
+</div>
 </section>
 
 <!-- Como é uma aula -->
 <section id="aula" class="terapias">
-    <div class="container">
-        <h2 class="section-title">Como é uma aula de 50 minutos</h2>
-        <p class="yk-lead">A estrutura é sempre a mesma — e isso é o que torna a prática segura. Só o conteúdo do meio muda a cada semana.</p>
+<div class="container">
+<h2 class="section-title">Como é uma aula de 50 minutos</h2>
+<p class="yk-lead">A estrutura é sempre a mesma — e isso é o que torna a prática segura. Só o conteúdo do meio muda a cada semana.</p>
 
-        <ol class="yk-steps">
-            <li><strong>Sintonização · 4 min</strong><span>Palmas unidas no peito e o mantra de abertura, três vezes, cada um numa respiração própria. Depois, alguns segundos de silêncio. Não é ritual vazio: é avisar ao sistema nervoso que o mundo lá fora fica lá fora.</span></li>
-            <li><strong>Aquecimento · 3 min</strong><span>Circulação dos olhos e soltura do pescoço. Aquietar o olhar aquieta a mente — alívio imediato para quem passa o dia em telas.</span></li>
-            <li><strong>Enraizamento · 7 min</strong><span>Em pé, pés paralelos, joelhos levemente dobrados, respiração longa descendo na barriga. Você volta para o corpo antes de trabalhar o corpo.</span></li>
-            <li><strong>Kriya da semana · 10 min</strong><span>Quatro exercícios em ordem fixa, com descansos de 30 segundos a 1 minuto entre eles. O descanso é parte do exercício, não perda de tempo.</span></li>
-            <li><strong>Abertura e descarga · 3 min</strong><span>Abrir o peito e soltar o que ficou preso. Sempre com versão suave disponível.</span></li>
-            <li><strong>Relaxamento · 8 min</strong><span>Deitado, com manta, varredura corporal dos pés ao rosto. Nunca menos de 5 minutos — é a parte mais importante.</span></li>
-            <li><strong>Meditação · 10 min</strong><span>A técnica da semana, com pronúncia e respiração ensinadas, seguida de silêncio.</span></li>
-            <li><strong>Encerramento · 5 min</strong><span>Canção do Sol, três Sat Nams longos e uma roda breve de compartilhamento — falar é voluntário; ouvir já é participar.</span></li>
-        </ol>
+<ol class="yk-steps">
+<li><strong>Sintonização · 4 min</strong><span>Palmas unidas no peito e o mantra de abertura, três vezes, cada um numa respiração própria. Depois, alguns segundos de silêncio. Não é ritual vazio: é avisar ao sistema nervoso que o mundo lá fora fica lá fora.</span></li>
+<li><strong>Aquecimento · 3 min</strong><span>Circulação dos olhos e soltura do pescoço. Aquietar o olhar aquieta a mente — alívio imediato para quem passa o dia em telas.</span></li>
+<li><strong>Enraizamento · 7 min</strong><span>Em pé, pés paralelos, joelhos levemente dobrados, respiração longa descendo na barriga. Você volta para o corpo antes de trabalhar o corpo.</span></li>
+<li><strong>Kriya da semana · 10 min</strong><span>Quatro exercícios em ordem fixa, com descansos de 30 segundos a 1 minuto entre eles. O descanso é parte do exercício, não perda de tempo.</span></li>
+<li><strong>Abertura e descarga · 3 min</strong><span>Abrir o peito e soltar o que ficou preso. Sempre com versão suave disponível.</span></li>
+<li><strong>Relaxamento · 8 min</strong><span>Deitado, com manta, varredura corporal dos pés ao rosto. Nunca menos de 5 minutos — é a parte mais importante.</span></li>
+<li><strong>Meditação · 10 min</strong><span>A técnica da semana, com pronúncia e respiração ensinadas, seguida de silêncio.</span></li>
+<li><strong>Encerramento · 5 min</strong><span>Canção do Sol, três Sat Nams longos e uma roda breve de compartilhamento — falar é voluntário; ouvir já é participar.</span></li>
+</ol>
 
-        <div class="yk-note">
-            À noite, tudo é mais suave. Preferimos respiração longa à respiração rápida, e as técnicas mais intensas só entram na segunda metade do percurso, com acompanhamento.
-        </div>
-    </div>
+<div class="yk-note">
+À noite, tudo é mais suave. Preferimos respiração longa à respiração rápida, e as técnicas mais intensas só entram na segunda metade do percurso, com acompanhamento.
+</div>
+</div>
 </section>
 
 <!-- O ciclo -->
 <section id="ciclo" class="sobre">
-    <div class="container">
-        <h2 class="section-title">O percurso: 8 semanas, 8 janelas</h2>
-        <p class="yk-lead">Cada semana tem uma janela em foco e uma prática-chave. As 11 janelas aparecem ao longo do ciclo — algumas como foco principal, outras como apoio.</p>
+<div class="container">
+<h2 class="section-title">O percurso: 8 semanas, 11 janelas</h2>
+<p class="yk-lead">Cada semana tem uma janela em foco e uma prática-chave. As 11 janelas aparecem ao longo do ciclo — algumas como foco principal, outras como apoio.</p>
 
-        <div class="yk-table-wrap">
-            <table class="yk-table">
-                <thead>
-                    <tr><th>Semana</th><th>Janela</th><th>Meditação</th><th>O que se convida</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Alma</td><td>Sat Kar Tar</td><td>Autenticidade — voltar ao que é seu de verdade</td></tr>
-                    <tr><td>2</td><td>Mente Negativa <span style="opacity:.6">(+ Corpo Físico)</span></td><td>Long Sat Nams</td><td>Aproximar-se sem se perder; afastar-se sem se fechar</td></tr>
-                    <tr><td>3</td><td>Mente Neutra</td><td>Wha Hey Guru</td><td>Ver os dois lados sem tomar partido</td></tr>
-                    <tr><td>4</td><td>Mente Positiva</td><td>Om So Ham</td><td>Reconhecer a própria luz e dar um passo</td></tr>
-                    <tr><td>5</td><td>Corpo Prânico <span style="opacity:.6">(+ Corpo Físico)</span></td><td>Respiração de 4 Partes</td><td>Vitalidade — achar as reservas que o cansaço esconde</td></tr>
-                    <tr><td>6</td><td>Aura</td><td>Kirtan Kriya</td><td>Presença — reorganizar o que ficou grudado</td></tr>
-                    <tr><td>7</td><td>Arco de Luz <span style="opacity:.6">(+ Corpo Sutil)</span></td><td>Silêncio e Escuta</td><td>Escuta — abaixar o ruído para ouvir a intuição</td></tr>
-                    <tr><td>8</td><td>Corpo Total <span style="opacity:.6">(+ Corpo Radiante)</span></td><td>Gurprasad</td><td>Integração — receber também é prática</td></tr>
-                </tbody>
-            </table>
-        </div>
+<div class="yk-table-wrap">
+<table class="yk-table">
+<thead><tr><th>Semana</th><th>Janela</th><th>Meditação</th><th>O que se convida</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Alma</td><td>Sat Kar Tar</td><td>Autenticidade — voltar ao que é seu de verdade</td></tr>
+<tr><td>2</td><td>Mente Negativa <span style="opacity:.65">(+ Corpo Físico)</span></td><td>Long Sat Nams</td><td>Aproximar-se sem se perder; afastar-se sem se fechar</td></tr>
+<tr><td>3</td><td>Mente Neutra</td><td>Wha Hey Guru</td><td>Ver os dois lados sem tomar partido</td></tr>
+<tr><td>4</td><td>Mente Positiva</td><td>Om So Ham</td><td>Reconhecer a própria luz e dar um passo</td></tr>
+<tr><td>5</td><td>Corpo Prânico <span style="opacity:.65">(+ Corpo Físico)</span></td><td>Respiração de 4 Partes</td><td>Vitalidade — achar as reservas que o cansaço esconde</td></tr>
+<tr><td>6</td><td>Aura</td><td>Kirtan Kriya</td><td>Presença — reorganizar o que ficou grudado</td></tr>
+<tr><td>7</td><td>Arco de Luz <span style="opacity:.65">(+ Corpo Sutil)</span></td><td>Silêncio e Escuta</td><td>Escuta — abaixar o ruído para ouvir a intuição</td></tr>
+<tr><td>8</td><td>Corpo Total <span style="opacity:.65">(+ Corpo Radiante)</span></td><td>Gurprasad</td><td>Integração — receber também é prática</td></tr>
+</tbody>
+</table>
+</div>
 
-        <h3 class="category-title" style="margin-top:2.5rem"><i class="fas fa-gift"></i> O que você recebe</h3>
-        <div class="yk-grid yk-grid-2">
-            <div class="yk-box">
-                <i class="fas fa-mobile-screen yk-ico"></i>
-                <h4>Guia digital de prática</h4>
-                <p>Um guia completo no celular, com todas as técnicas ilustradas: posição, respiração, tempo, como terminar e cuidados. Serve para praticar em casa e como referência depois do curso.</p>
-            </div>
-            <div class="yk-box">
-                <i class="fas fa-chart-simple yk-ico"></i>
-                <h4>Mapa das Minhas Janelas</h4>
-                <p>Uma ficha de auto-observação: você dá uma nota de 0 a 10 para cada janela hoje e refaz a cada 4 semanas. Não é prova — é uma foto do momento, para você ver o próprio movimento.</p>
-            </div>
-            <div class="yk-box">
-                <i class="fas fa-calendar-check yk-ico"></i>
-                <h4>Prática mínima e os 40 dias</h4>
-                <p>Uma prática de 4 minutos para os dias impossíveis e uma de 20 minutos para os dias bons, mais a grade dos 40 dias. A tradição propõe 40 dias de constância para transformar um hábito.</p>
-            </div>
-            <div class="yk-box">
-                <i class="fas fa-hashtag yk-ico"></i>
-                <h4>Numerologia Tântrica <span style="font-weight:400;opacity:.7">(opcional)</span></h4>
-                <p>Se você autorizar na ficha de inscrição, calculamos seus 5 números e entregamos sua ficha de resultado <strong>por escrito, em aula, no mesmo formato para todos</strong>. É um mapa simbólico para se observar — não é diagnóstico, não é previsão, e não há sessão individual decorrente do curso.</p>
-            </div>
-        </div>
+<h3 class="category-title" style="margin-top:2.8rem"><i class="fas fa-gift"></i> O que você recebe</h3>
+<div class="yk-grid yk-grid-2">
+<div class="yk-box">
+<i class="fas fa-mobile-screen yk-ico"></i>
+<h4>Guia digital de prática</h4>
+<p>Um guia completo no celular, com todas as técnicas ilustradas: posição, respiração, tempo, como terminar e cuidados. Serve para praticar em casa e como referência depois do curso.</p>
+</div>
+<div class="yk-box">
+<i class="fas fa-chart-simple yk-ico"></i>
+<h4>Mapa das Minhas Janelas</h4>
+<p>Uma ficha de auto-observação: você dá uma nota de 0 a 10 para cada janela hoje e refaz a cada 4 semanas. Não é prova — é uma foto do momento, para você ver o próprio movimento.</p>
+</div>
+<div class="yk-box">
+<i class="fas fa-calendar-check yk-ico"></i>
+<h4>Prática mínima e os 40 dias</h4>
+<p>Uma prática de 4 minutos para os dias impossíveis e uma de 20 minutos para os dias bons, mais a grade dos 40 dias. A tradição propõe 40 dias de constância para transformar um hábito.</p>
+</div>
+<div class="yk-box">
+<i class="fas fa-hashtag yk-ico"></i>
+<h4>Numerologia Tântrica <span style="font-weight:400;opacity:.7">(opcional)</span></h4>
+<p>Se você autorizar na ficha de inscrição, calculamos seus 5 números e entregamos sua ficha de resultado <strong>por escrito, em aula, no mesmo formato para todos</strong>. É um mapa simbólico para se observar — não é diagnóstico, não é previsão, e não há sessão individual decorrente do curso.</p>
+</div>
+</div>
 
-        <div class="yk-note">
-            <strong>Sobre seus dados:</strong> a data de nascimento é um dado pessoal e só é usada se você autorizar, exclusivamente para o cálculo e a entrega da ficha. Fica em local privado, não é exposta na roda, e você pode pedir exclusão a qualquer momento. A participação nas aulas não depende disso.
-        </div>
-    </div>
+<div class="yk-note">
+<strong>Sobre seus dados:</strong> a data de nascimento é um dado pessoal e só é usada se você autorizar, exclusivamente para o cálculo e a entrega da ficha. Fica em local privado, não é exposta na roda, e você pode pedir exclusão a qualquer momento. A participação nas aulas não depende disso.
+</div>
+</div>
 </section>
 
 <!-- Para quem é / segurança -->
 <section id="seguranca" class="terapias">
-    <div class="container">
-        <h2 class="section-title">Para quem é — e como cuidamos de você</h2>
+<div class="container">
+<h2 class="section-title">Para quem é — e como cuidamos de você</h2>
 
-        <div class="yk-grid yk-grid-2">
-            <div class="yk-box">
-                <i class="fas fa-user-check yk-ico"></i>
-                <h4>É para você se…</h4>
-                <ul class="yk-check">
-                    <li><i class="fas fa-check"></i> você nunca praticou yoga e acha que "não é flexível o bastante"</li>
-                    <li><i class="fas fa-check"></i> você quer algo concreto, com técnica explicada, não só relaxamento</li>
-                    <li><i class="fas fa-check"></i> você busca autoconhecimento com método e registro</li>
-                    <li><i class="fas fa-check"></i> você prefere praticar em grupo, perto de casa, à noite</li>
-                    <li><i class="fas fa-check"></i> você quer aprender a praticar sozinho depois</li>
-                </ul>
-            </div>
-            <div class="yk-box">
-                <i class="fas fa-shield-heart yk-ico"></i>
-                <h4>Adaptações e segurança</h4>
-                <ul class="yk-check">
-                    <li><i class="fas fa-check"></i> todo exercício tem versão suave; cadeira sempre válida</li>
-                    <li><i class="fas fa-check"></i> dor aguda = parar; tontura = sentar. Você é a autoridade sobre seu corpo</li>
-                    <li><i class="fas fa-check"></i> ajustes para ciclo menstrual, sem constrangimento</li>
-                    <li><i class="fas fa-check"></i> posição lateral no relaxamento para gestantes</li>
-                    <li><i class="fas fa-check"></i> condições de saúde são conversadas em particular, sem exposição</li>
-                </ul>
-            </div>
-        </div>
+<div class="yk-grid yk-grid-2">
+<div class="yk-box">
+<i class="fas fa-user-check yk-ico"></i>
+<h4>É para você se…</h4>
+<ul class="yk-check">
+<li><i class="fas fa-check"></i> você nunca praticou yoga e acha que "não é flexível o bastante"</li>
+<li><i class="fas fa-check"></i> você quer algo concreto, com técnica explicada, não só relaxamento</li>
+<li><i class="fas fa-check"></i> você busca autoconhecimento com método e registro</li>
+<li><i class="fas fa-check"></i> você prefere praticar em grupo, perto de casa, à noite</li>
+<li><i class="fas fa-check"></i> você quer aprender a praticar sozinho depois</li>
+</ul>
+</div>
+<div class="yk-box">
+<i class="fas fa-shield-heart yk-ico"></i>
+<h4>Adaptações e segurança</h4>
+<ul class="yk-check">
+<li><i class="fas fa-check"></i> todo exercício tem versão suave; cadeira sempre válida</li>
+<li><i class="fas fa-check"></i> dor aguda = parar; tontura = sentar. Você é a autoridade sobre seu corpo</li>
+<li><i class="fas fa-check"></i> ajustes para ciclo menstrual, sem constrangimento</li>
+<li><i class="fas fa-check"></i> posição lateral no relaxamento para gestantes</li>
+<li><i class="fas fa-check"></i> condições de saúde são conversadas em particular, sem exposição</li>
+</ul>
+</div>
+</div>
 
-        <div class="yk-note">
-            <strong>Escopo:</strong> a aula é uma prática educativa em grupo, de auto-observação. <strong>Não é psicoterapia, atendimento individual nem consulta de saúde.</strong> As práticas não substituem acompanhamento médico ou psicológico, e você não deve alterar medicação por conta própria. Se algo pessoal pedir cuidado, procure um profissional de sua confiança.
-        </div>
+<div class="yk-note">
+<strong>Escopo:</strong> a aula é uma prática educativa em grupo, de auto-observação. <strong>Não é psicoterapia, atendimento individual nem consulta de saúde.</strong> As práticas não substituem acompanhamento médico ou psicológico, e você não deve alterar medicação por conta própria. Se algo pessoal pedir cuidado, procure um profissional de sua confiança.
+</div>
 
-        <h3 class="category-title" style="margin-top:2.5rem"><i class="fas fa-flask"></i> O que os estudos sobre meditação observam</h3>
-        <p class="yk-lead">Pesquisas sobre meditação <em>em geral</em> — atenção plena, bondade amorosa, meditação transcendental — observaram efeitos como redução do estresse e da ansiedade, melhora do sono, aumento do tempo de atenção, mais autoconsciência e maior capacidade de lidar com a dor. Um dos métodos citados nominalmente nessa literatura é o <strong>Kirtan Kriya</strong>, que você pratica na Semana 6.</p>
-        <div class="yk-note">
-            <strong>Leia com atenção:</strong> esses estudos não são sobre este curso especificamente. Resultados variam de pessoa para pessoa. Nada aqui é promessa de resultado, diagnóstico ou tratamento. Nenhum desses efeitos é o objetivo da prática — são consequência possível de algo mais simples: constância.
-        </div>
-    </div>
+<h3 class="category-title" style="margin-top:2.8rem"><i class="fas fa-flask"></i> O que os estudos sobre meditação observam</h3>
+<p class="yk-lead">Pesquisas sobre meditação <em>em geral</em> — atenção plena, bondade amorosa, meditação transcendental — observaram efeitos como redução do estresse e da ansiedade, melhora do sono, aumento do tempo de atenção, mais autoconsciência e maior capacidade de lidar com a dor. Um dos métodos citados nominalmente nessa literatura é o <strong>Kirtan Kriya</strong>, que você pratica na Semana 6.</p>
+<div class="yk-note">
+<strong>Leia com atenção:</strong> esses estudos não são sobre este curso especificamente. Resultados variam de pessoa para pessoa. Nada aqui é promessa de resultado, diagnóstico ou tratamento. Nenhum desses efeitos é o objetivo da prática — são consequência possível de algo mais simples: constância.
+</div>
+</div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="sobre">
-    <div class="container">
-        <h2 class="section-title">Perguntas frequentes</h2>
-        <div class="yk-faq">
-            <details>
-                <summary>Preciso ser flexível ou ter experiência?</summary>
-                <p>Não. Muitos exercícios são sentados, e a cadeira é sempre uma opção legítima. O objetivo não é a postura — é a conexão interna. Cada exercício tem versão suave, e você nunca precisa acompanhar o desempenho de ninguém.</p>
-            </details>
-            <details>
-                <summary>E se minha mente não parar?</summary>
-                <p>Nem a de ninguém. A mente produz pensamentos sem parar; isso é o funcionamento dela, não um defeito seu. Meditar não é parar a mente, é trocar de canal. Se você se distraiu e voltou, você meditou.</p>
-            </details>
-            <details>
-                <summary>Preciso acreditar em algo?</summary>
-                <p>Não. Os mantras são sons com direção: você pronuncia e respira, e o resto acontece. A linguagem da tradição é apresentada como tradição — e o que a ciência observa é apresentado com a cautela da fonte.</p>
-            </details>
-            <details>
-                <summary>O que preciso levar?</summary>
-                <p>Colchonete, almofada e manta. Praticamos descalços. Roupa confortável, simples e discreta, com boa cobertura durante os movimentos — somos um espaço de famílias, casais e vizinhos, e o cuidado com o vestir é um cuidado com todos. Evite refeição pesada na hora anterior e deixe o celular guardado.</p>
-            </details>
-            <details>
-                <summary>Posso praticar durante o ciclo menstrual?</summary>
-                <p>Sim, com ajustes. Evitamos abdominais intensos, elevação de pernas e respirações rápidas, e priorizamos enraizamento e movimento suave. Avise o facilitador sem constrangimento — a adaptação é natural. Ajuste, não abandone.</p>
-            </details>
-            <details>
-                <summary>Quanto tempo até sentir algo?</summary>
-                <p>Muita gente sente diferença já na primeira aula, no relaxamento. Mas os efeitos que interessam aparecem mais no seu dia do que na prática: dormir melhor, se irritar menos, reagir menos no automático. A tradição propõe 40 dias de constância — e cinco minutos por dia valem mais que uma hora uma vez por semana.</p>
-            </details>
-            <details>
-                <summary>E depois das 8 semanas?</summary>
-                <p>Você continua com o guia digital, que funciona como manual de referência. Há um segundo nível introdutório para quem quer aprofundar — com técnicas que só entram depois que o corpo já está habituado e com acompanhamento.</p>
-            </details>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">Perguntas frequentes</h2>
+<div class="yk-faq">
+<details><summary>Preciso ser flexível ou ter experiência?</summary><p>Não. Muitos exercícios são sentados, e a cadeira é sempre uma opção legítima. O objetivo não é a postura — é a conexão interna. Cada exercício tem versão suave, e você nunca precisa acompanhar o desempenho de ninguém.</p></details>
+<details><summary>E se minha mente não parar?</summary><p>Nem a de ninguém. A mente produz pensamentos sem parar; isso é o funcionamento dela, não um defeito seu. Meditar não é parar a mente, é trocar de canal. Se você se distraiu e voltou, você meditou.</p></details>
+<details><summary>Preciso acreditar em algo?</summary><p>Não. Os mantras são sons com direção: você pronuncia e respira, e o resto acontece. A linguagem da tradição é apresentada como tradição — e o que a ciência observa é apresentado com a cautela da fonte.</p></details>
+<details><summary>O que preciso levar?</summary><p>Colchonete, almofada e manta. Praticamos descalços. Roupa confortável, simples e discreta, com boa cobertura durante os movimentos — somos um espaço de famílias, casais e vizinhos, e o cuidado com o vestir é um cuidado com todos. Evite refeição pesada na hora anterior e deixe o celular guardado.</p></details>
+<details><summary>Posso praticar durante o ciclo menstrual?</summary><p>Sim, com ajustes. Evitamos abdominais intensos, elevação de pernas e respirações rápidas, e priorizamos enraizamento e movimento suave. Avise o facilitador sem constrangimento — a adaptação é natural. Ajuste, não abandone.</p></details>
+<details><summary>Quanto tempo até sentir algo?</summary><p>Muita gente sente diferença já na primeira aula, no relaxamento. Mas os efeitos que interessam aparecem mais no seu dia do que na prática: dormir melhor, se irritar menos, reagir menos no automático. A tradição propõe 40 dias de constância — e cinco minutos por dia valem mais que uma hora uma vez por semana.</p></details>
+<details><summary>E depois das 8 semanas?</summary><p>Você continua com o guia digital, que funciona como manual de referência. Há um segundo nível introdutório para quem quer aprofundar — com técnicas que só entram depois que o corpo já está habituado e com acompanhamento.</p></details>
+<details><summary>Como faço para me inscrever?</summary><p>Pelo formulário abaixo ou pelo WhatsApp. Se preferir começar sem compromisso, a aula demonstração de 30 minutos é a porta de entrada. Dias e horário da turma são definidos conforme a formação do grupo.</p></details>
+</div>
+</div>
 </section>
 
 <!-- Inscrição -->
 <section id="inscricao" class="contato">
-    <div class="container">
-        <h2 class="section-title">Aula demonstração &amp; inscrição</h2>
+<div class="container">
+<h2 class="section-title">Aula demonstração &amp; inscrição</h2>
 
-        <div class="yk-cta">
-            <h3>Comece pela aula demonstração de 30 minutos</h3>
-            <p>Uma degustação da prática: sintonização com mantra, aquecimento dos olhos, três exercícios guiados, um relaxamento curto e uma respiração que você já sai sabendo usar. Sem técnica intensa, sem risco, sem compromisso. Você sai com um selo das mãos para usar no elevador amanhã.</p>
-            <a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" class="btn btn-primary">
-                <i class="fab fa-whatsapp"></i> Quero participar da demonstração
-            </a>
-        </div>
+<div class="yk-cta">
+<h3>Comece pela aula demonstração de 30 minutos</h3>
+<p>Uma degustação da prática: sintonização com mantra, aquecimento dos olhos, três exercícios guiados, um relaxamento curto e uma respiração que você já sai sabendo usar. Sem técnica intensa, sem risco, sem compromisso. Você sai com um selo das mãos para usar no elevador amanhã.</p>
+<a href="https://wa.me/5516997934558?text=Ol%C3%A1%2C%20Celso!%20Quero%20participar%20da%20aula%20demonstra%C3%A7%C3%A3o%20de%20Yoga%20Kundalini." target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Quero participar da demonstração</a>
+</div>
 
-        <div class="contato-content" style="margin-top:2.5rem">
-            <div class="contato-info">
-                <h3>Fale comigo</h3>
-                <p>Tire dúvidas sobre a turma, horários e adaptações. Respondo pessoalmente.</p>
+<div class="contato-grid" style="margin-top:3rem">
+<div class="contato-info">
+<h3>Fale comigo</h3>
+<p>Tire dúvidas sobre a turma, horários e adaptações. Respondo pessoalmente.</p>
+<div class="contato-item"><i class="fab fa-whatsapp"></i><span>+55 (16) 99793-4558</span></div>
+<div class="contato-item"><i class="fas fa-envelope"></i><span>celsot.holistics@gmail.com</span></div>
+<div class="contato-item"><i class="fas fa-map-marker-alt"></i><span>Condomínio Bella Vitta · Araraquara/SP</span></div>
+<div class="contato-item"><i class="fas fa-clock"></i><span>Dias e horário: a definir conforme a formação da turma</span></div>
+<div class="contato-item"><i class="fas fa-user"></i><span>Celso Luiz · Psicoterapeuta Holístico · CRTP 2.446</span></div>
+<div class="contato-item"><i class="fas fa-book-open"></i><span><a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank">Guia de prática do aluno</a></span></div>
 
-                <div class="contato-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <div><h4>WhatsApp</h4><p>+55 (16) 99793-4558</p></div>
-                </div>
-                <div class="contato-item">
-                    <i class="fas fa-envelope"></i>
-                    <div><h4>Email</h4><p>celsot.holistics@gmail.com</p></div>
-                </div>
-                <div class="contato-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div><h4>Local</h4><p>Condomínio Bella Vitta · Araraquara/SP</p></div>
-                </div>
-                <div class="contato-item">
-                    <i class="fas fa-clock"></i>
-                    <div><h4>Dias e horário</h4><p>A definir conforme a formação da turma</p></div>
-                </div>
-                <div class="contato-item">
-                    <i class="fas fa-user"></i>
-                    <div>
-                        <h4>Facilitador</h4>
-                        <p>Celso Luiz</p>
-                        <p>Psicoterapeuta holístico desde 2020 - CRTP 2.446</p>
-                    </div>
-                </div>
+<div class="social-links">
+<a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" title="Guia de prática do aluno"><i class="fas fa-book-open"></i></a>
+<a href="https://wa.me/5516997934558" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.youtube.com/channel/UCw5BZJvLIlDGLGQh8uy0wYw/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="https://linktr.ee/celsot.holistica" target="_blank" title="Linktree"><i class="fas fa-link"></i></a>
+<a href="index.html" title="Lunara Terapias"><i class="fas fa-house"></i></a>
+</div>
+</div>
 
-                <div class="social-links">
-                    <h4>Material de apoio</h4>
-                    <div class="social-icons">
-                        <a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank" class="social-icon" title="Guia de prática do aluno"><i class="fas fa-book-open"></i></a>
-                        <a href="https://wa.me/5516997934558" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://linktr.ee/celsot.holistica" target="_blank" class="social-icon"><i class="fas fa-tree"></i></a>
-                        <a href="index.html" class="social-icon" title="Lunara Terapias"><i class="fas fa-house"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contato-form">
-                <form id="inscricao-yoga" name="inscricao-yoga" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="inscricao-yoga" />
-                    <div class="form-group">
-                        <label for="yk-nome">Nome</label>
-                        <input type="text" id="yk-nome" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="yk-email">Email</label>
-                        <input type="email" id="yk-email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="yk-telefone">WhatsApp</label>
-                        <input type="tel" id="yk-telefone" name="telefone">
-                    </div>
-                    <div class="form-group">
-                        <label for="yk-interesse">Tenho interesse em</label>
-                        <select id="yk-interesse" name="interesse">
-                            <option value="">Selecione</option>
-                            <option value="demonstracao">Aula demonstração (30 min)</option>
-                            <option value="ciclo1">Ciclo de 8 semanas (50 min por aula)</option>
-                            <option value="informacoes">Só receber informações por enquanto</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="yk-experiencia">Já praticou yoga ou meditação?</label>
-                        <select id="yk-experiencia" name="experiencia">
-                            <option value="">Selecione</option>
-                            <option value="nunca">Nunca pratiquei</option>
-                            <option value="pouco">Pratiquei pouco / por conta própria</option>
-                            <option value="sim">Já pratico ou pratiquei regularmente</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="yk-mensagem">Mensagem</label>
-                        <textarea id="yk-mensagem" name="mensagem" rows="4" placeholder="Conte o que você está buscando. Se precisar de adaptação, pode dizer apenas 'preciso de adaptação' — conversamos em particular."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label style="display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;line-height:1.6;font-weight:400">
-                            <input type="checkbox" name="interesse-numerologia" value="sim" style="width:auto;margin-top:.25rem">
-                            <span>Tenho interesse na ficha opcional de Numerologia Tântrica (o cálculo usa a data de nascimento, coletada só na ficha de inscrição, com sua autorização).</span>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="contato-form">
+<h3>Formulário de interesse</h3>
+<form id="inscricaoYoga">
+<div class="form-group">
+<label for="from_name">Nome completo *</label>
+<input type="text" id="from_name" name="from_name" required placeholder="Seu nome">
+</div>
+<div class="form-group">
+<label for="from_email">E-mail *</label>
+<input type="email" id="from_email" name="from_email" required placeholder="seu@email.com">
+</div>
+<div class="form-group">
+<label for="phone">WhatsApp</label>
+<input type="tel" id="phone" name="phone" placeholder="(16) 99999-9999">
+</div>
+<div class="form-group">
+<label for="terapia_interesse">Tenho interesse em</label>
+<select id="terapia_interesse" name="terapia_interesse">
+<option value="">Selecione</option>
+<option value="Yoga - Aula demonstração (30 min)">Aula demonstração (30 min)</option>
+<option value="Yoga - Ciclo de 8 semanas">Ciclo de 8 semanas (50 min por aula)</option>
+<option value="Yoga - Só receber informações">Só receber informações por enquanto</option>
+</select>
+</div>
+<div class="form-group">
+<label for="yk-experiencia">Já praticou yoga ou meditação?</label>
+<select id="yk-experiencia">
+<option value="">Selecione</option>
+<option value="Nunca pratiquei">Nunca pratiquei</option>
+<option value="Pratiquei pouco / por conta própria">Pratiquei pouco / por conta própria</option>
+<option value="Já pratico ou pratiquei regularmente">Já pratico ou pratiquei regularmente</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Mensagem *</label>
+<textarea id="message" name="message" required placeholder="Conte o que você está buscando. Se precisar de adaptação, pode dizer apenas 'preciso de adaptação' — conversamos em particular."></textarea>
+</div>
+<div class="form-group">
+<label class="form-check">
+<input type="checkbox" id="yk-numerologia">
+<span>Tenho interesse na ficha opcional de Numerologia Tântrica (o cálculo usa a data de nascimento, coletada só na ficha de inscrição, com sua autorização).</span>
+</label>
+</div>
+<button type="submit" class="btn-form"><i class="fas fa-paper-plane"></i> Enviar</button>
+<div id="statusYoga" class="status-msg"></div>
+<a href="https://wa.me/5516997934558?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20Yoga%20Kundalini%20e%20gostaria%20de%20conversar." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Ou fale pelo WhatsApp</a>
+</form>
+</div>
+</div>
+</div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="logo_lunara.jpg" alt="Lunara Terapias" class="footer-logo-img">
-                <p>Equilíbrio, Cura e Transformação</p>
-            </div>
-            <div class="footer-links">
-                <h4>Nesta página</h4>
-                <ul>
-                    <li><a href="#praticas">As Práticas</a></li>
-                    <li><a href="#janelas">As 11 Janelas</a></li>
-                    <li><a href="#aula">Como é a aula</a></li>
-                    <li><a href="#ciclo">O Ciclo</a></li>
-                    <li><a href="#inscricao">Inscrição</a></li>
-                    <li><a href="index.html">Lunara Terapias</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contato</h4>
-                <p><i class="fab fa-whatsapp"></i> +55 (16) 99793-4558</p>
-                <p><i class="fas fa-envelope"></i> celsot.holistics@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Araraquara/SP</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Lunara Terapias. Todos os direitos reservados.</p>
-            <p style="font-size:.82rem;opacity:.7;margin-top:.5rem">As práticas têm caráter educativo e de auto-observação e não substituem acompanhamento médico ou psicológico.</p>
-        </div>
-    </div>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<img src="assets/logo.png" data-base="assets/logo" data-try="0" onerror="imgFallback(this)" alt="Lunara Terapias" class="footer-logo-img">
+<h4>Lunara Terapias</h4>
+<p>Equilíbrio, Cura e Transformação</p>
+<p>Atuação em terapias integrativas desde 2020.<br>Marca Lunara desde 2025.</p>
+</div>
+<div class="footer-section">
+<h4>Nesta página</h4>
+<a href="#praticas">As Práticas</a>
+<a href="#janelas">As 11 Janelas</a>
+<a href="#aula">Como é a aula</a>
+<a href="#ciclo">O Ciclo</a>
+<a href="#faq">Dúvidas</a>
+<a href="#inscricao">Inscrição</a>
+</div>
+<div class="footer-section">
+<h4>Contato</h4>
+<p><i class="fab fa-whatsapp"></i> +55 (16) 99793-4558</p>
+<p><i class="fas fa-envelope"></i> celsot.holistics@gmail.com</p>
+<p><i class="fas fa-map-marker-alt"></i> Araraquara/SP</p>
+<a href="index.html">Site Lunara Terapias</a>
+<a href="https://guia-de-pratica-b1343ix.gamma.site/" target="_blank">Guia de prática do aluno</a>
+</div>
+<div class="footer-section">
+<h4>Facilitador</h4>
+<p><strong>Celso Luiz</strong></p>
+<p>Psicoterapeuta Holístico desde 2020</p>
+<p>CRTP 2.446</p>
+<a href="https://linktr.ee/celsot.holistica" target="_blank">Linktree</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Lunara Terapias. Todos os direitos reservados.</p>
+<p style="font-size:.85rem">As práticas têm caráter educativo e de auto-observação e não substituem acompanhamento médico ou psicológico.</p>
+</div>
+</div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function trackEvent(n,p){ if(typeof gtag!=='undefined'){ gtag('event',n,p||{}); } }
+
+/* Cards expansíveis */
+function toggleContent(element){
+  const content = element.nextElementSibling;
+  const icon = element.querySelector('.expand-icon');
+  const isOpening = !content.classList.contains('active');
+  const category = element.closest('.terapia-category');
+  if(category){
+    category.querySelectorAll('.terapia-content.active').forEach(c=>{
+      if(c!==content){
+        c.classList.remove('active');
+        const oi = c.previousElementSibling.querySelector('.expand-icon');
+        if(oi) oi.style.transform='rotate(0deg)';
+      }
+    });
+  }
+  if(isOpening){ content.classList.add('active'); if(icon) icon.style.transform='rotate(180deg)'; }
+  else { content.classList.remove('active'); if(icon) icon.style.transform='rotate(0deg)'; }
+  trackEvent('yoga_card_toggle',{card:element.querySelector('h4').textContent.trim(),open:isOpening});
+}
+
+/* Menu mobile */
+const hamburger=document.querySelector('.hamburger');
+const navMenu=document.querySelector('.nav-menu');
+hamburger.addEventListener('click',()=>{
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded',navMenu.classList.contains('active'));
+});
+hamburger.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();hamburger.click();} });
+document.querySelectorAll('.nav-link').forEach(l=>l.addEventListener('click',()=>{
+  hamburger.classList.remove('active'); navMenu.classList.remove('active');
+}));
+
+/* Scroll suave */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const href=this.getAttribute('href');
+    if(href.length<2) return;
+    const t=document.querySelector(href);
+    if(t){ e.preventDefault();
+      window.scrollTo({top:t.offsetTop-document.querySelector('.header').offsetHeight-20,behavior:'smooth'});
+      trackEvent('yoga_nav',{target:href});
+    }
+  });
+});
+
+/* Header + scroll top */
+let ticking=false;
+window.addEventListener('scroll',()=>{
+  if(!ticking){ requestAnimationFrame(()=>{
+    const h=document.querySelector('.header');
+    if(window.scrollY>100){ h.style.background='rgba(44,85,48,.95)'; h.style.backdropFilter='blur(15px)'; }
+    else { h.style.background='linear-gradient(135deg,#2c5530 0%,#4a7c59 100%)'; h.style.backdropFilter='blur(10px)'; }
+    const b=document.querySelector('.scroll-top');
+    if(window.scrollY>500) b.classList.add('visible'); else b.classList.remove('visible');
+    ticking=false;
+  }); ticking=true; }
+});
+function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+
+/* EmailJS — mesmo serviço e template do site principal */
+(function(){ if(typeof emailjs!=='undefined'){ emailjs.init("RF_SmtXIYxnb8plsM"); } })();
+
+document.getElementById('inscricaoYoga').addEventListener('submit',function(e){
+  e.preventDefault();
+  const form=this;
+  const status=document.getElementById('statusYoga');
+  const btn=form.querySelector('button[type="submit"]');
+  const btnHTML=btn.innerHTML;
+  const msgField=document.getElementById('message');
+  const originalMsg=msgField.value;
+
+  const exp=document.getElementById('yk-experiencia').value;
+  const num=document.getElementById('yk-numerologia').checked;
+  const extras=['','---','Origem: página Yoga Kundalini'];
+  if(exp) extras.push('Experiência prévia: '+exp);
+  extras.push('Interesse em Numerologia Tântrica: '+(num?'sim':'não informado'));
+  msgField.value=originalMsg+'\n'+extras.join('\n');
+
+  status.className='status-msg sending';
+  status.textContent='📤 Enviando...';
+  btn.innerHTML='<span class="loading"></span> Enviando...';
+  btn.disabled=true;
+
+  emailjs.sendForm("service_jg22i2i","template_contact",form)
+    .then(()=>{
+      status.className='status-msg success';
+      status.innerHTML='🎉 Recebido! Em breve entro em contato. <br><small>Se preferir resposta mais rápida, me chame no WhatsApp.</small>';
+      trackEvent('yoga_form_submitted',{success:true,interesse:document.getElementById('terapia_interesse').value});
+      form.reset();
+      setTimeout(()=>{status.className='status-msg';},9000);
+    })
+    .catch(err=>{
+      status.className='status-msg error';
+      status.textContent='❌ Não foi possível enviar. Use o WhatsApp abaixo, por favor.';
+      console.error('EmailJS:',err);
+      trackEvent('yoga_form_submitted',{success:false});
+      setTimeout(()=>{status.className='status-msg';},9000);
+    })
+    .finally(()=>{ msgField.value=originalMsg; btn.innerHTML=btnHTML; btn.disabled=false; });
+});
+
+/* Acessibilidade */
+document.addEventListener('DOMContentLoaded',()=>{
+  const s=document.createElement('a');
+  s.href='#home'; s.className='sr-only'; s.textContent='Pular para o conteúdo';
+  s.addEventListener('focus',function(){this.classList.remove('sr-only');});
+  s.addEventListener('blur',function(){this.classList.add('sr-only');});
+  document.body.insertBefore(s,document.body.firstChild);
+  hamburger.setAttribute('aria-expanded','false');
+  hamburger.setAttribute('aria-controls','nav-menu');
+  navMenu.id='nav-menu';
+});
+
+console.log('🧘 Página Yoga Kundalini carregada.');
+</script>
 </body>
 </html>
